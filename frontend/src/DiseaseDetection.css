@@ -182,21 +182,43 @@
   color: var(--green);
 }
 
-/* ---------- Sidebar plantation image ---------- */
-/* Image path: frontend/public/assets/healthy-crops.jpg */
 
+/* Sidebar: stretch alongside the complete content */
+.dd-redesign-layout {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+}
+
+.dd-sidebar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  min-height: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #f8fcf9;
+}
+
+/* Plantation image: fill the remaining sidebar height */
 .dd-sidebar-art {
   position: relative;
   display: flex;
-  align-items: flex-end;
-
-  /* Fill remaining sidebar space */
   flex: 1 1 auto;
-  min-height: 240px;
-  height: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 
+  width: 100%;
+  min-height: 250px;
+  height: auto;
   margin-top: 12px;
   padding: 14px;
+
   overflow: hidden;
   border-radius: 10px;
 
@@ -204,8 +226,8 @@
   background-image:
     linear-gradient(
       to top,
-      rgba(3, 45, 28, 0.90) 0%,
-      rgba(3, 45, 28, 0.35) 48%,
+      rgba(3, 45, 28, 0.92) 0%,
+      rgba(3, 45, 28, 0.35) 45%,
       rgba(3, 45, 28, 0.02) 100%
     ),
     url("/assets/healthy-crops.jpg");
@@ -221,7 +243,7 @@
   z-index: 1;
   font-size: 14px;
   line-height: 1.5;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .dd-art-leaf {
@@ -232,6 +254,29 @@
   font-size: 28px;
   opacity: 0.95;
 }
+
+/* Tablet */
+@media (max-width: 1250px) {
+  .dd-redesign-layout {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .dd-sidebar-art {
+    min-height: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .dd-redesign-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-sidebar-art {
+    display: none;
+  }
+}
+
 
 /* ---------- Main content ---------- */
 
