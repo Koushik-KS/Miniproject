@@ -695,3 +695,525 @@ button { font: inherit; }
     justify-content: flex-start;
   }
 }
+
+
+/* ==========================================================
+   KisanVision AI — Typography & Readability Upgrade
+   Append this block at the END of App.css
+   ========================================================== */
+
+/* Base readability */
+.kv-app {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Header and brand */
+.kv-header {
+  gap: 22px;
+  padding: 12px 28px;
+}
+
+.kv-brand-icon {
+  width: 46px;
+  height: 46px;
+  font-size: 33px;
+}
+
+.kv-brand strong {
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.kv-brand small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Main navigation */
+.kv-nav {
+  gap: 5px;
+}
+
+.kv-nav-link {
+  min-width: 78px;
+  padding: 9px 11px;
+  gap: 7px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.kv-nav-link svg {
+  font-size: 20px;
+}
+
+.kv-profile {
+  padding: 9px 13px;
+  font-size: 13px;
+}
+
+/* Main page spacing */
+.kv-main {
+  padding: 20px 28px 24px;
+}
+
+/* Homepage hero */
+.kv-hero {
+  min-height: 280px;
+  border-radius: 16px;
+}
+
+.kv-hero-copy {
+  padding: 28px 30px;
+}
+
+.kv-eyebrow {
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.kv-welcome {
+  font-size: 21px;
+}
+
+.kv-hero h1 {
+  font-size: clamp(38px, 3.5vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -1.6px;
+}
+
+.kv-hero h2 {
+  margin: 10px 0 8px;
+  font-size: 19px;
+}
+
+.kv-hero-description {
+  max-width: 540px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.kv-primary {
+  min-height: 43px;
+  padding: 11px 19px;
+  font-size: 13px;
+}
+
+.kv-hero-note {
+  margin-top: 13px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.kv-hero-tagline > strong {
+  font-size: 19px;
+}
+
+.kv-hero-tagline > div {
+  font-size: 12px;
+}
+
+/* Dashboard sections */
+.kv-dashboard-grid {
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.kv-section {
+  margin-bottom: 18px;
+  padding: 20px;
+}
+
+.kv-section-heading {
+  margin-bottom: 17px;
+}
+
+.kv-section-heading h2 {
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.kv-section-heading p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Quick Start cards */
+.kv-quick-grid {
+  gap: 12px;
+}
+
+.kv-quick-card {
+  min-height: 165px;
+  gap: 13px;
+  padding: 18px 16px;
+}
+
+.kv-quick-icon {
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+
+.kv-quick-card h3 {
+  margin: 4px 0 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.kv-quick-card p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.kv-quick-card button {
+  margin-top: 14px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+/* Feature cards */
+.kv-feature-grid {
+  gap: 12px;
+}
+
+.kv-feature-card {
+  min-height: 115px;
+  gap: 13px;
+  padding: 16px;
+}
+
+.kv-feature-icon {
+  width: 46px;
+  height: 46px;
+  font-size: 21px;
+}
+
+.kv-feature-copy {
+  gap: 7px;
+}
+
+.kv-feature-copy strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.kv-feature-copy small {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.kv-feature-arrow {
+  font-size: 15px;
+}
+
+/* Recent Activity and side panels */
+.kv-side-panel {
+  padding: 19px;
+}
+
+.kv-empty-state {
+  padding: 26px 13px;
+}
+
+.kv-empty-state > svg {
+  font-size: 26px;
+}
+
+.kv-empty-state strong {
+  font-size: 14px;
+}
+
+.kv-empty-state p {
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.kv-text-button {
+  font-size: 12px;
+}
+
+.kv-crop-list {
+  gap: 8px;
+}
+
+.kv-crop-chip {
+  gap: 9px;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.kv-crop-chip span {
+  font-size: 11px;
+}
+
+.kv-crop-disclaimer {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Generic module pages */
+.kv-module-page {
+  padding: 38px;
+}
+
+.kv-module-heading {
+  gap: 18px;
+}
+
+.kv-module-heading h1 {
+  font-size: 30px;
+}
+
+.kv-module-heading p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.kv-module-notice {
+  padding: 22px;
+}
+
+.kv-module-notice p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Footer */
+.kv-footer {
+  padding-top: 20px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Disease Detection typography */
+.dd-heading h1 {
+  font-size: clamp(28px, 2.5vw, 35px);
+}
+
+.dd-heading p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.dd-status {
+  font-size: 11px;
+}
+
+.dd-notice strong {
+  font-size: 14px;
+}
+
+.dd-notice p {
+  font-size: 13px;
+}
+
+.dd-panel-title h2,
+.dd-panel > h2 {
+  font-size: 17px;
+}
+
+.dd-panel-title > span {
+  font-size: 11px;
+}
+
+.dd-file-picker strong {
+  font-size: 14px;
+}
+
+.dd-file-picker span {
+  font-size: 12px;
+}
+
+.dd-camera-button,
+.dd-stop-camera {
+  font-size: 14px;
+}
+
+.dd-camera-placeholder span {
+  font-size: 13px;
+}
+
+.dd-preview-heading h3 {
+  font-size: 15px;
+}
+
+.dd-preview-heading button {
+  font-size: 13px;
+}
+
+.dd-file-name {
+  font-size: 12px;
+}
+
+.dd-empty-preview strong {
+  font-size: 14px;
+}
+
+.dd-empty-preview span {
+  font-size: 12px;
+}
+
+.dd-result-placeholder h3 {
+  font-size: 16px;
+}
+
+.dd-result-placeholder p {
+  font-size: 13px;
+}
+
+.dd-result-fields span {
+  font-size: 12px;
+}
+
+.dd-result-fields strong {
+  font-size: 13px;
+}
+
+.dd-localization-note {
+  font-size: 12px;
+}
+
+.dd-localization-note span {
+  font-size: 12px;
+}
+
+.dd-muted {
+  font-size: 13px;
+}
+
+.dd-treatment-placeholder strong {
+  font-size: 14px;
+}
+
+.dd-treatment-placeholder p {
+  font-size: 13px;
+}
+
+.dd-error {
+  font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .kv-header {
+    padding: 12px 20px;
+  }
+
+  .kv-nav-link {
+    min-width: 90px;
+    font-size: 12px;
+  }
+
+  .kv-hero-copy {
+    padding: 24px;
+  }
+
+  .kv-quick-card h3 {
+    font-size: 14px;
+  }
+
+  .kv-quick-card p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .kv-header {
+    padding: 10px 12px;
+  }
+
+  .kv-brand strong {
+    font-size: 17px;
+  }
+
+  .kv-brand small {
+    font-size: 10px;
+  }
+
+  .kv-nav-link {
+    min-width: 90px;
+    font-size: 11px;
+  }
+
+  .kv-main {
+    padding: 12px;
+  }
+
+  .kv-hero {
+    min-height: 300px;
+  }
+
+  .kv-hero-copy {
+    padding: 22px 18px;
+  }
+
+  .kv-hero h1 {
+    font-size: 37px;
+    letter-spacing: -1px;
+  }
+
+  .kv-welcome {
+    font-size: 18px;
+  }
+
+  .kv-hero h2 {
+    font-size: 17px;
+  }
+
+  .kv-hero-description {
+    font-size: 13px;
+  }
+
+  .kv-hero-note {
+    font-size: 11px;
+  }
+
+  .kv-section {
+    padding: 14px;
+  }
+
+  .kv-section-heading h2 {
+    font-size: 17px;
+  }
+
+  .kv-quick-card h3 {
+    font-size: 15px;
+  }
+
+  .kv-quick-card p {
+    font-size: 13px;
+  }
+
+  .kv-feature-copy strong {
+    font-size: 14px;
+  }
+
+  .kv-feature-copy small {
+    font-size: 12px;
+  }
+
+  .kv-module-page {
+    padding: 20px;
+  }
+
+  .kv-module-heading h1 {
+    font-size: 25px;
+  }
+
+  .dd-heading h1 {
+    font-size: 27px;
+  }
+
+  .dd-panel {
+    padding: 14px;
+  }
+
+  .dd-panel-title h2,
+  .dd-panel > h2 {
+    font-size: 16px;
+  }
+}
