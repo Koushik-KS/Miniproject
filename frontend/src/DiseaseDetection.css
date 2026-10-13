@@ -1,7 +1,7 @@
-
-/* =====================================================
+/* =========================================================
    KisanVision AI — Disease Detection
-   ===================================================== */
+   Responsive layout, larger typography and sticky sidebar
+   ========================================================= */
 
 .dd-redesign {
   --green: #087b52;
@@ -12,12 +12,13 @@
   --border: #dce8e1;
 
   width: 100%;
-  max-width: 1600px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 20px 22px 30px;
+  padding: 24px 26px 36px;
   color: var(--text);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .dd-redesign *,
@@ -26,25 +27,25 @@
   box-sizing: border-box;
 }
 
-/* ---------- Heading ---------- */
+/* ==================== PAGE HEADING ==================== */
 
 .dd-redesign-heading {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 19px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .dd-title-symbol {
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
-  border-radius: 14px;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  border-radius: 15px;
   background: var(--green-light);
   color: var(--green);
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .dd-title-copy {
@@ -54,23 +55,23 @@
 
 .dd-overline {
   color: #16825c;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.5px;
 }
 
 .dd-title-copy h1 {
-  margin: 4px 0;
+  margin: 5px 0;
   color: var(--green-dark);
-  font-size: clamp(25px, 2vw, 32px);
-  line-height: 1.2;
+  font-size: clamp(30px, 2.5vw, 38px);
+  line-height: 1.25;
 }
 
 .dd-title-copy p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .dd-model-pill,
@@ -78,85 +79,84 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 9px 11px;
+  gap: 8px;
+  padding: 11px 13px;
   border: 1px solid #f0dfb5;
-  border-radius: 8px;
+  border-radius: 9px;
   background: #fff6e3;
   color: #916514;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   white-space: nowrap;
 }
 
 .dd-model-pill i {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #d99b22;
 }
 
-/* ---------- Main layout ---------- */
+/* ==================== MAIN LAYOUT ==================== */
 
 .dd-redesign-layout {
   display: grid;
-  grid-template-columns: 205px minmax(0, 1fr);
-  align-items: stretch;
-  gap: 14px;
+  grid-template-columns: 225px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
 }
 
 .dd-sidebar {
-  align-self: stretch;
+  position: sticky;
+  top: 12px;
+  align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   min-width: 0;
-  min-height: 100%;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid var(--border);
-  border-radius: 13px;
+  border-radius: 14px;
   background: #f8fcf9;
 }
 
 .dd-sidebar-title {
   display: flex;
   align-items: center;
-  gap: 9px;
-  min-height: 39px;
-  padding: 4px 7px 10px;
-  margin-bottom: 4px;
+  gap: 10px;
+  min-height: 46px;
+  padding: 5px 8px 12px;
+  margin-bottom: 5px;
   border-bottom: 1px solid #e6efe9;
   color: #123d30;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .dd-sidebar-title svg {
   flex-shrink: 0;
   color: var(--green);
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .dd-sidebar-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 11px;
   width: 100%;
-  min-height: 37px;
+  min-height: 45px;
   margin: 0;
-  padding: 9px 10px;
+  padding: 10px 11px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 9px;
   background: transparent;
   color: #425e53;
   text-align: left;
-  font: inherit;
-  font-size: 12px;
-  line-height: 1.4;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
   cursor: pointer;
-  transition:
-    background 0.18s ease,
-    border-color 0.18s ease,
-    color 0.18s ease;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
 .dd-sidebar-link:hover {
@@ -165,10 +165,10 @@
 }
 
 .dd-sidebar-link svg {
-  width: 17px;
+  width: 18px;
   flex-shrink: 0;
   color: #4e8771;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .dd-sidebar-link.active {
@@ -182,56 +182,29 @@
   color: var(--green);
 }
 
+/* Sidebar agricultural photograph */
 
-/* Sidebar: stretch alongside the complete content */
-.dd-redesign-layout {
-  display: grid;
-  grid-template-columns: 205px minmax(0, 1fr);
-  align-items: stretch;
-  gap: 14px;
-}
-
-.dd-sidebar {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-  min-height: 100%;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  background: #f8fcf9;
-}
-
-/* Plantation image: fill the remaining sidebar height */
 .dd-sidebar-art {
   position: relative;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-
   width: 100%;
-  min-height: 250px;
-  height: auto;
-  margin-top: 12px;
-  padding: 14px;
-
+  min-height: 260px;
+  margin-top: 14px;
+  padding: 16px;
   overflow: hidden;
-  border-radius: 10px;
-
+  border-radius: 11px;
   background-color: #dcefe0;
   background-image:
     linear-gradient(
       to top,
       rgba(3, 45, 28, 0.92) 0%,
-      rgba(3, 45, 28, 0.35) 45%,
+      rgba(3, 45, 28, 0.40) 45%,
       rgba(3, 45, 28, 0.02) 100%
     ),
     url("/assets/healthy-crops.jpg");
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -241,44 +214,21 @@
 .dd-sidebar-art strong {
   position: relative;
   z-index: 1;
-  font-size: 14px;
-  line-height: 1.5;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 17px;
+  line-height: 1.55;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
 }
 
 .dd-art-leaf {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 13px;
+  right: 13px;
   color: #e1f8e6;
-  font-size: 28px;
+  font-size: 29px;
   opacity: 0.95;
 }
 
-/* Tablet */
-@media (max-width: 1250px) {
-  .dd-redesign-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-  }
-
-  .dd-sidebar-art {
-    min-height: 220px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .dd-redesign-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .dd-sidebar-art {
-    display: none;
-  }
-}
-
-
-/* ---------- Main content ---------- */
+/* ==================== MAIN CONTENT ==================== */
 
 .dd-redesign-main {
   min-width: 0;
@@ -287,20 +237,20 @@
 .dd-message {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
-  margin-bottom: 13px;
-  padding: 11px 13px;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 13px 15px;
   border: 1px solid #f3d5cd;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #fff3ef;
   color: #9d3b2e;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .dd-message > svg {
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .dd-message span {
@@ -310,14 +260,14 @@
 .dd-message button {
   display: grid;
   place-items: center;
-  padding: 3px;
+  padding: 4px;
   border: 0;
   background: transparent;
   color: inherit;
   cursor: pointer;
 }
 
-/* ---------- Camera / Upload / Results ---------- */
+/* ==================== CAMERA, UPLOAD & RESULTS ==================== */
 
 .dd-workbench {
   display: grid;
@@ -326,29 +276,29 @@
     minmax(0, 0.95fr)
     minmax(0, 1.2fr);
   align-items: stretch;
-  gap: 12px;
-  scroll-margin-top: 18px;
+  gap: 14px;
+  scroll-margin-top: 22px;
 }
 
 .dd-card {
   min-width: 0;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 13px;
   background: #fff;
-  box-shadow: 0 3px 10px rgba(14, 73, 48, 0.04);
+  box-shadow: 0 3px 12px rgba(14, 73, 48, 0.045);
 }
 
 .dd-camera-card,
 .dd-upload-card,
 .dd-result-card {
-  padding: 13px;
+  padding: 16px;
 }
 
 .dd-card-tabs {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
-  margin-bottom: 11px;
+  gap: 9px;
+  margin-bottom: 13px;
 }
 
 .dd-card-tabs span,
@@ -356,12 +306,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 39px;
-  padding: 9px;
-  border-radius: 8px;
-  font: inherit;
-  font-size: 12px;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
   font-weight: 750;
 }
 
@@ -387,10 +337,10 @@
   position: relative;
   display: grid;
   place-items: center;
-  height: 205px;
+  height: 230px;
   overflow: hidden;
   border: 1px solid #dcebe1;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #eaf5ee;
 }
 
@@ -405,50 +355,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 16px;
+  gap: 12px;
+  padding: 18px;
   color: #6e8a7b;
   text-align: center;
 }
 
 .dd-camera-empty svg {
   color: #12865d;
-  font-size: 32px;
+  font-size: 39px;
 }
 
 .dd-camera-empty strong {
   color: #214c3a;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .dd-camera-empty span {
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .dd-camera-choice {
   display: block;
-  margin: 10px 0;
+  margin: 13px 0;
   color: #6d8377;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .dd-camera-choice select {
   display: block;
   width: 100%;
-  margin-top: 6px;
-  padding: 10px;
+  margin-top: 7px;
+  padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 9px;
   background: #fff;
   color: #355849;
-  font: inherit;
-  font-size: 12px;
+  font-family: inherit;
+  font-size: 14px;
 }
 
 .dd-camera-controls {
   display: flex;
-  gap: 8px;
+  gap: 9px;
 }
 
 .dd-primary-action,
@@ -456,14 +406,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  min-height: 39px;
-  padding: 10px 12px;
+  gap: 9px;
+  min-height: 45px;
+  padding: 11px 14px;
   border: 0;
-  border-radius: 8px;
-  font: inherit;
-  font-size: 12px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
   font-weight: 750;
+  line-height: 1.4;
   cursor: pointer;
 }
 
@@ -498,11 +449,11 @@
 .dd-upload-preview {
   display: grid;
   place-items: center;
-  height: 205px;
-  margin-bottom: 10px;
+  height: 230px;
+  margin-bottom: 12px;
   overflow: hidden;
   border: 1px solid #e0ebe4;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #f4f9f5;
 }
 
@@ -517,25 +468,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
-  padding: 16px;
+  gap: 11px;
+  padding: 18px;
   color: #71877b;
   text-align: center;
 }
 
 .dd-upload-preview-empty svg {
   color: #16865b;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .dd-upload-preview-empty strong {
   color: #315b48;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .dd-upload-preview-empty span {
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .dd-drop-zone {
@@ -544,11 +495,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  min-height: 135px;
-  padding: 13px;
+  gap: 9px;
+  min-height: 155px;
+  padding: 15px;
   border: 1px dashed #9bcbb2;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #f7fcf9;
   color: #6d8478;
   text-align: center;
@@ -568,36 +519,36 @@
 
 .dd-drop-zone > svg {
   color: #0a8b5b;
-  font-size: 32px;
+  font-size: 38px;
 }
 
 .dd-drop-zone strong {
   color: #244f3c;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .dd-drop-zone span {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .dd-drop-zone small {
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .dd-selected-file {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 10px 0 0;
-  font-size: 11px;
+  gap: 10px;
+  padding: 12px 0 0;
+  font-size: 13px;
 }
 
 .dd-selected-file span {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -610,8 +561,8 @@
 .dd-selected-file button {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 3px;
+  gap: 6px;
+  padding: 4px;
   border: 0;
   background: transparent;
   color: #a53a2d;
@@ -623,40 +574,40 @@
 .dd-honesty-note {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  margin: 11px 0 0;
-  padding: 10px;
-  border-radius: 8px;
+  gap: 9px;
+  margin: 13px 0 0;
+  padding: 12px;
+  border-radius: 9px;
   background: #f0f7fc;
   color: #54758a;
-  font-size: 11px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .dd-honesty-note svg {
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* ---------- Results ---------- */
+/* ==================== RESULTS ==================== */
 
 .dd-result-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 11px;
+  gap: 10px;
+  margin-bottom: 13px;
 }
 
 .dd-result-heading h2,
 .dd-info-card h2 {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   margin: 0;
   color: #173e30;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .dd-result-heading h2 svg,
@@ -666,8 +617,8 @@
 }
 
 .dd-pending-pill {
-  padding: 7px 8px;
-  font-size: 9px;
+  padding: 8px 10px;
+  font-size: 12px;
 }
 
 .dd-result-empty {
@@ -675,10 +626,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 170px;
-  padding: 16px;
+  min-height: 190px;
+  padding: 18px;
   border: 1px dashed #d4e6db;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #fafdfb;
   text-align: center;
 }
@@ -686,38 +637,38 @@
 .dd-result-empty > div {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #e8f6eb;
   color: #4b9a6b;
-  font-size: 21px;
+  font-size: 24px;
 }
 
 .dd-result-empty h3 {
-  margin: 10px 0 6px;
+  margin: 12px 0 7px;
   color: #315b48;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .dd-result-empty p {
-  max-width: 290px;
+  max-width: 340px;
   margin: 0;
   color: #7a9184;
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .dd-result-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 13px;
-  margin-top: 10px;
+  gap: 0 15px;
+  margin-top: 12px;
 }
 
 .dd-result-metrics > div {
   min-width: 0;
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #e8efeb;
 }
 
@@ -725,36 +676,37 @@
   display: block;
   margin-bottom: 5px;
   color: #81958a;
-  font-size: 11px;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .dd-result-metrics strong {
   display: block;
   color: #385b4b;
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.6;
   overflow-wrap: anywhere;
 }
 
 .dd-localization-warning {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  margin-top: 11px;
-  padding: 10px;
-  border-radius: 8px;
+  gap: 9px;
+  margin-top: 13px;
+  padding: 12px;
+  border-radius: 9px;
   background: #fff8e9;
   color: #8c7040;
-  font-size: 10px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .dd-localization-warning svg {
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* ---------- Lower information cards ---------- */
+/* ==================== INFORMATION CARDS ==================== */
 
 .dd-information-grid {
   display: grid;
@@ -763,64 +715,66 @@
     minmax(0, 1fr)
     minmax(0, 1.15fr);
   align-items: start;
-  gap: 12px;
-  margin-top: 13px;
-  scroll-margin-top: 18px;
+  gap: 14px;
+  margin-top: 16px;
 }
 
 .dd-information-grid > section[id] {
-  scroll-margin-top: 18px;
+  scroll-margin-top: 22px;
 }
 
 .dd-info-card {
   min-width: 0;
   min-height: 0;
-  padding: 14px;
+  padding: 17px;
 }
 
 .dd-info-card h2 {
-  padding-bottom: 11px;
+  padding-bottom: 13px;
   border-bottom: 1px solid #e5eee8;
 }
 
 .dd-info-card > p {
-  margin: 12px 0;
+  margin: 14px 0;
   color: #71877b;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .dd-info-placeholder {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
-  margin-top: 12px;
-  padding: 11px;
-  border-radius: 8px;
+  gap: 10px;
+  margin-top: 13px;
+  padding: 13px;
+  border-radius: 9px;
   background: #f7fbf8;
   color: #789084;
-  font-size: 11px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .dd-info-placeholder svg {
   flex-shrink: 0;
+  margin-top: 3px;
   color: #16865b;
 }
+
+/* Disease area */
 
 .dd-area-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 14px 5px 2px;
+  padding: 18px 8px 5px;
   text-align: center;
 }
 
 .dd-empty-ring {
-  width: 65px;
-  height: 65px;
-  margin-bottom: 10px;
-  border: 9px solid #e7f0ea;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 13px;
+  border: 10px solid #e7f0ea;
   border-top-color: #b4d9c2;
   border-right-color: #b4d9c2;
   border-radius: 50%;
@@ -828,23 +782,23 @@
 
 .dd-area-empty strong {
   color: #456b58;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .dd-area-empty p {
-  margin: 7px 0;
+  margin: 9px 0;
   color: #7e9186;
-  font-size: 11px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
-/* Treatment cards */
+/* Treatment and prevention */
 
 .dd-treatment-row {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
-  padding: 11px 0;
+  gap: 11px;
+  padding: 14px 0;
   border-bottom: 1px solid #edf2ee;
 }
 
@@ -854,9 +808,9 @@
 
 .dd-treatment-row > svg {
   flex-shrink: 0;
-  width: 27px;
-  height: 27px;
-  padding: 6px;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
   border-radius: 50%;
   background: #e4f6ea;
   color: #16885c;
@@ -864,18 +818,18 @@
 
 .dd-treatment-row strong {
   color: #315844;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-.dd-treatment-row p {
-  margin: 5px 0 0;
-  color: #7a8e82;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
-/* ---------- Severity and FAQ sections ---------- */
+.dd-treatment-row p {
+  margin: 6px 0 0;
+  color: #7a8e82;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* ==================== SEVERITY & FAQ ==================== */
 
 .dd-full-width {
   grid-column: 1 / -1;
@@ -883,7 +837,7 @@
 }
 
 .dd-full-width > p {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .dd-faq-item {
@@ -898,38 +852,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
   width: 100%;
-  padding: 12px 0;
+  padding: 15px 0;
   border: 0;
   background: transparent;
   color: #315844;
   text-align: left;
-  font: inherit;
-  font-size: 12px;
+  font-family: inherit;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 1.6;
   cursor: pointer;
 }
 
 .dd-faq-question span:last-child {
+  flex-shrink: 0;
   color: #12865d;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .dd-faq-answer {
   margin: 0;
-  padding: 0 0 13px;
+  padding: 0 0 16px;
   color: #71877b;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-/* ---------- Tablet ---------- */
+/* ==================== TABLET ==================== */
 
 @media (max-width: 1250px) {
+  .dd-redesign {
+    padding: 20px;
+  }
+
   .dd-redesign-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 11px;
+    grid-template-columns: 195px minmax(0, 1fr);
+    gap: 13px;
   }
 
   .dd-workbench {
@@ -949,64 +909,75 @@
   }
 
   .dd-sidebar-art {
-    min-height: 220px;
+    min-height: 230px;
   }
 }
 
-/* ---------- Mobile ---------- */
+/* ==================== MOBILE ==================== */
 
 @media (max-width: 700px) {
   .dd-redesign {
-    padding: 14px 10px 22px;
+    padding: 16px 12px 24px;
+    font-size: 15px;
   }
 
   .dd-redesign-heading {
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 11px;
+    margin-bottom: 17px;
   }
 
   .dd-title-symbol {
-    width: 43px;
-    height: 43px;
-    flex-basis: 43px;
-    font-size: 21px;
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    font-size: 23px;
   }
 
   .dd-title-copy {
-    flex-basis: calc(100% - 55px);
+    flex-basis: calc(100% - 58px);
+  }
+
+  .dd-overline {
+    font-size: 10px;
   }
 
   .dd-title-copy h1 {
-    font-size: 24px;
+    font-size: 27px;
+  }
+
+  .dd-title-copy p {
+    font-size: 14px;
   }
 
   .dd-model-pill {
-    margin-left: 53px;
+    margin-left: 57px;
+    font-size: 11px;
   }
 
   .dd-redesign-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
+    gap: 12px;
   }
 
   .dd-sidebar {
+    position: static;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px;
-    padding: 9px;
+    gap: 5px;
+    padding: 10px;
   }
 
   .dd-sidebar-title {
     grid-column: 1 / -1;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   .dd-sidebar-link {
-    min-height: 39px;
-    padding: 8px;
-    font-size: 11px;
+    min-height: 43px;
+    padding: 9px;
+    font-size: 13px;
   }
 
   .dd-sidebar-art {
@@ -1016,7 +987,7 @@
   .dd-workbench,
   .dd-information-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
+    gap: 12px;
   }
 
   .dd-result-card,
@@ -1026,26 +997,52 @@
 
   .dd-video-stage,
   .dd-upload-preview {
-    height: 225px;
+    height: 235px;
   }
 
   .dd-camera-card,
   .dd-upload-card,
   .dd-result-card,
   .dd-info-card {
-    padding: 12px;
+    padding: 14px;
   }
 
   .dd-full-width {
     grid-column: auto;
   }
+
+  .dd-result-heading h2,
+  .dd-info-card h2 {
+    font-size: 16px;
+  }
+
+  .dd-result-metrics {
+    gap: 0 12px;
+  }
+
+  .dd-result-metrics strong {
+    font-size: 13px;
+  }
+
+  .dd-faq-question {
+    font-size: 14px;
+  }
 }
 
-/* ---------- Accessibility ---------- */
+/* ==================== ACCESSIBILITY ==================== */
+
+.dd-redesign button:focus-visible,
+.dd-redesign select:focus-visible,
+.dd-redesign .dd-drop-zone:focus-visible {
+  outline: 3px solid #70bd95;
+  outline-offset: 3px;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .dd-sidebar-link,
-  .dd-drop-zone {
-    transition: none;
+  .dd-redesign *,
+  .dd-redesign *::before,
+  .dd-redesign *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
   }
 }

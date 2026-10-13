@@ -20,6 +20,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 import "./App.css";
+import PlantIdentificationPage from "./PlantIdentification";
 
 const pages = [
   { name: "Home", icon: FaHome },
@@ -427,6 +428,8 @@ function App() {
           </>
         ) : activePage === "Disease Detection" ? (
           <DiseaseDetectionPage />
+          ) : activePage === "Plant Identification" ? (
+  <PlantIdentificationPage />
         ) : (
           <section className="kv-module-page">
             <div className="kv-module-heading">
