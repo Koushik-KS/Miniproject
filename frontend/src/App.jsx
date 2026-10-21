@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import DiseaseDetectionPage from "./DiseaseDetection";
 import {
   FaLeaf,
   FaHome,
@@ -19,8 +18,12 @@ import {
   FaTimes,
   FaBars,
 } from "react-icons/fa";
-import "./App.css";
+
+import DiseaseDetectionPage from "./DiseaseDetection";
 import PlantIdentificationPage from "./PlantIdentification";
+import MultipleLeafAnalysis from "./MultipleLeafAnalysis";
+import WeatherRecommendation from "./WeatherRecommendation";
+import "./App.css";
 
 const pages = [
   { name: "Home", icon: FaHome },
@@ -74,21 +77,21 @@ const features = [
   },
   {
     title: "Multi-Image Analysis",
-    text: "Compare several uploaded leaf images.",
+    text: "Review several leaf images in one workflow.",
     icon: FaImages,
     color: "blue",
     page: "Multi-Image Analysis",
   },
   {
     title: "Weather-Aware Crop Recommendation",
-    text: "Combine farm conditions with real weather data.",
+    text: "Use weather data to support crop planning.",
     icon: FaCloudSun,
     color: "sky",
     page: "Weather-Aware Crop Recommendation",
   },
   {
     title: "Prediction History",
-    text: "Review saved analyses after database setup.",
+    text: "Review saved analyses after storage is implemented.",
     icon: FaHistory,
     color: "green",
     page: "Prediction History",
@@ -105,6 +108,10 @@ function App() {
     setMobileNavOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const ActivePageIcon =
+    pages.find((page) => page.name === activePage)?.icon ||
+    FaUserCircle;
 
   return (
     <div className="kv-app">
@@ -128,7 +135,7 @@ function App() {
         <button
           type="button"
           className="kv-mobile-menu"
-          onClick={() => setMobileNavOpen(!mobileNavOpen)}
+          onClick={() => setMobileNavOpen((open) => !open)}
           aria-label="Toggle navigation"
           aria-expanded={mobileNavOpen}
         >
@@ -150,6 +157,7 @@ function App() {
               }
               onClick={() => goTo(name)}
               title={name}
+              aria-current={activePage === name ? "page" : undefined}
             >
               <Icon />
               <span>{name}</span>
@@ -257,15 +265,12 @@ function App() {
                       <div>
                         <h3>Leaf Image Analysis</h3>
                         <p>
-                          Capture or upload a leaf image for
-                          analysis.
+                          Capture or upload a leaf image for analysis.
                         </p>
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Disease Detection")
-                          }
+                          onClick={() => goTo("Disease Detection")}
                         >
                           Open analysis <FaArrowRight />
                         </button>
@@ -285,9 +290,7 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Plant Identification")
-                          }
+                          onClick={() => goTo("Plant Identification")}
                         >
                           Identify plant <FaArrowRight />
                         </button>
@@ -307,9 +310,7 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Multi-Image Analysis")
-                          }
+                          onClick={() => goTo("Multi-Image Analysis")}
                         >
                           Compare images <FaArrowRight />
                         </button>
@@ -330,13 +331,7 @@ function App() {
 
                   <div className="kv-feature-grid">
                     {features.map(
-                      ({
-                        title,
-                        text,
-                        icon: Icon,
-                        color,
-                        page,
-                      }) => (
+                      ({ title, text, icon: Icon, color, page }) => (
                         <button
                           type="button"
                           className={`kv-feature-card ${color}`}
@@ -394,7 +389,7 @@ function App() {
                       type="button"
                       className="kv-text-button"
                       onClick={() =>
-                        setShowAllCrops(!showAllCrops)
+                        setShowAllCrops((show) => !show)
                       }
                     >
                       {showAllCrops ? "Show less" : "View all"}
@@ -402,20 +397,16 @@ function App() {
                   </div>
 
                   <div className="kv-crop-list">
-                    {(showAllCrops
-                      ? crops
-                      : crops.slice(0, 8)
-                    ).map((crop, index) => (
-                      <div
-                        className="kv-crop-chip"
-                        key={crop}
-                      >
-                        <span>
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        {crop}
-                      </div>
-                    ))}
+                    {(showAllCrops ? crops : crops.slice(0, 8)).map(
+                      (crop, index) => (
+                        <div className="kv-crop-chip" key={crop}>
+                          <span>
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+                          {crop}
+                        </div>
+                      )
+                    )}
                   </div>
 
                   <p className="kv-crop-disclaimer">
@@ -428,20 +419,17 @@ function App() {
           </>
         ) : activePage === "Disease Detection" ? (
           <DiseaseDetectionPage />
-          ) : activePage === "Plant Identification" ? (
-  <PlantIdentificationPage />
+        ) : activePage === "Plant Identification" ? (
+          <PlantIdentificationPage />
+        ) : activePage === "Multi-Image Analysis" ? (
+          <MultipleLeafAnalysis />
+        ) : activePage === "Weather-Aware Crop Recommendation" ? (
+          <WeatherRecommendation />
         ) : (
           <section className="kv-module-page">
             <div className="kv-module-heading">
               <span className="kv-module-symbol">
-                {(() => {
-                  const Icon =
-                    pages.find(
-                      (page) => page.name === activePage
-                    )?.icon || FaUserCircle;
-
-                  return <Icon />;
-                })()}
+                <ActivePageIcon />
               </span>
 
               <div>

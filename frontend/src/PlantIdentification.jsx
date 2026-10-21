@@ -9,44 +9,90 @@ import {
   FaSeedling,
   FaCheckCircle,
   FaImage,
-  FaHistory,
   FaQuestionCircle,
   FaChevronDown,
   FaChevronUp,
   FaShieldAlt,
   FaCloudSun,
   FaMicroscope,
+  FaBars,
+  FaHistory,
+  FaSearch,
+  FaUsers,
 } from "react-icons/fa";
 import "./PlantIdentification.css";
+
+const crops = [
+  {
+    name: "Coffee",
+    scientific: "Coffea spp.",
+    image: "/assets/coffe.png",
+    description: "Glossy green leaves and coffee cherries.",
+  },
+  {
+    name: "Arecanut",
+    scientific: "Areca catechu",
+    image: "/assets/arecanut.png",
+    description: "Long feather-like palm leaves.",
+  },
+  {
+   
+    name: "Cardamom",
+    scientific: "Elettaria cardamomum",
+    image: "/assets/cardmone.png",
+    description: "Long green leaves of the cardamom plant.",
+  },
+  {
+    
+    name: "Ginger",
+    scientific: "Zingiber officinale",
+    image: "/assets/ginger.png",
+    description: "Narrow leaves of the ginger plant.",
+  },
+  {
+    name: "Black Pepper",
+    scientific: "Piper nigrum",
+    image: "/assets/peppar.png",
+    description: "Green leaves of the black pepper vine.",
+  },
+];
 
 const questions = [
   {
     question: "How do I identify a plant?",
     answer:
-      "Upload a clear image of the plant, leaf, flower or fruit. The image can be previewed here. A trained identification model is required to produce an actual identification.",
+      "Upload a clear photo of a leaf, flower, fruit, or whole plant. The image can be previewed here. A trained identification model must be connected before the application can identify it.",
   },
   {
-    question: "Can I upload a fruit and leaf together?",
+    question: "Which crops does this prototype support?",
     answer:
-      "Yes. You can upload a photograph showing both the fruit and leaves. For more reliable analysis, provide clear images of each plant part when possible.",
+      "The current project scope includes Coffee, Arecanut, Elakki (Cardamom), Shunti (Ginger), and Black Pepper. Actual automated identification depends on a trained and evaluated model.",
   },
   {
-    question: "Will the system identify plant diseases?",
+    question: "Can I use a live camera?",
     answer:
-      "Disease screening is a separate task. It requires a compatible, evaluated disease-detection model. This page does not generate disease predictions until a model is connected.",
+      "Yes. Allow camera permission in your browser, capture a clear plant photo, and review the captured image before using it.",
   },
   {
-    question: "Why is no identification result displayed?",
+    question: "Does plant identification detect diseases?",
     answer:
-      "The frontend is ready for image capture and upload, but a trained plant-identification model has not yet been connected.",
+      "Plant identification and disease detection are separate tasks. Disease predictions require a compatible disease-detection model.",
+  },
+  {
+    question: "Why is my identification result pending?",
+    answer:
+      "Image upload and preview are available, but the trained plant-identification model has not yet been connected. No crop prediction or confidence score is fabricated.",
   },
 ];
 
-const plantParts = [
-  { name: "Leaf", description: "Leaf shape and arrangement" },
-  { name: "Flower", description: "Flower colour and structure" },
-  { name: "Fruit", description: "Fruit shape and appearance" },
-  { name: "Whole plant", description: "Overall plant structure" },
+const characteristics = [
+  ["Plant type", "Awaiting identification"],
+  ["Leaf shape", "Awaiting identification"],
+  ["Leaf arrangement", "Awaiting identification"],
+  ["Leaf texture", "Awaiting identification"],
+  ["Flower characteristics", "Awaiting identification"],
+  ["Fruit characteristics", "Awaiting identification"],
+  ["Scientific name", "Awaiting identification"],
 ];
 
 export default function PlantIdentificationPage() {
@@ -57,6 +103,9 @@ export default function PlantIdentificationPage() {
   const [cameraError, setCameraError] = useState("");
   const [expandedFaq, setExpandedFaq] = useState(0);
   const [activeSection, setActiveSection] = useState("identify");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dragging, setDragging] = useState(false);
+
   const videoRef = useRef(null);
   const streamRef = useRef(null);
   const fileRef = useRef(null);
@@ -76,9 +125,7 @@ export default function PlantIdentificationPage() {
 
   useEffect(() => {
     return () => {
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach((track) => track.stop());
-      }
+      streamRef.current?.getTracks().forEach((track) => track.stop());
     };
   }, []);
 
@@ -89,41 +136,13 @@ export default function PlantIdentificationPage() {
     }
   }, [cameraOpen]);
 
-  const openCamera = async () => {
-    setError("");
-    setCameraError("");
-
-    if (!navigator.mediaDevices?.getUserMedia) {
-      setCameraError(
-        "Camera access is unavailable. Open this application in a supported browser using localhost or HTTPS."
-      );
-      return;
-    }
-
-    try {
-      stopCamera();
-
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: { ideal: "environment" } },
-        audio: false,
-      });
-
-      streamRef.current = stream;
-      setCameraOpen(true);
-    } catch {
-      setCameraError(
-        "Camera access failed. Allow camera permission in your browser and try again."
-      );
-    }
-  };
-
   const handleFile = (file) => {
     setError("");
 
     if (!file) return;
 
     if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
-      setError("Choose a JPG, PNG or WebP image.");
+      setError("Choose a JPG, PNG, or WebP image.");
       return;
     }
 
@@ -141,16 +160,44 @@ export default function PlantIdentificationPage() {
     };
 
     reader.onerror = () => {
-      setError("The image could not be read. Please try another file.");
+      setError("The image could not be read. Please choose another file.");
     };
 
     reader.readAsDataURL(file);
   };
 
+  const openCamera = async () => {
+    setError("");
+    setCameraError("");
+
+    if (!navigator.mediaDevices?.getUserMedia) {
+      setCameraError(
+        "Camera access is unavailable. Use a supported browser on localhost or HTTPS."
+      );
+      return;
+    }
+
+    stopCamera();
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: { ideal: "environment" } },
+        audio: false,
+      });
+
+      streamRef.current = stream;
+      setCameraOpen(true);
+    } catch {
+      setCameraError(
+        "Camera access failed. Allow camera permission in your browser and try again."
+      );
+    }
+  };
+
   const captureImage = () => {
     const video = videoRef.current;
 
-    if (!video || !video.videoWidth || !video.videoHeight) {
+    if (!video?.videoWidth || !video?.videoHeight) {
       setCameraError("Wait for the camera preview to load, then capture.");
       return;
     }
@@ -175,11 +222,9 @@ export default function PlantIdentificationPage() {
           return;
         }
 
-        const file = new File([blob], "plant-capture.jpg", {
-          type: "image/jpeg",
-        });
-
-        handleFile(file);
+        handleFile(
+          new File([blob], "plant-capture.jpg", { type: "image/jpeg" })
+        );
       },
       "image/jpeg",
       0.92
@@ -190,12 +235,12 @@ export default function PlantIdentificationPage() {
     setImage(null);
     setImageName("");
     setError("");
-
     if (fileRef.current) fileRef.current.value = "";
   };
 
   const navigateToSection = (section) => {
     setActiveSection(section);
+    setMobileMenuOpen(false);
 
     document.getElementById(`pi-${section}`)?.scrollIntoView({
       behavior: "smooth",
@@ -203,94 +248,125 @@ export default function PlantIdentificationPage() {
     });
   };
 
+  const navItems = [
+    { id: "identify", label: "Identify Plant", icon: <FaSeedling /> },
+    { id: "supported", label: "Supported Crops", icon: <FaUsers /> },
+    {
+      id: "characteristics",
+      label: "Plant Characteristics",
+      icon: <FaLeaf />,
+    },
+    { id: "parts", label: "Plant Parts", icon: <FaImage /> },
+    { id: "information", label: "Key Information", icon: <FaInfoCircle /> },
+    { id: "history", label: "Upload History", icon: <FaHistory /> },
+    { id: "faqs", label: "FAQs", icon: <FaQuestionCircle /> },
+  ];
+
   return (
     <div className="pi-page">
-      <header className="pi-heading">
+      <div className="pi-page-heading">
+        <button
+          type="button"
+          className="pi-mobile-menu-button"
+          aria-label="Open page navigation"
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          <FaBars />
+        </button>
+
         <div className="pi-heading-icon">
           <FaLeaf />
         </div>
 
         <div className="pi-heading-copy">
-          <span className="pi-eyebrow">KISANVISION AI / PLANT HEALTH</span>
+          <span className="pi-eyebrow">CROP HEALTH TOOLS</span>
           <h1>Plant Identification</h1>
           <p>
-            Upload a plant, leaf or fruit image to prepare an identification
-            analysis.
+            Upload a leaf image to prepare plant identification.
+            {" "}Supported crop scope: 5 crops.
           </p>
         </div>
 
-        <span className="pi-status">
-          <span />
-          MODEL NOT CONNECTED
-        </span>
-      </header>
+        <div className="pi-heading-decoration" aria-hidden="true">
+          <FaImage />
+        </div>
+      </div>
 
       <div className="pi-layout">
-        <aside className="pi-sidebar">
+        <aside
+          className={`pi-sidebar ${mobileMenuOpen ? "pi-sidebar-open" : ""}`}
+          aria-label="Plant identification navigation"
+        >
           <h2>
             <FaLeaf /> Plant Identification
           </h2>
 
-          <button
-            className={activeSection === "identify" ? "active" : ""}
-            onClick={() => navigateToSection("identify")}
-            type="button"
-          >
-            <FaSeedling /> Identify Plant
-          </button>
-
-          <button
-            className={activeSection === "characteristics" ? "active" : ""}
-            onClick={() => navigateToSection("characteristics")}
-            type="button"
-          >
-            <FaLeaf /> Plant Characteristics
-          </button>
-
-          <button
-            className={activeSection === "parts" ? "active" : ""}
-            onClick={() => navigateToSection("parts")}
-            type="button"
-          >
-            <FaImage /> Plant Parts
-          </button>
-
-          <button
-            className={activeSection === "information" ? "active" : ""}
-            onClick={() => navigateToSection("information")}
-            type="button"
-          >
-            <FaInfoCircle /> Key Information
-          </button>
-
-          <button
-            className={activeSection === "faqs" ? "active" : ""}
-            onClick={() => navigateToSection("faqs")}
-            type="button"
-          >
-            <FaQuestionCircle /> FAQs
-          </button>
+          <nav className="pi-side-nav">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={activeSection === item.id ? "active" : ""}
+                onClick={() => navigateToSection(item.id)}
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
 
           <div className="pi-sidebar-photo">
             <strong>
-              Know Your Plants
+              Know Your Crops
               <br />
               Grow With Confidence
             </strong>
           </div>
         </aside>
 
+        {mobileMenuOpen && (
+          <button
+            type="button"
+            className="pi-mobile-backdrop"
+            aria-label="Close navigation"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+
         <main className="pi-main">
-          <section className="pi-workbench" id="pi-identify">
-            <article className="pi-card">
-              <div className="pi-card-title">
-                <h2>
+          <section className="pi-top-grid" id="pi-identify">
+            <article className="pi-card pi-upload-card">
+              <div className="pi-upload-tabs">
+                <button
+                  type="button"
+                  className={!cameraOpen ? "selected" : ""}
+                  onClick={() => {
+                    stopCamera();
+                    fileRef.current?.click();
+                  }}
+                >
+                  <FaUpload /> Upload Image
+                </button>
+
+                <button
+                  type="button"
+                  className={cameraOpen ? "selected" : ""}
+                  onClick={openCamera}
+                >
                   <FaCamera /> Live Camera
-                </h2>
+                </button>
               </div>
 
-              <div className="pi-camera-frame">
-                {cameraOpen ? (
+              {cameraError && (
+                <div className="pi-error">
+                  <FaInfoCircle />
+                  <span>{cameraError}</span>
+                </div>
+              )}
+
+              {cameraOpen ? (
+                <div className="pi-camera-area">
                   <video
                     ref={videoRef}
                     className="pi-video"
@@ -298,32 +374,7 @@ export default function PlantIdentificationPage() {
                     muted
                     playsInline
                   />
-                ) : (
-                  <div className="pi-empty">
-                    <FaCamera />
-                    <strong>Live plant camera</strong>
-                    <span>Capture a clear view of the plant.</span>
-                  </div>
-                )}
-              </div>
-
-              {cameraError && (
-                <div className="pi-error">
-                  <FaInfoCircle /> {cameraError}
-                </div>
-              )}
-
-              <div className="pi-actions">
-                {!cameraOpen ? (
-                  <button
-                    type="button"
-                    className="pi-primary"
-                    onClick={openCamera}
-                  >
-                    <FaCamera /> Open Live Camera
-                  </button>
-                ) : (
-                  <>
+                  <div className="pi-camera-actions">
                     <button
                       type="button"
                       className="pi-primary"
@@ -331,99 +382,131 @@ export default function PlantIdentificationPage() {
                     >
                       <FaCamera /> Capture Plant
                     </button>
-
                     <button
                       type="button"
-                      className="pi-stop"
+                      className="pi-secondary"
                       onClick={stopCamera}
                     >
-                      <FaTimes /> Stop
+                      <FaTimes /> Stop Camera
                     </button>
-                  </>
+                  </div>
+                </div>
+              ) : (
+                <label
+                  className={`pi-dropzone ${dragging ? "dragging" : ""}`}
+                  onDragOver={(event) => {
+                    event.preventDefault();
+                    setDragging(true);
+                  }}
+                  onDragLeave={() => setDragging(false)}
+                  onDrop={(event) => {
+                    event.preventDefault();
+                    setDragging(false);
+                    handleFile(event.dataTransfer.files?.[0]);
+                  }}
+                >
+                  <input
+                    ref={fileRef}
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    onChange={(event) => {
+                      handleFile(event.target.files?.[0]);
+                      event.target.value = "";
+                    }}
+                  />
+                  <FaUpload className="pi-drop-icon" />
+                  <strong>Drag &amp; drop a plant image here</strong>
+                  <span>or</span>
+                  <span className="pi-choose-file">Choose File</span>
+                  <small>Supports JPG, PNG, WebP · Maximum 5 MB</small>
+                </label>
+              )}
+
+              {error && (
+                <div className="pi-error">
+                  <FaInfoCircle />
+                  <span>{error}</span>
+                </div>
+              )}
+
+              <div className="pi-supported-mini" id="pi-supported">
+                <h2>
+                  <FaSeedling /> Supported Crops (5)
+                </h2>
+
+                <div className="pi-crop-strip">
+                  {crops.map((crop) => (
+                    <div className="pi-crop-tile" key={crop.name}>
+                      <img
+                        src={crop.image}
+                        alt={`${crop.name} reference`}
+                        loading="lazy"
+                      />
+                      <strong>{crop.name}</strong>
+                      {crop.subtitle && <span>({crop.subtitle})</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+            <article className="pi-card pi-uploaded-card">
+              <div className="pi-card-title">
+                <h2>
+                  <FaImage /> Uploaded Image
+                </h2>
+                {image && (
+                  <button
+                    type="button"
+                    className="pi-clear-button"
+                    onClick={clearImage}
+                  >
+                    <FaTimes /> Remove
+                  </button>
                 )}
               </div>
 
-              <p className="pi-hint">
-                Keep the plant in focus and use natural light where possible.
-              </p>
-            </article>
-
-            <article className="pi-card">
-              <div className="pi-card-title">
-                <h2>
-                  <FaUpload /> Upload Plant Image
-                </h2>
-              </div>
-
-              <label className="pi-dropzone">
-                <input
-                  ref={fileRef}
-                  type="file"
-                  accept="image/jpeg,image/png,image/webp"
-                  onChange={(event) => handleFile(event.target.files?.[0])}
-                />
-                <FaUpload />
-                <strong>Drag a plant image here</strong>
-                <span>or click to choose a file</span>
-                <small>JPG, PNG or WebP · Maximum 5 MB</small>
-              </label>
-
-              {error && <div className="pi-error">{error}</div>}
-
-              <div className="pi-preview">
+              <div className={`pi-image-viewer ${image ? "has-image" : ""}`}>
                 {image ? (
-                  <>
-                    <img src={image} alt="Uploaded plant preview" />
-                    <div className="pi-image-caption">
-                      <span>
-                        <FaCheckCircle /> Image ready for review
-                      </span>
-                      <button type="button" onClick={clearImage}>
-                        <FaTimes /> Remove
-                      </button>
-                    </div>
-                    <p className="pi-filename">{imageName}</p>
-                  </>
+                  <img src={image} alt="Uploaded plant preview" />
                 ) : (
-                  <div className="pi-empty">
+                  <div className="pi-image-placeholder">
                     <FaLeaf />
-                    <strong>Plant image preview</strong>
-                    <span>Your selected or captured image will appear here.</span>
+                    <strong>No image selected</strong>
+                    <span>Your uploaded or captured image appears here.</span>
                   </div>
                 )}
               </div>
 
-              <div className="pi-note">
-                <FaInfoCircle />
-                <span>
-                  Image upload and preview are available. Identification
-                  requires a trained model.
-                </span>
-              </div>
+              {image && (
+                <div className="pi-image-caption">
+                  <span>
+                    <FaCheckCircle /> Image ready for review
+                  </span>
+                  <p title={imageName}>{imageName}</p>
+                </div>
+              )}
             </article>
 
-            <article className="pi-card pi-result-card">
+            <article className="pi-card pi-identification-card">
               <div className="pi-card-title pi-result-title">
                 <h2>
                   <FaShieldAlt /> Identification Result
                 </h2>
-                <span className="pi-pending">Model pending</span>
+                <span className="pi-pending">
+                  <span /> Model pending
+                </span>
               </div>
 
               <div className="pi-result-empty">
-                {image ? (
-                  <img src={image} alt="Image awaiting plant identification" />
-                ) : (
-                  <div className="pi-result-icon">
-                    <FaLeaf />
-                  </div>
-                )}
-
-                <h3>Awaiting trained model</h3>
+                <div className="pi-result-icon">
+                  <FaLeaf />
+                </div>
+                <h3>{image ? "Ready for analysis" : "Awaiting image"}</h3>
                 <p>
                   {image
-                    ? "Your image is ready. Connect and evaluate a plant-identification model to obtain a supported result."
-                    : "Capture or upload a plant image to prepare it for analysis."}
+                    ? "Your image is ready. A trained identification model is required to return a crop prediction."
+                    : "Upload or capture a plant image to prepare it for identification."}
                 </p>
               </div>
 
@@ -441,12 +524,12 @@ export default function PlantIdentificationPage() {
                   <strong>—</strong>
                 </div>
                 <div>
-                  <span>Plant family</span>
+                  <span>Category</span>
                   <strong>Not determined</strong>
                 </div>
                 <div>
-                  <span>Plant part</span>
-                  <strong>Requires analysis</strong>
+                  <span>Plant family</span>
+                  <strong>Not determined</strong>
                 </div>
                 <div>
                   <span>Disease screening</span>
@@ -454,11 +537,11 @@ export default function PlantIdentificationPage() {
                 </div>
               </div>
 
-              <div className="pi-warning">
+              <div className="pi-note">
                 <FaInfoCircle />
                 <span>
-                  No crop name or confidence score is generated until a
-                  compatible model is connected.
+                  No crop name, plant information, or confidence score is
+                  generated until a compatible model is connected.
                 </span>
               </div>
             </article>
@@ -473,51 +556,42 @@ export default function PlantIdentificationPage() {
               </div>
 
               <p className="pi-muted">
-                These characteristics will be populated from model output or
-                verified plant reference data when available.
+                Characteristics will be populated after identification or from
+                verified plant reference data.
               </p>
 
-              {[
-                "Plant type",
-                "Leaf shape",
-                "Leaf arrangement",
-                "Leaf texture",
-                "Flower characteristics",
-                "Fruit characteristics",
-                "Scientific name",
-              ].map((item) => (
-                <div className="pi-characteristic" key={item}>
-                  <span>{item}</span>
-                  <strong>Awaiting identification</strong>
-                </div>
-              ))}
+              <div className="pi-characteristics-table">
+                {characteristics.map(([label, value]) => (
+                  <div className="pi-characteristic" key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                  </div>
+                ))}
+              </div>
             </article>
 
             <article className="pi-card" id="pi-parts">
               <div className="pi-card-title">
                 <h2>
-                  <FaImage /> Plant Parts
+                  <FaImage /> Different Views (Reference Images)
                 </h2>
               </div>
 
               <p className="pi-muted">
-                Images may contain leaves, flowers, fruit or the whole plant.
-                These examples describe what can be inspected; they are not
-                identification results.
+                Example views of the supported crops. These are reference
+                photographs, not predictions from your uploaded image.
               </p>
 
-              <div className="pi-parts-grid">
-                {plantParts.map((part) => (
-                  <div className="pi-part" key={part.name}>
-                    <div className="pi-part-icon">
-                      {part.name === "Fruit" ? (
-                        <FaSeedling />
-                      ) : (
-                        <FaLeaf />
-                      )}
-                    </div>
-                    <strong>{part.name}</strong>
-                    <span>{part.description}</span>
+              <div className="pi-reference-grid">
+                {[
+                  crops[2],
+                  crops[0],
+                  crops[4],
+                ].map((crop, index) => (
+                  <div className="pi-reference-item" key={`${crop.name}-${index}`}>
+                    <img src={crop.image} alt={`${crop.name} reference view`} loading="lazy" />
+                    <strong>{["Leaf view", "Plant view", "Crop view"][index]}</strong>
+                    <span>{crop.name}</span>
                   </div>
                 ))}
               </div>
@@ -526,39 +600,73 @@ export default function PlantIdentificationPage() {
             <article className="pi-card" id="pi-information">
               <div className="pi-card-title">
                 <h2>
-                  <FaInfoCircle /> Key Information
+                  <FaSearch /> Similar Crops (For Reference)
                 </h2>
               </div>
 
-              <div className="pi-info-row">
-                <FaSeedling />
-                <span>Crop identification</span>
-                <strong>Model pending</strong>
-              </div>
-              <div className="pi-info-row">
-                <FaMicroscope />
-                <span>Disease analysis</span>
-                <strong>Separate model</strong>
-              </div>
-              <div className="pi-info-row">
-                <FaCloudSun />
-                <span>Growing conditions</span>
-                <strong>Verified data required</strong>
-              </div>
-              <div className="pi-info-row">
-                <FaShieldAlt />
-                <span>Result validation</span>
-                <strong>Not available yet</strong>
+              <p className="pi-muted">
+                Compare reference photographs. Visual similarity alone does
+                not confirm a plant's identity.
+              </p>
+
+              <div className="pi-similar-grid">
+                {crops.slice(1).map((crop) => (
+                  <div className="pi-similar-item" key={crop.name}>
+                    <img src={crop.image} alt={`${crop.name} reference`} loading="lazy" />
+                    <strong>{crop.name}</strong>
+                    {crop.subtitle && <span>({crop.subtitle})</span>}
+                  </div>
+                ))}
               </div>
 
               <div className="pi-note">
-                <FaInfoCircle />
+                <FaShieldAlt />
                 <span>
-                  Growing advice must be matched to the correctly identified
-                  crop and local conditions.
+                  Confirm identification using a trained model or a qualified
+                  agricultural expert.
                 </span>
               </div>
             </article>
+          </section>
+
+          <section className="pi-card pi-information-panel" id="pi-history">
+            <div className="pi-card-title">
+              <h2>
+                <FaHistory /> Upload History
+              </h2>
+            </div>
+            <p className="pi-muted">
+              This prototype does not yet save identification history. Uploaded
+              images remain in the current page session only.
+            </p>
+          </section>
+
+          <section className="pi-card pi-information-panel" id="pi-supported-details">
+            <div className="pi-card-title">
+              <h2>
+                <FaCloudSun /> Key Information
+              </h2>
+            </div>
+            <div className="pi-info-row">
+              <FaSeedling />
+              <span>Plant identification</span>
+              <strong>Model pending</strong>
+            </div>
+            <div className="pi-info-row">
+              <FaMicroscope />
+              <span>Disease analysis</span>
+              <strong>Separate model required</strong>
+            </div>
+            <div className="pi-info-row">
+              <FaCloudSun />
+              <span>Growing conditions</span>
+              <strong>Verified local data required</strong>
+            </div>
+            <div className="pi-info-row">
+              <FaShieldAlt />
+              <span>Result validation</span>
+              <strong>Not available yet</strong>
+            </div>
           </section>
 
           <section className="pi-card pi-faq-card" id="pi-faqs">
@@ -578,11 +686,7 @@ export default function PlantIdentificationPage() {
                   aria-expanded={expandedFaq === index}
                 >
                   <span>{item.question}</span>
-                  {expandedFaq === index ? (
-                    <FaChevronUp />
-                  ) : (
-                    <FaChevronDown />
-                  )}
+                  {expandedFaq === index ? <FaChevronUp /> : <FaChevronDown />}
                 </button>
 
                 {expandedFaq === index && <p>{item.answer}</p>}
