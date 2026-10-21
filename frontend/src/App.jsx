@@ -23,6 +23,8 @@ import DiseaseDetectionPage from "./DiseaseDetection";
 import PlantIdentificationPage from "./PlantIdentification";
 import MultipleLeafAnalysis from "./MultipleLeafAnalysis";
 import WeatherRecommendation from "./WeatherRecommendation";
+import PredictionHistory from "./PredictionHistory";
+import FarmerProfile from "./FarmerProfile";
 import "./App.css";
 
 const pages = [
@@ -35,11 +37,12 @@ const pages = [
     icon: FaCloudSun,
   },
   { name: "Prediction History", icon: FaHistory },
+ 
 ];
 
 const crops = [
   "Rice",
-  "Maize",
+  "Maize", 
   "Ragi",
   "Jowar",
   "Sugarcane",
@@ -166,21 +169,21 @@ function App() {
         </nav>
 
         <div className="kv-account">
-          <FaBell aria-label="Notifications" />
+         
 
           <button
             type="button"
             className="kv-profile"
             onClick={() => goTo("Farmer Profile")}
           >
-            <FaUserCircle />
+            <FaUserCircle /> 
             <span>Farmer</span>
           </button>
         </div>
       </header>
 
       <main className="kv-main">
-        {activePage === "Home" ? (
+        {activePage === "Home" ? ( 
           <>
             <section className="kv-hero">
               <div className="kv-hero-copy">
@@ -425,6 +428,10 @@ function App() {
           <MultipleLeafAnalysis />
         ) : activePage === "Weather-Aware Crop Recommendation" ? (
           <WeatherRecommendation />
+          ) : activePage === "Prediction History" ? (
+  <PredictionHistory />
+  ) : activePage === "Farmer Profile" ? (
+  <FarmerProfile />
         ) : (
           <section className="kv-module-page">
             <div className="kv-module-heading">

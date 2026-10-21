@@ -1,6 +1,7 @@
 
 /* ==========================================================
    KisanVision AI — Weather-Aware Crop Recommendation
+   Balanced typography + responsive layout
    ========================================================== */
 
 .wr-page {
@@ -15,8 +16,8 @@
   min-width: 0;
   padding: 20px;
   color: var(--wr-text);
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .wr-page *,
@@ -27,15 +28,21 @@
 
 .wr-page button,
 .wr-page input,
-.wr-page select {
+.wr-page select,
+.wr-page textarea {
   font: inherit;
 }
 
 .wr-page button:focus-visible,
 .wr-page input:focus-visible,
 .wr-page select:focus-visible {
-  outline: 3px solid #70bb90;
-  outline-offset: 3px;
+  outline: 2px solid #70bb90;
+  outline-offset: 2px;
+}
+
+.wr-page button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 /* Heading */
@@ -43,21 +50,21 @@
 .wr-heading {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
   min-width: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .wr-heading-icon {
   display: grid;
-  flex: 0 0 50px;
-  width: 50px;
-  height: 50px;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 11px;
   background: var(--wr-light);
   color: var(--wr-green);
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .wr-heading-copy {
@@ -68,41 +75,42 @@
 .wr-eyebrow,
 .wr-kicker {
   color: var(--wr-green);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .wr-heading-copy h1 {
   margin: 4px 0;
   color: #123d2e;
-  font-size: clamp(27px, 2.3vw, 36px);
-  line-height: 1.25;
+  font-size: clamp(25px, 2vw, 32px);
+  line-height: 1.3;
 }
 
 .wr-heading-copy p {
   margin: 0;
   color: var(--wr-muted);
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .wr-live-status {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
-  gap: 8px;
-  padding: 9px 11px;
+  gap: 7px;
+  padding: 8px 10px;
   border: 1px solid #cfe8d8;
   border-radius: 8px;
   background: #f1faf4;
   color: #246b43;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
 }
 
 .wr-live-status > span {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #2e9b5e;
 }
@@ -115,9 +123,9 @@
 
 .wr-layout {
   display: grid;
-  grid-template-columns: 225px minmax(0, 1fr);
+  grid-template-columns: 220px minmax(0, 1fr);
   align-items: start;
-  gap: 16px;
+  gap: 15px;
   min-width: 0;
 }
 
@@ -131,7 +139,7 @@
   align-self: start;
   overflow: hidden;
   border: 1px solid var(--wr-border);
-  border-radius: 13px;
+  border-radius: 12px;
   background: #fff;
   box-shadow: 0 3px 12px rgb(20 60 40 / 4%);
 }
@@ -139,21 +147,21 @@
 .wr-sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 16px 13px;
+  gap: 9px;
+  padding: 14px 12px;
   border-bottom: 1px solid #eaf0eb;
 }
 
 .wr-sidebar-brand > span {
   display: grid;
-  flex: 0 0 36px;
-  width: 36px;
-  height: 36px;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
   place-items: center;
-  border-radius: 9px;
+  border-radius: 8px;
   background: #e6f5eb;
   color: var(--wr-green);
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .wr-sidebar-brand strong,
@@ -163,30 +171,30 @@
 
 .wr-sidebar-brand strong {
   color: #204735;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .wr-sidebar-brand small {
   margin-top: 2px;
   color: #7a8a7f;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
 .wr-nav {
   display: grid;
   gap: 5px;
-  padding: 11px;
+  padding: 10px;
 }
 
 .wr-nav > button {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   width: 100%;
-  min-height: 44px;
-  padding: 10px 11px;
+  min-height: 41px;
+  padding: 9px 10px;
   border: 1px solid transparent;
   border-radius: 8px;
   background: transparent;
@@ -199,13 +207,13 @@
 .wr-nav > button > svg {
   flex-shrink: 0;
   color: #558168;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .wr-nav > button > span {
   font-size: 12px;
-  font-weight: 650;
-  line-height: 1.5;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .wr-nav > button:hover,
@@ -216,7 +224,7 @@
 }
 
 .wr-nav > button.active {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .wr-nav > button.active > svg {
@@ -225,13 +233,13 @@
 
 .wr-sidebar-photo {
   display: flex;
-  min-height: 235px;
+  min-height: 210px;
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
   gap: 4px;
   margin-top: auto;
-  padding: 17px;
+  padding: 15px;
   background-color: #477f59;
   background-image:
     linear-gradient(
@@ -240,19 +248,19 @@
       rgb(0 52 34 / 35%) 45%,
       rgb(0 52 34 / 92%) 100%
     ),
-    url("/assets/farmer.jpg");
+    url("/assets/wheather.png");
   background-position: center;
   background-size: cover;
   color: #fff;
 }
 
 .wr-sidebar-photo strong {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 .wr-sidebar-photo span {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .wr-backdrop {
@@ -264,7 +272,7 @@
 .wr-main {
   display: grid;
   min-width: 0;
-  gap: 15px;
+  gap: 14px;
 }
 
 .wr-card,
@@ -274,9 +282,9 @@
 }
 
 .wr-card {
-  padding: 17px;
+  padding: 16px;
   border: 1px solid var(--wr-border);
-  border-radius: 12px;
+  border-radius: 11px;
   background: #fff;
   box-shadow: 0 3px 12px rgb(20 60 40 / 3%);
 }
@@ -285,18 +293,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: 11px;
+  margin-bottom: 14px;
 }
 
 .wr-section-heading h2 {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   margin: 4px 0;
   color: #214735;
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .wr-section-heading h2 svg {
@@ -307,17 +315,17 @@
 .wr-section-heading p {
   margin: 0;
   color: var(--wr-muted);
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .wr-data-badge {
   flex-shrink: 0;
-  padding: 6px 9px;
+  padding: 5px 8px;
   border-radius: 6px;
   background: #e6f5eb;
   color: #176941;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
 }
 
@@ -326,28 +334,28 @@
 .wr-location-form {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 13px;
   align-items: end;
 }
 
 .wr-field {
   display: grid;
   min-width: 0;
-  gap: 7px;
+  gap: 6px;
 }
 
 .wr-field > span {
   color: #395646;
-  font-size: 13px;
-  font-weight: 750;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .wr-field input,
 .wr-field select {
   width: 100%;
   min-width: 0;
-  min-height: 43px;
-  padding: 10px 11px;
+  min-height: 42px;
+  padding: 9px 10px;
   border: 1px solid #dce7df;
   border-radius: 7px;
   background: #fff;
@@ -371,7 +379,7 @@
 .wr-input-with-icon > svg {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 11px;
   z-index: 1;
   color: #658a72;
   transform: translateY(-50%);
@@ -379,33 +387,28 @@
 }
 
 .wr-input-with-icon input {
-  padding-left: 36px;
+  padding-left: 34px;
 }
 
 .wr-primary-button {
   display: inline-flex;
-  min-height: 43px;
+  min-height: 42px;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  padding: 10px 14px;
+  gap: 8px;
+  padding: 9px 13px;
   border: 0;
   border-radius: 7px;
   background: var(--wr-green);
   color: #fff;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.18s ease;
 }
 
 .wr-primary-button:hover:not(:disabled) {
   background: #055b3e;
-}
-
-.wr-primary-button:disabled {
-  cursor: wait;
-  opacity: 0.7;
 }
 
 .wr-spin {
@@ -421,14 +424,14 @@
 .wr-data-note {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
-  margin: 13px 0 0;
-  padding: 11px 12px;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 10px 11px;
   border-radius: 7px;
   background: #f0f7f3;
   color: #55715e;
-  font-size: 12px;
-  line-height: 1.75;
+  font-size: 11px;
+  line-height: 1.7;
 }
 
 .wr-data-note > svg {
@@ -440,15 +443,15 @@
 .wr-error {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
-  margin-top: 12px;
-  padding: 11px 12px;
+  gap: 8px;
+  margin-top: 11px;
+  padding: 10px 11px;
   border: 1px solid #f0d0cc;
   border-radius: 8px;
   background: #fff3f1;
   color: #a33f38;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.65;
   overflow-wrap: anywhere;
 }
 
@@ -465,14 +468,14 @@
 
 .wr-weather-grid {
   display: grid;
-  grid-template-columns: minmax(210px, 1.4fr) repeat(3, minmax(0, 1fr));
-  gap: 11px;
+  grid-template-columns: minmax(190px, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .wr-weather-main {
   min-width: 0;
-  padding: 17px;
-  border-radius: 11px;
+  padding: 15px;
+  border-radius: 10px;
   background: linear-gradient(145deg, #e3f5e9, #f6fbf7);
 }
 
@@ -481,7 +484,7 @@
   align-items: flex-start;
   gap: 7px;
   color: #42664e;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   line-height: 1.6;
   overflow-wrap: anywhere;
@@ -496,14 +499,14 @@
 .wr-current-summary {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin: 17px 0 9px;
+  gap: 12px;
+  margin: 15px 0 8px;
 }
 
 .wr-current-summary > svg {
   flex-shrink: 0;
   color: #d59a2d;
-  font-size: 42px;
+  font-size: 36px;
 }
 
 .wr-current-summary > div {
@@ -517,20 +520,20 @@
 
 .wr-current-summary strong {
   color: #16462f;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.2;
 }
 
 .wr-current-summary span {
   margin-top: 4px;
   color: #587360;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .wr-weather-main > p {
   margin: 0;
   color: #56705e;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .wr-metric-card {
@@ -539,27 +542,27 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 12px;
-  padding: 15px;
+  gap: 10px;
+  padding: 13px;
   border: 1px solid var(--wr-border);
-  border-radius: 10px;
+  border-radius: 9px;
   background: #fff;
 }
 
 .wr-metric-card > svg {
   color: #27845b;
-  font-size: 23px;
+  font-size: 21px;
 }
 
 .wr-metric-card > span {
   color: #718176;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
 }
 
 .wr-metric-card > strong {
   color: #214735;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
@@ -568,8 +571,8 @@
 .wr-inline-empty {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 22px;
+  gap: 11px;
+  padding: 20px;
   border: 1px dashed #cfe1d4;
   border-radius: 9px;
   background: #fafdfa;
@@ -584,29 +587,29 @@
 
 .wr-empty-weather > svg {
   color: #4c9c70;
-  font-size: 33px;
+  font-size: 29px;
 }
 
 .wr-empty-weather strong {
   color: #355642;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .wr-empty-weather p {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .wr-inline-empty {
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.65;
   overflow-wrap: anywhere;
 }
 
 .wr-inline-empty > svg {
   flex-shrink: 0;
   color: #4a956a;
-  font-size: 23px;
+  font-size: 21px;
 }
 
 /* Forecast */
@@ -614,7 +617,7 @@
 .wr-forecast-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  gap: 9px;
 }
 
 .wr-forecast-day {
@@ -622,49 +625,49 @@
   min-width: 0;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 15px 9px;
+  gap: 7px;
+  padding: 13px 8px;
   border: 1px solid #e3ece5;
-  border-radius: 10px;
+  border-radius: 9px;
   background: #fbfdfb;
   text-align: center;
 }
 
 .wr-forecast-day > strong:first-child {
   color: #244a35;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .wr-forecast-date {
   color: #829086;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .wr-forecast-day > svg {
   margin: 4px 0;
   color: #d29a31;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .wr-forecast-condition {
-  min-height: 34px;
+  min-height: 32px;
   color: #5f7465;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
 .wr-forecast-temperatures {
   color: #294c37;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .wr-forecast-detail {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   color: #6b7d71;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
@@ -673,10 +676,10 @@
 }
 
 .wr-footnote {
-  margin: 13px 0 0;
+  margin: 12px 0 0;
   color: #7b8a7e;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.65;
 }
 
 /* Soil information */
@@ -684,7 +687,7 @@
 .wr-soil-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 11px;
+  gap: 10px;
 }
 
 .wr-soil-grid > div {
@@ -692,8 +695,8 @@
   min-width: 0;
   flex-direction: column;
   align-items: flex-start;
-  gap: 7px;
-  padding: 14px;
+  gap: 6px;
+  padding: 12px;
   border: 1px solid #e3ece5;
   border-radius: 9px;
   background: #fbfdfb;
@@ -701,18 +704,18 @@
 
 .wr-soil-grid > div > svg {
   color: #31845a;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .wr-soil-grid > div > span {
   color: #718176;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .wr-soil-grid > div > strong {
   color: #2b4c38;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.55;
   overflow-wrap: anywhere;
 }
 
@@ -721,8 +724,8 @@
 .wr-recommendation-pending {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  padding: 17px;
+  gap: 12px;
+  padding: 15px;
   border: 1px solid #d9eadf;
   border-radius: 10px;
   background: #f4faf5;
@@ -730,14 +733,14 @@
 
 .wr-pending-icon {
   display: grid;
-  flex: 0 0 45px;
-  width: 45px;
-  height: 45px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
   place-items: center;
-  border-radius: 10px;
+  border-radius: 9px;
   background: #e1f3e7;
   color: #24804e;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .wr-recommendation-pending > div:last-child {
@@ -747,49 +750,49 @@
 .wr-recommendation-pending strong {
   display: block;
   color: #244b34;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .wr-recommendation-pending p {
-  margin: 6px 0 0;
+  margin: 5px 0 0;
   color: #64796a;
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.75;
 }
 
 .wr-requirement-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 11px;
-  margin-top: 13px;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 .wr-requirement-grid > div {
   display: grid;
   align-content: start;
   justify-items: start;
-  gap: 8px;
-  padding: 14px;
+  gap: 7px;
+  padding: 12px;
   border: 1px solid #e4ece5;
   border-radius: 9px;
 }
 
 .wr-requirement-grid > div > svg {
   color: #348b5b;
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .wr-requirement-grid > div > strong {
   color: #345440;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .wr-requirement-grid > div > span {
   color: #77857a;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.65;
 }
 
 /* FAQ */
@@ -806,16 +809,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 11px;
   width: 100%;
-  padding: 15px 0;
+  padding: 13px 0;
   border: 0;
   background: transparent;
   color: #2e4f3a;
   text-align: left;
-  font-size: 14px;
-  font-weight: 750;
-  line-height: 1.6;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
   cursor: pointer;
 }
 
@@ -831,10 +834,10 @@
 
 .wr-faq > p {
   margin: 0;
-  padding: 0 0 15px;
+  padding: 0 0 13px;
   color: #6d7e71;
-  font-size: 13px;
-  line-height: 1.85;
+  font-size: 12px;
+  line-height: 1.75;
 }
 
 /* Footer */
@@ -843,37 +846,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 8px 16px;
+  gap: 8px 14px;
   padding: 5px 3px 2px;
   color: #7d8b80;
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 10px;
+  line-height: 1.65;
 }
 
-/* Desktop and tablet adjustments */
+/* Wide screens */
 
 @media (min-width: 1500px) {
   .wr-page {
-    padding: 23px 26px 30px;
+    padding: 22px 24px 28px;
   }
 
   .wr-layout {
-    grid-template-columns: 245px minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .wr-card {
-    padding: 19px;
-  }
-
-  .wr-main {
+    grid-template-columns: 230px minmax(0, 1fr);
     gap: 17px;
   }
 
-  .wr-weather-grid {
-    gap: 13px;
+  .wr-card {
+    padding: 18px;
+  }
+
+  .wr-main {
+    gap: 16px;
   }
 }
+
+/* Tablet and smaller desktop */
 
 @media (max-width: 1250px) {
   .wr-layout {
@@ -902,7 +903,7 @@
   }
 
   .wr-forecast-day {
-    padding: 12px 6px;
+    padding: 11px 6px;
   }
 }
 
@@ -910,25 +911,25 @@
 
 @media (max-width: 760px) {
   .wr-page {
-    padding: 13px 10px 22px;
+    padding: 12px 10px 20px;
   }
 
   .wr-heading {
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 9px;
+    margin-bottom: 14px;
   }
 
   .wr-mobile-menu {
     display: grid;
-    flex: 0 0 38px;
-    width: 38px;
-    height: 38px;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
     place-items: center;
     border: 1px solid var(--wr-border);
     border-radius: 8px;
     background: #fff;
     color: var(--wr-green);
-    font-size: 17px;
+    font-size: 16px;
     cursor: pointer;
   }
 
@@ -937,12 +938,12 @@
   }
 
   .wr-heading-copy h1 {
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .wr-heading-copy p {
     font-size: 12px;
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   .wr-eyebrow {
@@ -963,7 +964,7 @@
     top: 10px;
     bottom: 10px;
     left: 10px;
-    width: min(300px, calc(100vw - 45px));
+    width: min(290px, calc(100vw - 42px));
     min-height: 0;
     transform: translateX(calc(-100% - 20px));
     transition: transform 0.22s ease;
@@ -985,7 +986,7 @@
   }
 
   .wr-sidebar-photo {
-    min-height: 170px;
+    min-height: 165px;
   }
 
   .wr-main {
@@ -993,16 +994,16 @@
   }
 
   .wr-card {
-    padding: 13px;
+    padding: 12px;
   }
 
   .wr-section-heading {
     align-items: flex-start;
-    gap: 9px;
+    gap: 8px;
   }
 
   .wr-section-heading h2 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .wr-section-heading p {
@@ -1011,23 +1012,23 @@
 
   .wr-location-form {
     grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
+    gap: 11px;
   }
 
   .wr-field > span {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .wr-field input,
   .wr-field select {
-    min-height: 45px;
-    font-size: 14px;
+    min-height: 43px;
+    font-size: 13px;
   }
 
   .wr-primary-button {
     width: 100%;
-    min-height: 46px;
-    font-size: 14px;
+    min-height: 43px;
+    font-size: 13px;
   }
 
   .wr-weather-grid {
@@ -1039,12 +1040,12 @@
   }
 
   .wr-metric-card {
-    padding: 13px;
+    padding: 12px;
   }
 
   .wr-forecast-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
+    gap: 8px;
   }
 
   .wr-forecast-day:last-child {
@@ -1052,7 +1053,7 @@
   }
 
   .wr-forecast-day {
-    padding: 14px 10px;
+    padding: 12px 8px;
   }
 
   .wr-forecast-condition {
@@ -1073,11 +1074,11 @@
 
 @media (max-width: 450px) {
   .wr-heading-copy h1 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .wr-section-heading h2 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .wr-kicker {
@@ -1089,23 +1090,23 @@
   }
 
   .wr-weather-main {
-    padding: 14px;
+    padding: 12px;
   }
 
   .wr-current-summary strong {
-    font-size: 31px;
+    font-size: 28px;
   }
 
   .wr-current-summary > svg {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .wr-metric-card > strong {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .wr-metric-card > span {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .wr-forecast-grid {
@@ -1119,11 +1120,11 @@
 
   .wr-recommendation-pending {
     flex-direction: column;
-    padding: 13px;
+    padding: 12px;
   }
 
   .wr-recommendation-pending strong {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .wr-recommendation-pending p {
@@ -1131,7 +1132,7 @@
   }
 
   .wr-faq > button {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .wr-faq > p {
