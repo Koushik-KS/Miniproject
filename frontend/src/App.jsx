@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   FaLeaf,
@@ -37,30 +36,14 @@ const pages = [
     icon: FaCloudSun,
   },
   { name: "Prediction History", icon: FaHistory },
- 
 ];
 
 const crops = [
-  "Rice",
-  "Maize", 
-  "Ragi",
-  "Jowar",
-  "Sugarcane",
-  "Red Gram",
-  "Bengal Gram",
-  "Groundnut",
-  "Sunflower",
-  "Cotton",
   "Coffee",
+  "Black Pepper",
+  "Ginger",
+  "Cardamom",
   "Arecanut",
-  "Coconut",
-  "Tomato",
-  "Potato",
-  "Onion",
-  "Green Chilli",
-  "Mango",
-  "Banana",
-  "Grapes",
 ];
 
 const features = [
@@ -103,7 +86,6 @@ const features = [
 
 function App() {
   const [activePage, setActivePage] = useState("Home");
-  const [showAllCrops, setShowAllCrops] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const goTo = (page) => {
@@ -160,7 +142,9 @@ function App() {
               }
               onClick={() => goTo(name)}
               title={name}
-              aria-current={activePage === name ? "page" : undefined}
+              aria-current={
+                activePage === name ? "page" : undefined
+              }
             >
               <Icon />
               <span>{name}</span>
@@ -169,21 +153,19 @@ function App() {
         </nav>
 
         <div className="kv-account">
-         
-
           <button
             type="button"
             className="kv-profile"
             onClick={() => goTo("Farmer Profile")}
           >
-            <FaUserCircle /> 
+            <FaUserCircle />
             <span>Farmer</span>
           </button>
         </div>
       </header>
 
       <main className="kv-main">
-        {activePage === "Home" ? ( 
+        {activePage === "Home" ? (
           <>
             <section className="kv-hero">
               <div className="kv-hero-copy">
@@ -273,7 +255,9 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() => goTo("Disease Detection")}
+                          onClick={() =>
+                            goTo("Disease Detection")
+                          }
                         >
                           Open analysis <FaArrowRight />
                         </button>
@@ -293,7 +277,9 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() => goTo("Plant Identification")}
+                          onClick={() =>
+                            goTo("Plant Identification")
+                          }
                         >
                           Identify plant <FaArrowRight />
                         </button>
@@ -313,7 +299,9 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() => goTo("Multi-Image Analysis")}
+                          onClick={() =>
+                            goTo("Multi-Image Analysis")
+                          }
                         >
                           Compare images <FaArrowRight />
                         </button>
@@ -334,7 +322,13 @@ function App() {
 
                   <div className="kv-feature-grid">
                     {features.map(
-                      ({ title, text, icon: Icon, color, page }) => (
+                      ({
+                        title,
+                        text,
+                        icon: Icon,
+                        color,
+                        page,
+                      }) => (
                         <button
                           type="button"
                           className={`kv-feature-card ${color}`}
@@ -385,31 +379,19 @@ function App() {
                       <h2>
                         <FaSeedling /> Target Crops
                       </h2>
-                      <p>Initial project scope: 20 crops</p>
+                      <p>Current dataset scope: 5 crops</p>
                     </div>
-
-                    <button
-                      type="button"
-                      className="kv-text-button"
-                      onClick={() =>
-                        setShowAllCrops((show) => !show)
-                      }
-                    >
-                      {showAllCrops ? "Show less" : "View all"}
-                    </button>
                   </div>
 
                   <div className="kv-crop-list">
-                    {(showAllCrops ? crops : crops.slice(0, 8)).map(
-                      (crop, index) => (
-                        <div className="kv-crop-chip" key={crop}>
-                          <span>
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
-                          {crop}
-                        </div>
-                      )
-                    )}
+                    {crops.map((crop, index) => (
+                      <div className="kv-crop-chip" key={crop}>
+                        <span>
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        {crop}
+                      </div>
+                    ))}
                   </div>
 
                   <p className="kv-crop-disclaimer">
@@ -428,10 +410,10 @@ function App() {
           <MultipleLeafAnalysis />
         ) : activePage === "Weather-Aware Crop Recommendation" ? (
           <WeatherRecommendation />
-          ) : activePage === "Prediction History" ? (
-  <PredictionHistory />
-  ) : activePage === "Farmer Profile" ? (
-  <FarmerProfile />
+        ) : activePage === "Prediction History" ? (
+          <PredictionHistory />
+        ) : activePage === "Farmer Profile" ? (
+          <FarmerProfile />
         ) : (
           <section className="kv-module-page">
             <div className="kv-module-heading">
