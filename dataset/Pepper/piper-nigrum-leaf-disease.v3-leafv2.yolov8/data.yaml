@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['footrot', 'healthy', 'leaf-blight', 'pollu-disease', 'slow-decline', 'yellow-mottle-virus']
+
+roboflow:
+  workspace: pipernigrum
+  project: piper-nigrum-leaf-disease
+  version: 3
+  license: Private
+  url: https://app.roboflow.com/pipernigrum/piper-nigrum-leaf-disease/3
