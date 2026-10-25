@@ -1,0 +1,962 @@
+path_1,class_1,split_1,path_2,class_2,split_2,hash_distance
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/6 (41).jpg,Cercospora,test,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/6 (42).jpg,Cercospora,validation,4
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/8 (734).jpg,Cercospora,test,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/8 (733).jpg,Cercospora,train,4
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/4 (874).jpg,Cercospora,train,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/4 (875).jpg,Cercospora,train,2
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/6 (600).jpg,Cercospora,train,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/6 (602).jpg,Cercospora,validation,4
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/7 (1) (Custom).jpg,Cercospora,train,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/7 (1).jpg,Cercospora,train,4
+dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/7 (332).jpg,Cercospora,train,dataset/Coffee/diseased/Cerscospora-20210326T085017Z-001/Cerscospora/7 (334).jpg,Cercospora,train,4
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (104).jpg,Healthy,test,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3809).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (364).jpg,Healthy,test,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4170).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3808).jpg,Healthy,test,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (103).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3808).jpg,Healthy,test,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/2 (2).jpg,Healthy,train,2
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4166).jpg,Healthy,test,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (360).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (1).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3807).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (10).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3811).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (10).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (5).jpg,Healthy,validation,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (100).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3810).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (103).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/2 (2).jpg,Healthy,train,2
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (361).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4167).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (362).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4168).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (365).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4171).jpg,Healthy,train,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3811).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (5).jpg,Healthy,validation,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (3812).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (102).jpg,Healthy,validation,0
+dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (4169).jpg,Healthy,train,dataset/Coffee/healthy/Healthy-20210326T083815Z-001/Healthy/1 (363).jpg,Healthy,validation,0
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (109).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (110).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (109).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (112).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (109).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (119).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (115).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (117).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (115).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (121).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (115).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (113).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (149).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (148).jpg,Leaf Rust,train,0
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (149).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (152).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (169).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (167).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (255).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (258).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (27).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (29).jpg,Leaf Rust,test,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (335).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (337).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (353).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (355).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (354).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (356).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (475).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (481).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (50).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (56).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (57).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (51).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (66).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (80).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (81).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (67).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (83).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (79).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (92).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (69).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (92).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (88).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (581).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (604).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (583).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (587).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (621).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (622).jpg,Leaf Rust,test,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (621).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (624).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (622).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (624).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (622).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (631).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (657).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (654).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (657).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (662).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (660).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (661).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (660).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (664).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (684).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (687).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (719).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (718).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (755).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (760).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (767).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (770).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (786).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (782).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (786).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (784).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (838).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (839).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (838).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (837).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (867).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (865).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (932).jpg,Leaf Rust,test,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (936).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (1).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (4).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (10).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (15).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (110).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (112).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (110).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (119).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (112).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (119).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (114).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (113).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (117).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (121).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (12).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (14).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (12).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (4).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (131).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (133).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (137).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (140).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (14).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (4).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (14).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (2).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (142).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (145).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (145).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (150).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (148).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (152).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (15).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (9).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (171).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (170).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (206).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (207).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (219).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (221).jpg,Leaf Rust,train,0
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (224).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (216).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (227).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (211).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (247).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (248).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (247).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (250).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (248).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (250).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (251).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (254).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (256).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (259).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (261).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (260).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (270).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (272).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (270).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (274).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (272).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (274).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (280).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (275).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (296).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (297).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (300).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (299).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (303).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (299).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (327).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (325).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (379).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (383).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (400).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (399).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (413).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (937).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (454).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (483).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (485).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (486).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (498).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (504).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (51).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (90).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (69).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (88).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (70).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (74).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (89).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/1 (93).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (514).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (516).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (514).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (524).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (514).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (526).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (514).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (529).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (514).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (513).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (516).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (526).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (516).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (513).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (522).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (527).jpg,Leaf Rust,train,0
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (522).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (521).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (524).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (526).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (524).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (513).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (526).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (513).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (527).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (521).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (562).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (568).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (563).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (569).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (575).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (577).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (578).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (592).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (579).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (593).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (586).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (582).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (589).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (609).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (591).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (595).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (601).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (605).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (604).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (600).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (610).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (612).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (625).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (626).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (625).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (627).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (626).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (627).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (643).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (645).jpg,Leaf Rust,train,0
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (647).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (653).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (649).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (650).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (649).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (651).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (649).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (652).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (650).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (641).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (661).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (664).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (665).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (663).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (679).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (681).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (682).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (683).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (696).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (693).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (703).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (704).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (714).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (715).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (717).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (718).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (723).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (739).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (731).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (733).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (748).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (778).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (759).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (760).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (759).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (762).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (759).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (761).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (760).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (762).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (768).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (771).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (805).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (809).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (805).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (808).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (809).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (808).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (811).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (815).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (825).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (840).jpg,Leaf Rust,train,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (839).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (837).jpg,Leaf Rust,validation,2
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (868).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (866).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (879).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (883).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (891).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (895).jpg,Leaf Rust,validation,4
+dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (896).jpg,Leaf Rust,train,dataset/Coffee/diseased/Leaf rust-20210326T083416Z-001/Leaf rust/2 (897).jpg,Leaf Rust,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10006).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10004).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10008).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10007).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10051).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10052).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10062).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10061).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10081).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10082).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10083).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10084).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10123).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10124).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10126).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10125).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10136).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10135).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10182).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10181).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10203).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10204).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10230).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10229).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10236).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10235).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10240).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10239).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10303).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10304).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10318).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10317).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10318).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10315).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10318).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10316).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10357).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10359).jpg,Miner,test,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10357).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10358).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10357).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10360).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10359).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10364).jpg,Miner,test,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10359).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10358).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10359).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10363).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10359).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10360).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10364).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10362).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10364).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10363).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10364).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10360).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10364).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10361).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10376).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10375).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10377).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10378).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10389).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10390).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10402).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10401).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10403).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10404).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10403).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10421).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10403).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10422).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10415).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10413).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10415).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10414).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10415).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10416).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10442).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10441).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10474).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10473).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10475).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10476).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10533).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10534).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10535).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10536).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10543).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10544).jpg,Miner,test,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1063).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1063).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1062).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1071).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1072).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10717).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10718).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10719).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10732).jpg,Miner,test,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10719).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10720).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10721).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10722).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10728).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10727).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10732).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10720).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10744).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10743).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10749).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10750).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10757).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10758).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10762).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10761).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10764).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10759).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10764).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10760).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10764).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10763).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11118).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11117).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11245).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11246).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11295).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11296).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11298).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11297).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11356).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11355).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11369).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11370).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11371).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11372).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11377).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11384).jpg,Miner,test,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11377).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11378).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11383).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11384).jpg,Miner,test,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11461).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11462).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11566).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11565).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11634).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11633).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11674).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11673).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11709).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11710).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11738).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11737).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11753).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11754).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11769).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11770).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11775).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11776).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11825).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11826).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11855).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11856).jpg,Miner,test,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11858).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11857).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11860).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11859).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11862).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11861).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11867).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11868).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11869).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11870).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11877).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11878).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11898).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11897).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11922).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11921).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11963).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11964).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11978).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11977).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12007).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12008).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12054).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12053).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12126).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12128).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12183).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12184).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12189).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12193).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12189).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12194).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12189).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12190).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12192).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12191).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12196).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12195).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12199).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12200).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12199).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12190).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12217).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12218).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12533).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12534).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12542).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12536).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12542).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12537).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12542).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12538).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12542).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12541).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12665).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12666).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12667).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12668).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12793).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12794).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12850).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12849).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12851).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12852).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12854).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12841).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12854).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12842).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12861).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12862).jpg,Miner,test,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12877).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12878).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12885).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12886).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13085).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13086).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13087).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13088).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13129).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13130).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13211).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13212).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13221).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13222).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13237).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13238).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13240).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13239).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13241).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13242).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13407).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13408).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13418).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13417).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13419).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13420).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13476).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13503).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13476).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13504).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13493).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13494).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13636).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13635).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13689).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13690).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13691).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13692).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13760).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13759).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13762).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13761).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13803).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13804).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13824).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13823).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13827).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13828).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13832).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13831).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13834).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13833).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13840).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13839).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13841).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13842).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13844).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13843).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13845).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13846).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13867).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13868).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13871).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13872).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13899).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13900).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13977).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13978).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13983).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13984).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13991).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13992).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14001).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14002).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14017).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14018).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14039).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14040).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14044).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14043).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14045).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14046).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14048).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14047).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14085).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14086).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14095).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14096).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14123).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14124).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14155).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14156).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14157).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14158).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14161).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14162).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14163).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14166).jpg,Miner,test,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14163).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14164).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14163).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14165).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14166).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14164).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14166).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14165).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14174).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14173).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14203).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14204).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14217).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14218).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14249).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14247).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14250).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14248).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14311).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14312).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14311).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14322).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14311).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14321).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14317).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14318).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14325).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14326).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14329).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14330).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14332).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14331).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14337).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14338).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14643).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14644).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14653).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14654).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14663).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14663).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14664).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14666).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14665).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14667).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14668).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14711).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14712).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14719).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14720).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14787).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14788).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14920).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14919).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14960).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14959).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14966).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14965).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14976).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14963).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14976).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14964).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14979).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14980).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14984).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14983).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14991).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14992).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14995).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14996).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14998).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14997).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15204).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15203).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15249).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15250).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15336).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15335).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15360).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15359).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15365).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15366).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15370).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15369).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15541).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15542).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15613).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15614).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15616).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15615).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15621).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15628).jpg,Miner,test,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15621).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15622).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15628).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15627).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15683).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15684).jpg,Miner,test,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15704).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15703).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15768).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15767).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15810).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15809).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15810).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15817).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15818).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15817).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15884).jpg,Miner,test,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15883).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1062).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10000).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10455).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10003).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10005).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10009).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10010).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10011).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10012).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10012).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10010).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10025).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10026).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10027).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10028).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10030).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10029).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10031).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10032).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10033).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10034).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10037).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10038).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10039).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10040).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10041).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10042).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10045).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10046).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10055).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10056).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10057).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10058).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10060).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10059).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10063).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10064).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10065).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10066).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10067).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10068).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10067).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10077).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10067).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10078).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10068).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10077).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10069).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10070).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10071).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10072).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10073).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10074).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10075).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10076).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10077).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10078).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10079).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10080).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10085).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10086).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10087).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10088).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10089).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10090).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10091).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10092).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10094).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10093).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10095).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10096).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10118).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10117).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10120).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10119).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10121).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10122).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10134).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10133).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10137).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10138).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10140).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10139).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10141).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10142).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10175).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10176).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10179).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10180).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10195).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10196).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10197).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10198).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10199).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10200).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10201).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10202).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10205).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10206).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10207).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10208).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10209).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10210).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10211).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10212).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10217).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10218).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10219).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10220).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10232).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10231).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10233).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10234).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10237).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10238).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10242).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10241).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10255).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10256).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10257).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10258).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10261).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10262).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10264).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10263).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10266).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10265).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10305).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10311).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10313).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10314).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10317).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10315).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10317).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10316).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10339).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10340).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10342).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10341).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10343).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10344).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10344).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10345).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10344).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10346).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10345).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10346).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10347).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10348).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10353).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10354).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10355).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10356).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10358).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10360).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10362).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10363).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10362).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10361).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10363).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10360).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10363).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10361).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10365).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10366).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10368).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10367).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10369).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10370).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10371).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10372).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10373).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10374).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10391).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10392).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10397).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10398).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10399).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10400).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10404).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10421).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10404).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10422).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10405).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10406).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10407).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10408).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10410).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10409).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10411).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10412).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10413).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10414).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10413).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10416).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10414).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10416).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10418).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10417).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10419).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10420).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10421).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10422).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10423).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10424).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10425).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10426).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10429).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10430).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10443).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10444).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10467).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10468).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10469).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10470).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10472).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10471).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10478).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10477).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10541).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10542).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10545).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10546).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10548).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10547).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10615).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10616).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1065).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1066).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10666).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10665).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10667).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10668).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10669).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10670).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10669).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10675).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10669).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10676).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1067).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1068).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10670).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10675).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10670).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10676).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10671).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10672).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10673).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10674).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10675).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10676).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1069).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (1070).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10715).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10716).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10725).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10726).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10729).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10730).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10735).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10736).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10739).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10740).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10741).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10742).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10745).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10746).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10747).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10748).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10752).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10751).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10753).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10754).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10755).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10756).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10759).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10760).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10957).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10958).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10961).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10962).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10963).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10964).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10965).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10966).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11005).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11006).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11007).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11008).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11009).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11010).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11089).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11090).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11091).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11092).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11094).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11093).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11095).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11096).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11097).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11098).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11099).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11100).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11101).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11102).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11113).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11114).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11115).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11116).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11120).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11119).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11122).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11121).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11123).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11124).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11125).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11126).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11285).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11286).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11288).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11287).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11289).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11290).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11294).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11293).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11354).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11381).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11354).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11382).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11375).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11376).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11379).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11380).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11381).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11382).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11433).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11434).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11435).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11436).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11437).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11438).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11439).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11440).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11459).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11460).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11463).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11464).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11513).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11514).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11517).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11518).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11524).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11523).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11562).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11561).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11563).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11564).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11567).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11568).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11569).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11570).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11573).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11574).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11575).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11576).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11577).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11578).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11579).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11580).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11635).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11636).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11637).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11638).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11639).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11640).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11675).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11676).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11678).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11677).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11679).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11680).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11681).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11682).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11697).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11698).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11701).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11702).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11704).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11703).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11705).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11706).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11707).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11708).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11711).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11712).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11715).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11716).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11717).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11718).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11720).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11719).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11721).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11722).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11723).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11724).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11733).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11734).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11745).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11746).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11747).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11748).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11749).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11750).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11752).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11751).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11771).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11772).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11777).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11778).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11819).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11820).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11823).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11824).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11863).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11864).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11865).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11866).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11871).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11872).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11879).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11880).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11889).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11890).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11891).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11892).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11894).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11893).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11895).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11896).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11899).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11900).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11901).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11902).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11915).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11916).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11917).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11918).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11923).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11924).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11925).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11926).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11961).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11971).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11965).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11971).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11973).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11974).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11975).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11976).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12000).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11999).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12001).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12002).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12003).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12004).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12005).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12006).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12033).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12034).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12036).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12035).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12037).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12038).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12039).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12040).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12041).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12043).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12041).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12044).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12041).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12042).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12043).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12044).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12043).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12042).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12044).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12042).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12046).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12045).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12047).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12048).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12049).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12050).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12051).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12052).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12055).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12056).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12057).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12058).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12069).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12070).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12071).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12072).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12081).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12082).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12083).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12084).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12095).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12096).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12098).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12099).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12098).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12100).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12098).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12097).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12099).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12100).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12099).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12097).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12100).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12097).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12101).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12102).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12125).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12127).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12185).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12186).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12187).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12188).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12193).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12194).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12193).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12215).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12193).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12216).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12194).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12215).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12194).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12216).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12197).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12198).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12201).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12202).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12204).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12203).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12205).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12206).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12207).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12208).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12209).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12210).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12212).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12211).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12213).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12214).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12215).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12216).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12519).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12520).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12521).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12522).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12523).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12524).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12525).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12544).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12525).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12526).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12525).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12543).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12528).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12527).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12529).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12530).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12530).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12531).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12531).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12532).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12534).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12539).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12534).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12540).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12535).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12536).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12535).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12537).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12535).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12538).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12536).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12537).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12536).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12538).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12537).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12538).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12539).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12540).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12544).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12543).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12545).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12546).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12547).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12548).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12551).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12552).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12589).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12590).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12591).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12592).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12593).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12594).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12595).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12596).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12598).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12597).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12599).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12600).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12655).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12656).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12657).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12658).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12663).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12664).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12736).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12732).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12737).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12738).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12787).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12788).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12789).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12790).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12791).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12792).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12791).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12797).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12791).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12798).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12792).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12797).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12792).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12798).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12796).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12795).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12797).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12798).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12837).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12838).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12839).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12840).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12841).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12842).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12843).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12844).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12848).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12847).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12857).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12858).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12864).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12863).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12865).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12866).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12867).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12868).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12869).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12870).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12871).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12872).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12874).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12873).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12876).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12875).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12879).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12880).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12881).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12882).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12883).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12884).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13079).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13080).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13083).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13084).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13127).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13128).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13131).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13132).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13213).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13214).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13215).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13216).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13217).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13218).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13219).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13220).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13223).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13224).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13226).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13225).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13235).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13236).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13243).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13244).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13246).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13245).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13247).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13248).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13339).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13340).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13367).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13368).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13410).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13409).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13411).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13412).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13415).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13416).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13477).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13478).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13492).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13491).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13498).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13497).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13501).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13502).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13503).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13504).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13505).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13506).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13555).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13556).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13557).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13558).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13559).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13560).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13561).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13562).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13581).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13582).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13583).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13584).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13585).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13586).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13639).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13640).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13645).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13646).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13683).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13684).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13685).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13686).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13688).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13687).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13696).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13695).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13700).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13699).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13701).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13702).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13755).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13756).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13757).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13758).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13795).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13796).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13797).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13798).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13800).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13799).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13801).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13802).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13819).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13820).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13825).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13826).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13829).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13830).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13835).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13836).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13837).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13838).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13855).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13856).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13859).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13860).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13869).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13870).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13873).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13874).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13875).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13876).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13893).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13894).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13895).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13896).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13898).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13897).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13941).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13942).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13945).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13946).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13947).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13948).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13980).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13979).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13981).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13982).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13985).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13986).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13987).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13988).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13989).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13990).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13993).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13994).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14000).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13999).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14011).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14012).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14013).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14014).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14015).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14016).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14019).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14020).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14021).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14022).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14023).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14024).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14038).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14037).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14093).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14087).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14097).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14098).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14097).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14099).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14097).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14100).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14098).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14099).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14098).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14100).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14099).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14100).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14121).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14122).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14125).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14126).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14127).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14128).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14129).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14130).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14159).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14160).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14164).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14165).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14167).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14168).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14169).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14170).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14171).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14172).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14175).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14176).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14177).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14178).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14179).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14180).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14191).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14192).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14193).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14194).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14205).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14206).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14219).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14220).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14219).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14223).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14220).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14223).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14220).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14224).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14221).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14222).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14223).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14224).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14305).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14306).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14308).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14307).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14309).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14310).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14312).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14321).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14314).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14313).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14315).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14316).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14320).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14319).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14322).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14321).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14327).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14328).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14333).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14334).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14335).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14336).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14339).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14340).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14641).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14642).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14645).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14646).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14658).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14664).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14648).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14647).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14649).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14650).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14651).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14652).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14655).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14656).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14657).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14658).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14657).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14657).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14657).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14647).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14658).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14658).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14647).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14659).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14662).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14647).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14660).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14662).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14661).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14662).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14669).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14670).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14673).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14674).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14715).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14716).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14717).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14718).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14721).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14722).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14777).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14778).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14780).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14779).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14786).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14785).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14789).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14790).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14791).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14792).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14860).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14859).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14909).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14910).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14911).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14912).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14913).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14914).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14915).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14916).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14917).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14918).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14961).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14962).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14963).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14964).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14969).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14970).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14971).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14972).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14973).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14974).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14989).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14990).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14993).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14994).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15000).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14999).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15001).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15002).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15004).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15003).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15005).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15006).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15008).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15007).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15201).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15202).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15205).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15206).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15207).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15208).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15209).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15210).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15251).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15252).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15253).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15254).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15333).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15334).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15337).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15338).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15339).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15340).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15341).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15342).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15343).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15344).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15345).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15346).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15347).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15348).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15357).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15358).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15361).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15362).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15363).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15364).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15367).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15368).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15461).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15462).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15489).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15490).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15529).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15530).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15531).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15532).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15533).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15534).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15537).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15538).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15539).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15540).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15599).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15600).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15620).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15619).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15623).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15624).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15625).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15626).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15678).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15677).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15679).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15680).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15681).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15682).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15705).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15706).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15707).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15708).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15757).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15758).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15806).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15805).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15807).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15808).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15809).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15817).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15812).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15811).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15813).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15814).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15819).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15820).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15821).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15822).jpg,Miner,train,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15823).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15824).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15877).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15878).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15879).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15880).jpg,Miner,train,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15881).jpg,Miner,train,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15882).jpg,Miner,train,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10049).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10050).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10053).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10054).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10315).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10316).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10959).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (10960).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11103).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11104).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11217).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11218).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11713).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11714).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11773).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (11774).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12669).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (12670).jpg,Miner,validation,4
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13081).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13082).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13499).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13500).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13697).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (13698).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14323).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14324).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14985).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14986).jpg,Miner,validation,2
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14987).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (14988).jpg,Miner,validation,0
+dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15761).jpg,Miner,validation,dataset/Coffee/diseased/Miner-20210326T082341Z-001/Miner/1 (15762).jpg,Miner,validation,0
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/3 (936).jpg,Phoma,test,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/3 (938).jpg,Phoma,validation,2
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/4 (149).jpg,Phoma,test,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/4 (150).jpg,Phoma,train,4
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/1 (560).jpg,Phoma,train,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/1 (562).jpg,Phoma,train,4
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/2 (104).jpg,Phoma,train,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/2 (115).jpg,Phoma,train,0
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/2 (311).jpg,Phoma,train,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/2 (309).jpg,Phoma,validation,4
+dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/3 (1464).jpg,Phoma,train,dataset/Coffee/diseased/Phoma-20210326T082051Z-001/Phoma/3 (1466).jpg,Phoma,validation,2

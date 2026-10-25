@@ -1,0 +1,23 @@
+Test images: 577
+Test accuracy: 100.0000%
+
+Classes: ["Cercospora", "Healthy", "Leaf Rust", "Miner", "Phoma"]
+
+              precision    recall  f1-score   support
+
+  Cercospora     1.0000    1.0000    1.0000        49
+     Healthy     1.0000    1.0000    1.0000         9
+   Leaf Rust     1.0000    1.0000    1.0000       157
+       Miner     1.0000    1.0000    1.0000       258
+       Phoma     1.0000    1.0000    1.0000       104
+
+    accuracy                         1.0000       577
+   macro avg     1.0000    1.0000    1.0000       577
+weighted avg     1.0000    1.0000    1.0000       577
+
+Confusion matrix:
+[[ 49   0   0   0   0]
+ [  0   9   0   0   0]
+ [  0   0 157   0   0]
+ [  0   0   0 258   0]
+ [  0   0   0   0 104]]
