@@ -46,6 +46,42 @@ def main():
 
     print("\n===== COFFEE PREDICTION CHECK =====")
 
+    
+    # Test your new Coffee leaf image
+    image_path = PROJECT_ROOT / "training" / "coffee" / "test_coffee_leaf.jpg"
+
+    print("\n===== YOUR COFFEE LEAF PHOTO =====")
+
+    image_bytes = tf.io.read_file(str(image_path))
+    image = tf.io.decode_image(
+        image_bytes,
+        channels=3,
+        expand_animations=False,
+    )
+    image.set_shape([None, None, 3])
+    image = tf.image.resize(image, IMAGE_SIZE)
+    image = tf.cast(image, tf.float32)
+
+    probabilities = model.predict(
+        tf.expand_dims(image, axis=0),
+        verbose=0,
+    )[0]
+
+    predicted_index = int(np.argmax(probabilities))
+    predicted_class = class_names[predicted_index]
+    confidence = float(probabilities[predicted_index]) * 100
+
+
+    print(f"Predicted class: {predicted_class}")
+    print(f"Model confidence: {confidence:.2f}%")
+
+    print("\nProbabilities for all Coffee classes:")
+    for index, class_name in enumerate(class_names):
+        probability = float(probabilities[index]) * 100
+        print(f"{class_name}: {probability:.4f}%")
+
+
+
     for row in selected:
         image_path = PROJECT_ROOT / Path(row["relative_path"])
 
