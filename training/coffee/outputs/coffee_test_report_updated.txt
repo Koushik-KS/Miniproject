@@ -1,0 +1,37 @@
+KisanVision AI - Updated Coffee Model Evaluation
+Manifest: coffee_visual_safe_manifest_updated.csv
+Model: coffee_best_updated.keras
+Test images: 600
+Test accuracy: 99.6667%
+
+Classes: ["Cercospora", "Healthy", "Leaf Rust", "Miner", "Phoma"]
+
+Classification report:
+              precision    recall  f1-score   support
+
+  Cercospora     1.0000    1.0000    1.0000        49
+     Healthy     1.0000    1.0000    1.0000        41
+   Leaf Rust     1.0000    1.0000    1.0000       156
+       Miner     0.9921    1.0000    0.9960       250
+       Phoma     1.0000    0.9808    0.9903       104
+
+    accuracy                         0.9967       600
+   macro avg     0.9984    0.9962    0.9973       600
+weighted avg     0.9967    0.9967    0.9967       600
+
+
+Confusion matrix:
+Rows = actual, columns = predicted
+Classes: ["Cercospora", "Healthy", "Leaf Rust", "Miner", "Phoma"]
+[[ 49   0   0   0   0]
+ [  0  41   0   0   0]
+ [  0   0 156   0   0]
+ [  0   0   0 250   0]
+ [  0   0   0   2 102]]
+
+Per-class test accuracy:
+Cercospora: 49/49 (100.00%)
+Healthy: 41/41 (100.00%)
+Leaf Rust: 156/156 (100.00%)
+Miner: 250/250 (100.00%)
+Phoma: 102/104 (98.08%)
