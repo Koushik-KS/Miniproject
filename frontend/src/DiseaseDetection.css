@@ -1,24 +1,24 @@
 /* =========================================================
-   KisanVision AI — Disease Detection
-   Responsive layout, larger typography and sticky sidebar
+   KisanVision AI — Disease Detection Dashboard
+   Responsive layout, shared crop images, larger typography
    ========================================================= */
 
 .dd-redesign {
-  --green: #087b52;
-  --green-dark: #073f30;
-  --green-light: #e3f5e9;
-  --text: #16372e;
-  --muted: #6c8277;
-  --border: #dce8e1;
+  --green: #087d55;
+  --green-dark: #064a38;
+  --green-light: #e3f5eb;
+  --text: #183b30;
+  --muted: #71877c;
+  --border: #dfeae3;
 
   width: 100%;
   max-width: 1700px;
   margin: 0 auto;
-  padding: 24px 26px 36px;
+  padding: 26px 28px 38px;
   color: var(--text);
   font-family: inherit;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .dd-redesign *,
@@ -27,21 +27,36 @@
   box-sizing: border-box;
 }
 
-/* ==================== PAGE HEADING ==================== */
+.dd-redesign button,
+.dd-redesign select,
+.dd-redesign input {
+  font: inherit;
+}
+
+.dd-redesign button {
+  cursor: pointer;
+}
+
+.dd-redesign button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ==================== HEADING ==================== */
 
 .dd-redesign-heading {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .dd-title-symbol {
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
-  flex: 0 0 58px;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
   border-radius: 15px;
   background: var(--green-light);
   color: var(--green);
@@ -63,12 +78,13 @@
 .dd-title-copy h1 {
   margin: 5px 0;
   color: var(--green-dark);
-  font-size: clamp(30px, 2.5vw, 38px);
+  font-size: clamp(30px, 2.6vw, 40px);
+  font-weight: 800;
   line-height: 1.25;
 }
 
 .dd-title-copy p {
-  margin: 0;
+  margin: 5px 0 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.7;
@@ -80,36 +96,68 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 13px;
+  padding: 10px 13px;
   border: 1px solid #f0dfb5;
-  border-radius: 9px;
-  background: #fff6e3;
-  color: #916514;
+  border-radius: 10px;
+  background: #fff7e7;
+  color: #946517;
   font-size: 12px;
   font-weight: 800;
+  text-align: center;
+}
+
+.dd-model-pill {
   white-space: nowrap;
 }
 
 .dd-model-pill i {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: #d99b22;
 }
 
-/* ==================== MAIN LAYOUT ==================== */
+.dd-model-online {
+  border-color: #c8ead5;
+  background: #eaf8ef;
+  color: #08794e;
+}
+
+.dd-model-online i {
+  background: #168b58;
+}
+
+.dd-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  margin: 0 0 17px;
+  color: #7c8d84;
+  font-size: 13px;
+}
+
+.dd-breadcrumb svg {
+  font-size: 10px;
+}
+
+.dd-breadcrumb strong {
+  color: #355648;
+}
+
+/* ==================== PAGE LAYOUT ==================== */
 
 .dd-redesign-layout {
   display: grid;
-  grid-template-columns: 225px minmax(0, 1fr);
+  grid-template-columns: 245px minmax(0, 1fr);
   align-items: start;
-  gap: 16px;
+  gap: 17px;
 }
 
 .dd-sidebar {
   position: sticky;
   top: 12px;
-  align-self: start;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -117,20 +165,20 @@
   padding: 14px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: #f8fcf9;
+  background: #fbfdfb;
 }
 
 .dd-sidebar-title {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 46px;
-  padding: 5px 8px 12px;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #e6efe9;
-  color: #123d30;
-  font-size: 16px;
-  line-height: 1.4;
+  min-height: 48px;
+  padding: 5px 8px 13px;
+  margin: 0 0 5px;
+  border-bottom: 1px solid #e5eee8;
+  color: #143e30;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .dd-sidebar-title svg {
@@ -144,35 +192,32 @@
   align-items: center;
   gap: 11px;
   width: 100%;
-  min-height: 45px;
-  margin: 0;
+  min-height: 46px;
   padding: 10px 11px;
   border: 1px solid transparent;
   border-radius: 9px;
   background: transparent;
   color: #425e53;
   text-align: left;
-  font-family: inherit;
   font-size: 14px;
   line-height: 1.5;
-  cursor: pointer;
-  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  transition: background 0.18s ease, border-color 0.18s ease;
 }
 
 .dd-sidebar-link:hover {
-  border-color: #e0eee5;
+  border-color: #dceee3;
   background: #edf7f0;
 }
 
 .dd-sidebar-link svg {
   width: 18px;
   flex-shrink: 0;
-  color: #4e8771;
+  color: #528a73;
   font-size: 16px;
 }
 
 .dd-sidebar-link.active {
-  border-color: #c4ead4;
+  border-color: #c3ead4;
   background: #d8f4e5;
   color: #07563c;
   font-weight: 750;
@@ -182,27 +227,24 @@
   color: var(--green);
 }
 
-/* Sidebar agricultural photograph */
+/* Sidebar photograph */
 
 .dd-sidebar-art {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 100%;
-  min-height: 260px;
+  align-items: flex-end;
+  min-height: 300px;
   margin-top: 14px;
-  padding: 16px;
+  padding: 17px;
   overflow: hidden;
   border-radius: 11px;
   background-color: #dcefe0;
   background-image:
     linear-gradient(
       to top,
-      rgba(3, 45, 28, 0.92) 0%,
-      rgba(3, 45, 28, 0.40) 45%,
-      rgba(3, 45, 28, 0.02) 100%
+      rgba(3, 45, 28, 0.93),
+      rgba(3, 45, 28, 0.25) 70%,
+      rgba(3, 45, 28, 0.02)
     ),
     url("/assets/healthy-crops.jpg");
   background-position: center;
@@ -214,9 +256,9 @@
 .dd-sidebar-art strong {
   position: relative;
   z-index: 1;
-  font-size: 17px;
-  line-height: 1.55;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+  font-size: 18px;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px #163c2d;
 }
 
 .dd-art-leaf {
@@ -225,7 +267,6 @@
   right: 13px;
   color: #e1f8e6;
   font-size: 29px;
-  opacity: 0.95;
 }
 
 /* ==================== MAIN CONTENT ==================== */
@@ -244,13 +285,13 @@
   border-radius: 10px;
   background: #fff3ef;
   color: #9d3b2e;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .dd-message > svg {
   flex-shrink: 0;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .dd-message span {
@@ -264,10 +305,31 @@
   border: 0;
   background: transparent;
   color: inherit;
-  cursor: pointer;
 }
 
-/* ==================== CAMERA, UPLOAD & RESULTS ==================== */
+/* Crop selection */
+
+.dd-crop-select {
+  display: block;
+  margin-bottom: 15px;
+  color: #6d8377;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dd-crop-select select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 12px 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fff;
+  color: #355849;
+  font-size: 14px;
+}
+
+/* ==================== WORKBENCH ==================== */
 
 .dd-workbench {
   display: grid;
@@ -276,8 +338,8 @@
     minmax(0, 0.95fr)
     minmax(0, 1.2fr);
   align-items: stretch;
-  gap: 14px;
-  scroll-margin-top: 22px;
+  gap: 15px;
+  scroll-margin-top: 20px;
 }
 
 .dd-card {
@@ -291,7 +353,7 @@
 .dd-camera-card,
 .dd-upload-card,
 .dd-result-card {
-  padding: 16px;
+  padding: 17px;
 }
 
 .dd-card-tabs {
@@ -307,10 +369,10 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 44px;
-  padding: 10px;
+  min-height: 46px;
+  padding: 11px;
+  border: 1px solid transparent;
   border-radius: 9px;
-  font-family: inherit;
   font-size: 15px;
   font-weight: 750;
 }
@@ -321,23 +383,22 @@
 }
 
 .dd-card-tabs button {
-  border: 1px solid var(--border);
+  border-color: var(--border);
   background: #edf6f0;
   color: #274c3d;
-  cursor: pointer;
 }
 
 .dd-card-tabs button:hover {
   background: #e0f1e6;
 }
 
-/* Camera preview */
+/* ==================== CAMERA ==================== */
 
 .dd-video-stage {
   position: relative;
   display: grid;
   place-items: center;
-  height: 230px;
+  height: 235px;
   overflow: hidden;
   border: 1px solid #dcebe1;
   border-radius: 10px;
@@ -351,34 +412,42 @@
   object-fit: cover;
 }
 
-.dd-camera-empty {
+.dd-camera-empty,
+.dd-upload-preview-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   padding: 18px;
-  color: #6e8a7b;
+  color: #71877b;
   text-align: center;
 }
 
-.dd-camera-empty svg {
-  color: #12865d;
-  font-size: 39px;
+.dd-camera-empty > svg {
+  color: #13875e;
+  font-size: 40px;
 }
 
-.dd-camera-empty strong {
-  color: #214c3a;
+.dd-camera-empty strong,
+.dd-upload-preview-empty strong {
+  color: #244f3c;
   font-size: 16px;
 }
 
-.dd-camera-empty span {
+.dd-camera-empty span,
+.dd-upload-preview-empty span {
   font-size: 14px;
   line-height: 1.7;
 }
 
+.dd-upload-preview-empty > svg {
+  color: #16865b;
+  font-size: 39px;
+}
+
 .dd-camera-choice {
   display: block;
-  margin: 13px 0;
+  margin: 14px 0;
   color: #6d8377;
   font-size: 14px;
 }
@@ -392,7 +461,6 @@
   border-radius: 9px;
   background: #fff;
   color: #355849;
-  font-family: inherit;
   font-size: 14px;
 }
 
@@ -401,21 +469,21 @@
   gap: 9px;
 }
 
+/* Buttons */
+
 .dd-primary-action,
 .dd-secondary-action {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 45px;
+  min-height: 46px;
   padding: 11px 14px;
   border: 0;
   border-radius: 9px;
-  font-family: inherit;
   font-size: 14px;
   font-weight: 750;
-  line-height: 1.4;
-  cursor: pointer;
+  line-height: 1.5;
 }
 
 .dd-primary-action {
@@ -424,13 +492,12 @@
   color: #fff;
 }
 
-.dd-primary-action:hover {
+.dd-primary-action:hover:not(:disabled) {
   background: #066744;
 }
 
 .dd-primary-action:disabled {
-  opacity: 0.65;
-  cursor: wait;
+  opacity: 0.6;
 }
 
 .dd-secondary-action {
@@ -439,7 +506,7 @@
   color: #a53a2d;
 }
 
-/* Upload preview */
+/* ==================== UPLOAD IMAGE ==================== */
 
 .dd-upload-card {
   display: flex;
@@ -449,8 +516,8 @@
 .dd-upload-preview {
   display: grid;
   place-items: center;
-  height: 230px;
-  margin-bottom: 12px;
+  height: 235px;
+  margin-bottom: 13px;
   overflow: hidden;
   border: 1px solid #e0ebe4;
   border-radius: 10px;
@@ -462,31 +529,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.dd-upload-preview-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 11px;
-  padding: 18px;
-  color: #71877b;
-  text-align: center;
-}
-
-.dd-upload-preview-empty svg {
-  color: #16865b;
-  font-size: 40px;
-}
-
-.dd-upload-preview-empty strong {
-  color: #315b48;
-  font-size: 16px;
-}
-
-.dd-upload-preview-empty span {
-  font-size: 14px;
-  line-height: 1.7;
 }
 
 .dd-drop-zone {
@@ -519,7 +561,7 @@
 
 .dd-drop-zone > svg {
   color: #0a8b5b;
-  font-size: 38px;
+  font-size: 39px;
 }
 
 .dd-drop-zone strong {
@@ -532,23 +574,23 @@
 }
 
 .dd-drop-zone small {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 .dd-selected-file {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 12px 0 0;
+  gap: 9px;
+  padding: 11px 0 0;
   font-size: 13px;
 }
 
 .dd-selected-file span {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
@@ -561,13 +603,12 @@
 .dd-selected-file button {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   padding: 4px;
   border: 0;
   background: transparent;
   color: #a53a2d;
-  font: inherit;
-  cursor: pointer;
+  font-size: 13px;
   white-space: nowrap;
 }
 
@@ -589,18 +630,32 @@
   margin-top: 4px;
 }
 
-/* ==================== RESULTS ==================== */
+.dd-analyze-action {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 13px;
+  font-size: 15px;
+}
+
+.dd-pending-note {
+  margin: 8px 0 0;
+  color: #92651b;
+  font-size: 13px;
+}
+
+/* ==================== RESULT ==================== */
 
 .dd-result-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 9px;
   margin-bottom: 13px;
 }
 
 .dd-result-heading h2,
-.dd-info-card h2 {
+.dd-info-card h2,
+.dd-section-heading h2 {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -611,14 +666,15 @@
 }
 
 .dd-result-heading h2 svg,
-.dd-info-card h2 svg {
+.dd-info-card h2 svg,
+.dd-section-heading h2 svg {
   flex-shrink: 0;
   color: #13845a;
 }
 
 .dd-pending-pill {
   padding: 8px 10px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .dd-result-empty {
@@ -626,8 +682,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 190px;
-  padding: 18px;
+  min-height: 185px;
+  padding: 17px;
   border: 1px dashed #d4e6db;
   border-radius: 10px;
   background: #fafdfb;
@@ -637,16 +693,20 @@
 .dd-result-empty > div {
   display: grid;
   place-items: center;
-  width: 50px;
-  height: 50px;
+  width: 49px;
+  height: 49px;
   border-radius: 50%;
   background: #e8f6eb;
   color: #4b9a6b;
   font-size: 24px;
 }
 
+.dd-result-empty.dd-has-prediction > div {
+  color: #168b58;
+}
+
 .dd-result-empty h3 {
-  margin: 12px 0 7px;
+  margin: 11px 0 6px;
   color: #315b48;
   font-size: 16px;
 }
@@ -657,27 +717,27 @@
   color: #7a9184;
   font-size: 14px;
   line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
 .dd-result-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 15px;
-  margin-top: 12px;
+  margin-top: 11px;
 }
 
 .dd-result-metrics > div {
   min-width: 0;
-  padding: 12px 0;
+  padding: 11px 0;
   border-bottom: 1px solid #e8efeb;
 }
 
 .dd-result-metrics span {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: #81958a;
   font-size: 13px;
-  line-height: 1.5;
 }
 
 .dd-result-metrics strong {
@@ -692,13 +752,14 @@
   display: flex;
   align-items: flex-start;
   gap: 9px;
-  margin-top: 13px;
+  margin-top: 12px;
   padding: 12px;
   border-radius: 9px;
   background: #fff8e9;
   color: #8c7040;
   font-size: 13px;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .dd-localization-warning svg {
@@ -706,36 +767,162 @@
   margin-top: 4px;
 }
 
+/* ==================== PROBABILITY BARS ==================== */
+
+.dd-probabilities {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #e5eee8;
+}
+
+.dd-probabilities h3 {
+  margin: 0 0 13px;
+  color: #173e30;
+  font-size: 15px;
+}
+
+.dd-probability-row {
+  margin-bottom: 12px;
+}
+
+.dd-probability-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 5px;
+  color: #456b58;
+  font-size: 13px;
+}
+
+.dd-probability-label strong {
+  color: #173e30;
+  font-variant-numeric: tabular-nums;
+}
+
+.dd-probability-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #e8f0eb;
+}
+
+.dd-probability-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #087b52;
+  transition: width 0.25s ease;
+}
+
+/* ==================== SUPPORTED CROPS ==================== */
+
+.dd-crops-card {
+  margin-top: 15px;
+  padding: 17px;
+  scroll-margin-top: 20px;
+}
+
+.dd-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.dd-section-heading > span {
+  color: #71877b;
+  font-size: 12px;
+}
+
+.dd-crop-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.dd-crop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #e6eee8;
+  border-radius: 10px;
+  background: #fbfdfb;
+  color: #355849;
+  text-align: center;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.dd-crop-item:hover,
+.dd-crop-item.selected {
+  border-color: #8fc8a8;
+  background: #eff9f2;
+}
+
+.dd-crop-image {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 8px;
+  border-radius: 7px;
+  background: #e6f2e8;
+  object-fit: cover;
+}
+
+.dd-crop-item strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dd-crop-item em {
+  margin-top: 3px;
+  color: #829388;
+  font-size: 11px;
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
+.dd-crop-item small {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dd-crop-item .crop-ready {
+  color: #08794e;
+}
+
+.dd-crop-item .crop-pending {
+  color: #946517;
+}
+
 /* ==================== INFORMATION CARDS ==================== */
 
 .dd-information-grid {
   display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr)
-    minmax(0, 1.15fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
-  gap: 14px;
-  margin-top: 16px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .dd-information-grid > section[id] {
-  scroll-margin-top: 22px;
+  scroll-margin-top: 20px;
 }
 
 .dd-info-card {
   min-width: 0;
-  min-height: 0;
   padding: 17px;
 }
 
 .dd-info-card h2 {
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #e5eee8;
 }
 
 .dd-info-card > p {
-  margin: 14px 0;
+  margin: 13px 0;
   color: #71877b;
   font-size: 14px;
   line-height: 1.8;
@@ -744,23 +931,24 @@
 .dd-info-placeholder {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-top: 13px;
-  padding: 13px;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 12px;
   border-radius: 9px;
-  background: #f7fbf8;
+  background: #f5faf6;
   color: #789084;
   font-size: 14px;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .dd-info-placeholder svg {
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 4px;
   color: #16865b;
 }
 
-/* Disease area */
+/* Area and severity */
 
 .dd-area-empty {
   display: flex;
@@ -774,7 +962,7 @@
   width: 75px;
   height: 75px;
   margin-bottom: 13px;
-  border: 10px solid #e7f0ea;
+  border: 9px solid #e7f0ea;
   border-top-color: #b4d9c2;
   border-right-color: #b4d9c2;
   border-radius: 50%;
@@ -792,13 +980,21 @@
   line-height: 1.7;
 }
 
-/* Treatment and prevention */
+.dd-full-width {
+  grid-column: 1 / -1;
+}
+
+.dd-full-width > p {
+  margin-bottom: 12px;
+}
+
+/* ==================== TREATMENT ==================== */
 
 .dd-treatment-row {
   display: flex;
   align-items: flex-start;
   gap: 11px;
-  padding: 14px 0;
+  padding: 13px 0;
   border-bottom: 1px solid #edf2ee;
 }
 
@@ -808,9 +1004,9 @@
 
 .dd-treatment-row > svg {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  padding: 7px;
+  width: 33px;
+  height: 33px;
+  padding: 8px;
   border-radius: 50%;
   background: #e4f6ea;
   color: #16885c;
@@ -823,22 +1019,63 @@
 }
 
 .dd-treatment-row p {
-  margin: 6px 0 0;
+  margin: 5px 0 0;
   color: #7a8e82;
   font-size: 13px;
   line-height: 1.75;
 }
 
-/* ==================== SEVERITY & FAQ ==================== */
+/* ==================== HISTORY ==================== */
 
-.dd-full-width {
-  grid-column: 1 / -1;
-  min-height: 0;
+.dd-history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 13px;
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fbfdfb;
 }
 
-.dd-full-width > p {
-  margin-bottom: 12px;
+.dd-history-item img {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
 }
+
+.dd-history-item > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 4px;
+}
+
+.dd-history-item strong {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.dd-history-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dd-history-item button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  color: #087b52;
+  font-size: 13px;
+}
+
+/* ==================== FAQ ==================== */
 
 .dd-faq-item {
   border-bottom: 1px solid #e5eee8;
@@ -852,181 +1089,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
   padding: 15px 0;
   border: 0;
   background: transparent;
   color: #315844;
   text-align: left;
-  font-family: inherit;
   font-size: 15px;
   font-weight: 700;
-  line-height: 1.6;
-  cursor: pointer;
 }
 
 .dd-faq-question span:last-child {
   flex-shrink: 0;
   color: #12865d;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .dd-faq-answer {
   margin: 0;
-  padding: 0 0 16px;
+  padding: 0 0 15px;
   color: #71877b;
   font-size: 14px;
   line-height: 1.8;
-}
-
-/* ==================== TABLET ==================== */
-
-@media (max-width: 1250px) {
-  .dd-redesign {
-    padding: 20px;
-  }
-
-  .dd-redesign-layout {
-    grid-template-columns: 195px minmax(0, 1fr);
-    gap: 13px;
-  }
-
-  .dd-workbench {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .dd-result-card {
-    grid-column: 1 / -1;
-  }
-
-  .dd-information-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .dd-information-grid > section:last-child:not(.dd-full-width) {
-    grid-column: 1 / -1;
-  }
-
-  .dd-sidebar-art {
-    min-height: 230px;
-  }
-}
-
-/* ==================== MOBILE ==================== */
-
-@media (max-width: 700px) {
-  .dd-redesign {
-    padding: 16px 12px 24px;
-    font-size: 15px;
-  }
-
-  .dd-redesign-heading {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 11px;
-    margin-bottom: 17px;
-  }
-
-  .dd-title-symbol {
-    width: 46px;
-    height: 46px;
-    flex-basis: 46px;
-    font-size: 23px;
-  }
-
-  .dd-title-copy {
-    flex-basis: calc(100% - 58px);
-  }
-
-  .dd-overline {
-    font-size: 10px;
-  }
-
-  .dd-title-copy h1 {
-    font-size: 27px;
-  }
-
-  .dd-title-copy p {
-    font-size: 14px;
-  }
-
-  .dd-model-pill {
-    margin-left: 57px;
-    font-size: 11px;
-  }
-
-  .dd-redesign-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .dd-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5px;
-    padding: 10px;
-  }
-
-  .dd-sidebar-title {
-    grid-column: 1 / -1;
-    margin-bottom: 3px;
-  }
-
-  .dd-sidebar-link {
-    min-height: 43px;
-    padding: 9px;
-    font-size: 13px;
-  }
-
-  .dd-sidebar-art {
-    display: none;
-  }
-
-  .dd-workbench,
-  .dd-information-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .dd-result-card,
-  .dd-information-grid > section:last-child:not(.dd-full-width) {
-    grid-column: auto;
-  }
-
-  .dd-video-stage,
-  .dd-upload-preview {
-    height: 235px;
-  }
-
-  .dd-camera-card,
-  .dd-upload-card,
-  .dd-result-card,
-  .dd-info-card {
-    padding: 14px;
-  }
-
-  .dd-full-width {
-    grid-column: auto;
-  }
-
-  .dd-result-heading h2,
-  .dd-info-card h2 {
-    font-size: 16px;
-  }
-
-  .dd-result-metrics {
-    gap: 0 12px;
-  }
-
-  .dd-result-metrics strong {
-    font-size: 13px;
-  }
-
-  .dd-faq-question {
-    font-size: 14px;
-  }
 }
 
 /* ==================== ACCESSIBILITY ==================== */
@@ -1047,3 +1132,303 @@
   }
 }
 
+/* ==================== TABLET ==================== */
+
+@media (max-width: 1250px) {
+  .dd-redesign {
+    padding: 21px;
+  }
+
+  .dd-redesign-layout {
+    grid-template-columns: 205px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .dd-workbench {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-result-card {
+    grid-column: 1 / -1;
+  }
+
+  .dd-information-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-sidebar-art {
+    min-height: 245px;
+  }
+
+  .dd-crop-image {
+    height: 85px;
+  }
+}
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 700px) {
+  .dd-redesign {
+    padding: 15px 12px 25px;
+    font-size: 15px;
+  }
+
+  .dd-redesign-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-bottom: 15px;
+  }
+
+  .dd-title-symbol {
+    width: 47px;
+    height: 47px;
+    flex-basis: 47px;
+    font-size: 23px;
+  }
+
+  .dd-title-copy {
+    flex-basis: calc(100% - 58px);
+  }
+
+  .dd-overline {
+    font-size: 10px;
+  }
+
+  .dd-title-copy h1 {
+    font-size: 27px;
+  }
+
+  .dd-title-copy p {
+    font-size: 14px;
+  }
+
+  .dd-model-pill {
+    margin-left: 58px;
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .dd-breadcrumb {
+    justify-content: flex-start;
+  }
+
+  .dd-redesign-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .dd-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .dd-sidebar-title {
+    grid-column: 1 / -1;
+  }
+
+  .dd-sidebar-link {
+    min-height: 43px;
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .dd-sidebar-art {
+    display: none;
+  }
+
+  .dd-workbench,
+  .dd-information-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .dd-result-card,
+  .dd-full-width {
+    grid-column: auto;
+  }
+
+  .dd-video-stage,
+  .dd-upload-preview {
+    height: 235px;
+  }
+
+  .dd-camera-card,
+  .dd-upload-card,
+  .dd-result-card,
+  .dd-info-card,
+  .dd-crops-card {
+    padding: 14px;
+  }
+
+  .dd-crop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-crop-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .dd-crop-image {
+    height: 120px;
+  }
+
+  .dd-result-heading h2,
+  .dd-info-card h2,
+  .dd-section-heading h2 {
+    font-size: 16px;
+  }
+
+  .dd-result-metrics {
+    gap: 0 12px;
+  }
+
+  .dd-result-metrics strong {
+    font-size: 13px;
+  }
+
+  .dd-faq-question {
+    font-size: 14px;
+  }
+
+  .dd-history-item {
+    flex-wrap: wrap;
+  }
+
+  .dd-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/* ==================== REFINED FONT SIZES ==================== */
+
+.dd-redesign {
+  font-size: 14px;
+}
+
+.dd-title-copy h1 {
+  font-size: clamp(27px, 2.3vw, 35px);
+}
+
+.dd-title-copy p {
+  font-size: 14px;
+}
+
+.dd-sidebar-title {
+  font-size: 15px;
+}
+
+.dd-sidebar-link {
+  font-size: 13px;
+}
+
+.dd-card-tabs span,
+.dd-card-tabs button {
+  font-size: 13px;
+}
+
+.dd-camera-empty strong,
+.dd-upload-preview-empty strong {
+  font-size: 14px;
+}
+
+.dd-camera-empty span,
+.dd-upload-preview-empty span {
+  font-size: 13px;
+}
+
+.dd-drop-zone strong {
+  font-size: 14px;
+}
+
+.dd-drop-zone span {
+  font-size: 13px;
+}
+
+.dd-drop-zone small {
+  font-size: 11px;
+}
+
+.dd-result-heading h2,
+.dd-info-card h2,
+.dd-section-heading h2 {
+  font-size: 15px;
+}
+
+.dd-result-empty h3 {
+  font-size: 14px;
+}
+
+.dd-result-empty p {
+  font-size: 13px;
+}
+
+.dd-result-metrics span {
+  font-size: 12px;
+}
+
+.dd-result-metrics strong {
+  font-size: 13px;
+}
+
+.dd-probabilities h3 {
+  font-size: 14px;
+}
+
+.dd-probability-label {
+  font-size: 12px;
+}
+
+.dd-crop-item strong {
+  font-size: 13px;
+}
+
+.dd-crop-item em,
+.dd-crop-item small {
+  font-size: 10px;
+}
+
+.dd-info-card > p,
+.dd-info-placeholder {
+  font-size: 13px;
+}
+
+.dd-treatment-row strong {
+  font-size: 13px;
+}
+
+.dd-treatment-row p {
+  font-size: 12px;
+}
+
+.dd-faq-question {
+  font-size: 14px;
+}
+
+.dd-faq-answer {
+  font-size: 13px;
+}
+
+/* Keep mobile text comfortable to read */
+@media (max-width: 700px) {
+  .dd-title-copy h1 {
+    font-size: 25px;
+  }
+
+  .dd-title-copy p {
+    font-size: 13px;
+  }
+
+  .dd-sidebar-link {
+    font-size: 12px;
+  }
+
+  .dd-result-heading h2,
+  .dd-info-card h2,
+  .dd-section-heading h2 {
+    font-size: 14px;
+  }
+}
