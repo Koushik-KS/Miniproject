@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   FaLeaf,
@@ -8,7 +9,6 @@ import {
   FaCloudSun,
   FaHistory,
   FaUserCircle,
-  FaBell,
   FaArrowRight,
   FaCamera,
   FaUpload,
@@ -16,6 +16,8 @@ import {
   FaInfoCircle,
   FaTimes,
   FaBars,
+  FaCheckCircle,
+  FaClock,
 } from "react-icons/fa";
 
 import DiseaseDetectionPage from "./DiseaseDetection";
@@ -39,11 +41,36 @@ const pages = [
 ];
 
 const crops = [
-  "Coffee",
-  "Black Pepper",
-  "Ginger",
-  "Cardamom",
-  "Arecanut",
+  {
+    name: "Coffee",
+    scientific: "Coffea spp.",
+    image: "/assets/coffe.png",
+    supported: true,
+  },
+  {
+    name: "Arecanut",
+    scientific: "Areca catechu",
+    image: "/assets/arecanut.png",
+    supported: false,
+  },
+  {
+    name: "Cardamom",
+    scientific: "Elettaria cardamomum",
+    image: "/assets/cardmone.png",
+    supported: false,
+  },
+  {
+    name: "Ginger",
+    scientific: "Zingiber officinale",
+    image: "/assets/ginger.png",
+    supported: false,
+  },
+  {
+    name: "Black Pepper",
+    scientific: "Piper nigrum",
+    image: "/assets/peppar.png",
+    supported: false,
+  },
 ];
 
 const features = [
@@ -87,6 +114,7 @@ const features = [
 function App() {
   const [activePage, setActivePage] = useState("Home");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [selectedCrop, setSelectedCrop] = useState("Coffee");
 
   const goTo = (page) => {
     setActivePage(page);
@@ -98,8 +126,13 @@ function App() {
     pages.find((page) => page.name === activePage)?.icon ||
     FaUserCircle;
 
+  const selectedCropDetails = crops.find(
+    (crop) => crop.name === selectedCrop
+  );
+
   return (
     <div className="kv-app">
+      {/* HEADER */}
       <header className="kv-header">
         <button
           type="button"
@@ -164,9 +197,11 @@ function App() {
         </div>
       </header>
 
+      {/* MAIN CONTENT */}
       <main className="kv-main">
         {activePage === "Home" ? (
           <>
+            {/* HERO SECTION */}
             <section className="kv-hero">
               <div className="kv-hero-copy">
                 <span className="kv-eyebrow">
@@ -231,8 +266,145 @@ function App() {
               </div>
             </section>
 
+            {/* SUPPORTED CROPS SECTION ON HOME */}
+            <section
+              className="kv-section kv-supported-section"
+              aria-labelledby="kv-supported-heading"
+            >
+              <div className="kv-section-heading kv-supported-heading">
+                <div>
+                  <span className="kv-eyebrow">
+                    KISANVISION AI / PLANT HEALTH
+                  </span>
+
+                  <h2 id="kv-supported-heading">
+                    <FaSeedling /> Supported Crops (5)
+                  </h2>
+
+                  <p>
+                    Explore supported crops and their model
+                    integration status.
+                  </p>
+                </div>
+
+                <span className="kv-crop-count">
+                  {crops.length} crops
+                </span>
+              </div>
+
+              {/* FIVE ORIGINAL CROP IMAGES */}
+              <div className="kv-supported-grid">
+                {crops.map((crop) => (
+                  <button
+                    type="button"
+                    key={crop.name}
+                    className={[
+                      "kv-supported-card",
+                      crop.supported
+                        ? "model-connected"
+                        : "model-pending",
+                      selectedCrop === crop.name
+                        ? "crop-selected"
+                        : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    onClick={() => setSelectedCrop(crop.name)}
+                    aria-pressed={selectedCrop === crop.name}
+                  >
+                    <div className="kv-supported-image-wrap">
+                      <img
+                        className="kv-supported-image"
+                        src={crop.image}
+                        alt={`${crop.name} plant`}
+                        loading="lazy"
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    </div>
+
+                    <span className="kv-supported-name">
+                      {crop.name}
+                    </span>
+
+                    <span className="kv-supported-scientific">
+                      {crop.scientific}
+                    </span>
+
+                    <span
+                      className={`kv-model-status ${
+                        crop.supported
+                          ? "status-connected"
+                          : "status-pending"
+                      }`}
+                    >
+                      {crop.supported ? (
+                        <FaCheckCircle />
+                      ) : (
+                        <FaClock />
+                      )}
+
+                      {crop.supported
+                        ? "Model connected"
+                        : "Model pending"}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* SELECTED CROP STATUS */}
+              {selectedCropDetails && (
+                <div
+                  className="kv-selected-crop-info"
+                  aria-live="polite"
+                >
+                  <div className="kv-selected-crop-icon">
+                    {selectedCropDetails.supported ? (
+                      <FaCheckCircle />
+                    ) : (
+                      <FaInfoCircle />
+                    )}
+                  </div>
+
+                  <div>
+                    <strong>
+                      {selectedCropDetails.name} —{" "}
+                      {selectedCropDetails.supported
+                        ? "Model connected"
+                        : "Model pending"}
+                    </strong>
+
+                    <p>
+                      {selectedCropDetails.supported
+                        ? "Coffee disease classification is configured as connected. Prediction quality must still be evaluated."
+                        : `A separately trained and tested ${selectedCropDetails.name} model is required before disease predictions can be provided.`}
+                    </p>
+                  </div>
+
+                  {selectedCropDetails.supported && (
+                    <button
+                      type="button"
+                      className="kv-crop-action"
+                      onClick={() => goTo("Disease Detection")}
+                    >
+                      Open Disease Detection <FaArrowRight />
+                    </button>
+                  )}
+                </div>
+              )}
+
+              <p className="kv-supported-disclaimer">
+                <FaShieldAlt />
+                Predictions are experimental. Pending crops require
+                their own trained and tested models.
+              </p>
+            </section>
+
+            {/* DASHBOARD GRID */}
             <div className="kv-dashboard-grid">
               <div className="kv-dashboard-main">
+                {/* QUICK START */}
                 <section className="kv-section">
                   <div className="kv-section-heading">
                     <div>
@@ -255,9 +427,7 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Disease Detection")
-                          }
+                          onClick={() => goTo("Disease Detection")}
                         >
                           Open analysis <FaArrowRight />
                         </button>
@@ -277,9 +447,7 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Plant Identification")
-                          }
+                          onClick={() => goTo("Plant Identification")}
                         >
                           Identify plant <FaArrowRight />
                         </button>
@@ -299,9 +467,7 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() =>
-                            goTo("Multi-Image Analysis")
-                          }
+                          onClick={() => goTo("Multi-Image Analysis")}
                         >
                           Compare images <FaArrowRight />
                         </button>
@@ -310,6 +476,7 @@ function App() {
                   </div>
                 </section>
 
+                {/* PROJECT MODULES */}
                 <section className="kv-section">
                   <div className="kv-section-heading">
                     <div>
@@ -352,6 +519,7 @@ function App() {
                 </section>
               </div>
 
+              {/* RIGHT SIDEBAR */}
               <aside className="kv-dashboard-side">
                 <section className="kv-section kv-side-panel">
                   <div className="kv-section-heading">
@@ -359,6 +527,7 @@ function App() {
                       <h2>
                         <FaHistory /> Recent Activity
                       </h2>
+
                       <p>Database connection required</p>
                     </div>
                   </div>
@@ -366,6 +535,7 @@ function App() {
                   <div className="kv-empty-state">
                     <FaInfoCircle />
                     <strong>No saved activity yet</strong>
+
                     <p>
                       Real analysis history will appear here after
                       storage is implemented.
@@ -379,24 +549,37 @@ function App() {
                       <h2>
                         <FaSeedling /> Target Crops
                       </h2>
+
                       <p>Current dataset scope: 5 crops</p>
                     </div>
                   </div>
 
                   <div className="kv-crop-list">
                     {crops.map((crop, index) => (
-                      <div className="kv-crop-chip" key={crop}>
+                      <button
+                        type="button"
+                        className="kv-crop-chip"
+                        key={crop.name}
+                        onClick={() => {
+                          setSelectedCrop(crop.name);
+                          window.scrollTo({
+                            top: 0,
+                            behavior: "smooth",
+                          });
+                        }}
+                      >
                         <span>
                           {String(index + 1).padStart(2, "0")}
                         </span>
-                        {crop}
-                      </div>
+
+                        {crop.name}
+                      </button>
                     ))}
                   </div>
 
                   <p className="kv-crop-disclaimer">
-                    Target crops only. Model support depends on
-                    dataset availability and evaluation.
+                    Model availability depends on training,
+                    evaluation and integration.
                   </p>
                 </section>
               </aside>
@@ -440,6 +623,7 @@ function App() {
 
               <div>
                 <strong>Not connected yet</strong>
+
                 <p>
                   This page does not produce predictions or
                   recommendations yet. The required model, backend
@@ -459,6 +643,7 @@ function App() {
           </section>
         )}
 
+        {/* FOOTER */}
         <footer className="kv-footer">
           <span>
             © KisanVision AI · BAI586 academic mini-project

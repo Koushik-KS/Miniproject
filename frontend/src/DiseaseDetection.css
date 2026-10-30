@@ -1,6 +1,7 @@
+
 /* =========================================================
    KisanVision AI — Disease Detection Dashboard
-   Responsive layout, shared crop images, larger typography
+   Complete responsive stylesheet
    ========================================================= */
 
 .dd-redesign {
@@ -17,7 +18,7 @@
   padding: 26px 28px 38px;
   color: var(--text);
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -42,7 +43,7 @@
   opacity: 0.6;
 }
 
-/* ==================== HEADING ==================== */
+/* Header */
 
 .dd-redesign-heading {
   display: flex;
@@ -78,7 +79,7 @@
 .dd-title-copy h1 {
   margin: 5px 0;
   color: var(--green-dark);
-  font-size: clamp(30px, 2.6vw, 40px);
+  font-size: clamp(27px, 2.3vw, 35px);
   font-weight: 800;
   line-height: 1.25;
 }
@@ -86,7 +87,7 @@
 .dd-title-copy p {
   margin: 5px 0 0;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -96,12 +97,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 13px;
+  padding: 9px 12px;
   border: 1px solid #f0dfb5;
   border-radius: 10px;
   background: #fff7e7;
   color: #946517;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-align: center;
 }
@@ -135,7 +136,7 @@
   gap: 9px;
   margin: 0 0 17px;
   color: #7c8d84;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .dd-breadcrumb svg {
@@ -146,7 +147,7 @@
   color: #355648;
 }
 
-/* ==================== PAGE LAYOUT ==================== */
+/* Main layout and sidebar */
 
 .dd-redesign-layout {
   display: grid;
@@ -177,7 +178,7 @@
   margin: 0 0 5px;
   border-bottom: 1px solid #e5eee8;
   color: #143e30;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -192,14 +193,14 @@
   align-items: center;
   gap: 11px;
   width: 100%;
-  min-height: 46px;
+  min-height: 44px;
   padding: 10px 11px;
   border: 1px solid transparent;
   border-radius: 9px;
   background: transparent;
   color: #425e53;
   text-align: left;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   transition: background 0.18s ease, border-color 0.18s ease;
 }
@@ -226,8 +227,6 @@
 .dd-sidebar-link.active svg {
   color: var(--green);
 }
-
-/* Sidebar photograph */
 
 .dd-sidebar-art {
   position: relative;
@@ -256,7 +255,7 @@
 .dd-sidebar-art strong {
   position: relative;
   z-index: 1;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.6;
   text-shadow: 0 1px 4px #163c2d;
 }
@@ -269,7 +268,7 @@
   font-size: 29px;
 }
 
-/* ==================== MAIN CONTENT ==================== */
+/* Main content */
 
 .dd-redesign-main {
   min-width: 0;
@@ -285,7 +284,7 @@
   border-radius: 10px;
   background: #fff3ef;
   color: #9d3b2e;
-  font-size: 14px;
+  font-size: 13px;
   overflow-wrap: anywhere;
 }
 
@@ -307,13 +306,13 @@
   color: inherit;
 }
 
-/* Crop selection */
+/* Crop selector */
 
 .dd-crop-select {
   display: block;
   margin-bottom: 15px;
   color: #6d8377;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -321,15 +320,16 @@
   display: block;
   width: 100%;
   margin-top: 7px;
-  padding: 12px 13px;
+  padding: 11px 13px;
   border: 1px solid var(--border);
   border-radius: 9px;
   background: #fff;
   color: #355849;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-/* ==================== WORKBENCH ==================== */
+/* Camera, upload and result cards:
+   These three cards remain together on the detection dashboard. */
 
 .dd-workbench {
   display: grid;
@@ -353,7 +353,7 @@
 .dd-camera-card,
 .dd-upload-card,
 .dd-result-card {
-  padding: 17px;
+  padding: 15px;
 }
 
 .dd-card-tabs {
@@ -369,11 +369,11 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 46px;
-  padding: 11px;
+  min-height: 42px;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 9px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 750;
 }
 
@@ -392,7 +392,7 @@
   background: #e0f1e6;
 }
 
-/* ==================== CAMERA ==================== */
+/* Camera */
 
 .dd-video-stage {
   position: relative;
@@ -417,7 +417,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
   padding: 18px;
   color: #71877b;
   text-align: center;
@@ -425,18 +425,18 @@
 
 .dd-camera-empty > svg {
   color: #13875e;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .dd-camera-empty strong,
 .dd-upload-preview-empty strong {
   color: #244f3c;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .dd-camera-empty span,
 .dd-upload-preview-empty span {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -449,19 +449,19 @@
   display: block;
   margin: 14px 0;
   color: #6d8377;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dd-camera-choice select {
   display: block;
   width: 100%;
   margin-top: 7px;
-  padding: 12px;
+  padding: 11px;
   border: 1px solid var(--border);
   border-radius: 9px;
   background: #fff;
   color: #355849;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dd-camera-controls {
@@ -469,19 +469,19 @@
   gap: 9px;
 }
 
-/* Buttons */
+/* Action buttons */
 
 .dd-primary-action,
 .dd-secondary-action {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-height: 46px;
-  padding: 11px 14px;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 12px;
   border: 0;
   border-radius: 9px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 750;
   line-height: 1.5;
 }
@@ -506,7 +506,7 @@
   color: #a53a2d;
 }
 
-/* ==================== UPLOAD IMAGE ==================== */
+/* Upload preview and drop zone */
 
 .dd-upload-card {
   display: flex;
@@ -537,9 +537,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-height: 155px;
-  padding: 15px;
+  gap: 8px;
+  min-height: 145px;
+  padding: 14px;
   border: 1px dashed #9bcbb2;
   border-radius: 10px;
   background: #f7fcf9;
@@ -561,20 +561,20 @@
 
 .dd-drop-zone > svg {
   color: #0a8b5b;
-  font-size: 39px;
+  font-size: 36px;
 }
 
 .dd-drop-zone strong {
   color: #244f3c;
-  font-size: 15px;
-}
-
-.dd-drop-zone span {
   font-size: 14px;
 }
 
+.dd-drop-zone span {
+  font-size: 13px;
+}
+
 .dd-drop-zone small {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.7;
 }
 
@@ -584,7 +584,7 @@
   justify-content: space-between;
   gap: 9px;
   padding: 11px 0 0;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .dd-selected-file span {
@@ -608,7 +608,7 @@
   border: 0;
   background: transparent;
   color: #a53a2d;
-  font-size: 13px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -617,11 +617,11 @@
   align-items: flex-start;
   gap: 9px;
   margin: 13px 0 0;
-  padding: 12px;
+  padding: 10px;
   border-radius: 9px;
   background: #f0f7fc;
   color: #54758a;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.7;
 }
 
@@ -630,20 +630,37 @@
   margin-top: 4px;
 }
 
-.dd-analyze-action {
-  width: 100%;
-  min-height: 50px;
-  margin-top: 13px;
-  font-size: 15px;
+/* Compact Analyze Disease button */
+
+.dd-redesign .dd-upload-card .dd-analyze-action {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  max-width: 100%;
+  height: 40px;
+  min-height: 40px;
+  margin: 14px auto 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dd-redesign .dd-upload-card .dd-analyze-action svg {
+  font-size: 13px;
 }
 
 .dd-pending-note {
   margin: 8px 0 0;
   color: #92651b;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-/* ==================== RESULT ==================== */
+/* Detection result */
 
 .dd-result-heading {
   display: flex;
@@ -661,7 +678,7 @@
   gap: 9px;
   margin: 0;
   color: #173e30;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -673,8 +690,27 @@
 }
 
 .dd-pending-pill {
-  padding: 8px 10px;
-  font-size: 11px;
+  padding: 7px 9px;
+  font-size: 10px;
+}
+
+.dd-result-image,
+.dd-area-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid #dce9df;
+  border-radius: 9px;
+  background: #f4f9f5;
+}
+
+.dd-result-image img,
+.dd-area-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .dd-result-empty {
@@ -682,8 +718,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 185px;
-  padding: 17px;
+  min-height: 175px;
+  padding: 15px;
   border: 1px dashed #d4e6db;
   border-radius: 10px;
   background: #fafdfb;
@@ -693,12 +729,12 @@
 .dd-result-empty > div {
   display: grid;
   place-items: center;
-  width: 49px;
-  height: 49px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: #e8f6eb;
   color: #4b9a6b;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .dd-result-empty.dd-has-prediction > div {
@@ -706,16 +742,16 @@
 }
 
 .dd-result-empty h3 {
-  margin: 11px 0 6px;
+  margin: 10px 0 6px;
   color: #315b48;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .dd-result-empty p {
   max-width: 340px;
   margin: 0;
   color: #7a9184;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.75;
   overflow-wrap: anywhere;
 }
@@ -723,13 +759,13 @@
 .dd-result-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 15px;
+  gap: 0 13px;
   margin-top: 11px;
 }
 
 .dd-result-metrics > div {
   min-width: 0;
-  padding: 11px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #e8efeb;
 }
 
@@ -737,13 +773,13 @@
   display: block;
   margin-bottom: 4px;
   color: #81958a;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .dd-result-metrics strong {
   display: block;
   color: #385b4b;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
@@ -753,11 +789,11 @@
   align-items: flex-start;
   gap: 9px;
   margin-top: 12px;
-  padding: 12px;
+  padding: 10px;
   border-radius: 9px;
   background: #fff8e9;
   color: #8c7040;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
@@ -767,18 +803,18 @@
   margin-top: 4px;
 }
 
-/* ==================== PROBABILITY BARS ==================== */
+/* Probability bars */
 
 .dd-probabilities {
-  margin-top: 16px;
+  margin-top: 15px;
   padding-top: 13px;
   border-top: 1px solid #e5eee8;
 }
 
 .dd-probabilities h3 {
-  margin: 0 0 13px;
+  margin: 0 0 12px;
   color: #173e30;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .dd-probability-row {
@@ -791,7 +827,7 @@
   gap: 10px;
   margin-bottom: 5px;
   color: #456b58;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .dd-probability-label strong {
@@ -813,11 +849,11 @@
   transition: width 0.25s ease;
 }
 
-/* ==================== SUPPORTED CROPS ==================== */
+/* Supported Crops */
 
 .dd-crops-card {
   margin-top: 15px;
-  padding: 17px;
+  padding: 16px;
   scroll-margin-top: 20px;
 }
 
@@ -831,7 +867,7 @@
 
 .dd-section-heading > span {
   color: #71877b;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .dd-crop-grid {
@@ -871,21 +907,21 @@
 }
 
 .dd-crop-item strong {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .dd-crop-item em {
   margin-top: 3px;
   color: #829388;
-  font-size: 11px;
+  font-size: 10px;
   font-style: italic;
   overflow-wrap: anywhere;
 }
 
 .dd-crop-item small {
   margin-top: 6px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -897,7 +933,7 @@
   color: #946517;
 }
 
-/* ==================== INFORMATION CARDS ==================== */
+/* Information cards */
 
 .dd-information-grid {
   display: grid;
@@ -913,7 +949,7 @@
 
 .dd-info-card {
   min-width: 0;
-  padding: 17px;
+  padding: 16px;
 }
 
 .dd-info-card h2 {
@@ -924,7 +960,7 @@
 .dd-info-card > p {
   margin: 13px 0;
   color: #71877b;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
@@ -933,11 +969,11 @@
   align-items: flex-start;
   gap: 9px;
   margin-top: 12px;
-  padding: 12px;
+  padding: 11px;
   border-radius: 9px;
   background: #f5faf6;
   color: #789084;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
@@ -948,7 +984,7 @@
   color: #16865b;
 }
 
-/* Area and severity */
+/* Disease area and severity */
 
 .dd-area-empty {
   display: flex;
@@ -970,13 +1006,13 @@
 
 .dd-area-empty strong {
   color: #456b58;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dd-area-empty p {
   margin: 9px 0;
   color: #7e9186;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.7;
 }
 
@@ -988,7 +1024,172 @@
   margin-bottom: 12px;
 }
 
-/* ==================== TREATMENT ==================== */
+/* Separate book-style information pages */
+
+.dd-book-page {
+  position: relative;
+  min-width: 0;
+  padding: clamp(20px, 3vw, 38px);
+  overflow: hidden;
+  border: 1px solid #d8e7dc;
+  border-radius: 6px 18px 18px 6px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 125, 85, 0.055),
+      transparent 24px
+    ),
+    #fffef9;
+  box-shadow:
+    -5px 0 0 #e0eee4,
+    0 12px 28px rgba(14, 73, 48, 0.09);
+  animation: dd-page-turn 0.38s ease both;
+}
+
+.dd-book-page::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  width: 1px;
+  background: #e3e9dd;
+  content: "";
+}
+
+.dd-book-page > * {
+  position: relative;
+}
+
+.dd-book-page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #dcebe0;
+}
+
+.dd-book-page-heading h2 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.35;
+}
+
+.dd-book-page-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dd-book-page-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dd-book-page-content .dd-info-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dd-book-page-content .dd-info-card.dd-full-width {
+  grid-column: 1 / -1;
+}
+
+.dd-page-turn {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #dce9df;
+  border-radius: 12px;
+  background: #fffefb;
+  box-shadow: 0 8px 22px rgba(14, 73, 48, 0.07);
+  animation: dd-page-enter 0.32s ease both;
+}
+
+.dd-view-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #dce9df;
+}
+
+.dd-view-heading > svg {
+  flex-shrink: 0;
+  color: #087d55;
+  font-size: 29px;
+}
+
+.dd-view-heading h2 {
+  margin: 0;
+  color: #064a38;
+  font-size: 23px;
+  line-height: 1.4;
+}
+
+.dd-view-heading p {
+  margin: 5px 0 0;
+  color: #71877c;
+  font-size: 13px;
+}
+
+.dd-separate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 0;
+}
+
+.dd-separate-grid .dd-full-width {
+  grid-column: 1 / -1;
+}
+
+.dd-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.dd-back-arrow {
+  transform: rotate(180deg);
+}
+
+.dd-history-back {
+  width: auto;
+  margin-top: 12px;
+  padding: 9px 14px;
+}
+
+@keyframes dd-page-turn {
+  from {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-4deg) translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0) translateX(0);
+  }
+}
+
+@keyframes dd-page-enter {
+  from {
+    opacity: 0;
+    transform: translateX(8px) rotateY(-2deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+/* Treatment and prevention */
 
 .dd-treatment-row {
   display: flex;
@@ -1014,18 +1215,18 @@
 
 .dd-treatment-row strong {
   color: #315844;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
 .dd-treatment-row p {
   margin: 5px 0 0;
   color: #7a8e82;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.75;
 }
 
-/* ==================== HISTORY ==================== */
+/* Upload history */
 
 .dd-history-item {
   display: flex;
@@ -1056,12 +1257,12 @@
 
 .dd-history-item strong {
   overflow-wrap: anywhere;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .dd-history-item span {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .dd-history-item button {
@@ -1072,10 +1273,10 @@
   border: 0;
   background: transparent;
   color: #087b52;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-/* ==================== FAQ ==================== */
+/* FAQs */
 
 .dd-faq-item {
   border-bottom: 1px solid #e5eee8;
@@ -1096,7 +1297,7 @@
   background: transparent;
   color: #315844;
   text-align: left;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -1110,11 +1311,27 @@
   margin: 0;
   padding: 0 0 15px;
   color: #71877b;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
-/* ==================== ACCESSIBILITY ==================== */
+/* Footer */
+
+.dd-redesign > footer,
+.dd-dashboard-footer {
+  margin-top: 16px;
+}
+
+.dd-redesign-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  color: #71877c;
+  font-size: 11px;
+}
+
+/* Accessibility */
 
 .dd-redesign button:focus-visible,
 .dd-redesign select:focus-visible,
@@ -1128,11 +1345,12 @@
   .dd-redesign *::before,
   .dd-redesign *::after {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
     transition: none !important;
   }
 }
 
-/* ==================== TABLET ==================== */
+/* Tablet */
 
 @media (max-width: 1250px) {
   .dd-redesign {
@@ -1165,12 +1383,12 @@
   }
 }
 
-/* ==================== MOBILE ==================== */
+/* Mobile */
 
 @media (max-width: 700px) {
   .dd-redesign {
     padding: 15px 12px 25px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .dd-redesign-heading {
@@ -1196,17 +1414,17 @@
   }
 
   .dd-title-copy h1 {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   .dd-title-copy p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .dd-model-pill {
     margin-left: 58px;
     white-space: normal;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .dd-breadcrumb {
@@ -1231,9 +1449,9 @@
   }
 
   .dd-sidebar-link {
-    min-height: 43px;
+    min-height: 42px;
     padding: 9px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .dd-sidebar-art {
@@ -1241,13 +1459,15 @@
   }
 
   .dd-workbench,
-  .dd-information-grid {
+  .dd-information-grid,
+  .dd-separate-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
   .dd-result-card,
-  .dd-full-width {
+  .dd-full-width,
+  .dd-separate-grid .dd-full-width {
     grid-column: auto;
   }
 
@@ -1279,7 +1499,7 @@
   .dd-result-heading h2,
   .dd-info-card h2,
   .dd-section-heading h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .dd-result-metrics {
@@ -1287,11 +1507,11 @@
   }
 
   .dd-result-metrics strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .dd-faq-question {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .dd-history-item {
@@ -1302,133 +1522,44 @@
     align-items: flex-start;
     flex-direction: column;
   }
-}
-/* ==================== REFINED FONT SIZES ==================== */
 
-.dd-redesign {
-  font-size: 14px;
-}
-
-.dd-title-copy h1 {
-  font-size: clamp(27px, 2.3vw, 35px);
-}
-
-.dd-title-copy p {
-  font-size: 14px;
-}
-
-.dd-sidebar-title {
-  font-size: 15px;
-}
-
-.dd-sidebar-link {
-  font-size: 13px;
-}
-
-.dd-card-tabs span,
-.dd-card-tabs button {
-  font-size: 13px;
-}
-
-.dd-camera-empty strong,
-.dd-upload-preview-empty strong {
-  font-size: 14px;
-}
-
-.dd-camera-empty span,
-.dd-upload-preview-empty span {
-  font-size: 13px;
-}
-
-.dd-drop-zone strong {
-  font-size: 14px;
-}
-
-.dd-drop-zone span {
-  font-size: 13px;
-}
-
-.dd-drop-zone small {
-  font-size: 11px;
-}
-
-.dd-result-heading h2,
-.dd-info-card h2,
-.dd-section-heading h2 {
-  font-size: 15px;
-}
-
-.dd-result-empty h3 {
-  font-size: 14px;
-}
-
-.dd-result-empty p {
-  font-size: 13px;
-}
-
-.dd-result-metrics span {
-  font-size: 12px;
-}
-
-.dd-result-metrics strong {
-  font-size: 13px;
-}
-
-.dd-probabilities h3 {
-  font-size: 14px;
-}
-
-.dd-probability-label {
-  font-size: 12px;
-}
-
-.dd-crop-item strong {
-  font-size: 13px;
-}
-
-.dd-crop-item em,
-.dd-crop-item small {
-  font-size: 10px;
-}
-
-.dd-info-card > p,
-.dd-info-placeholder {
-  font-size: 13px;
-}
-
-.dd-treatment-row strong {
-  font-size: 13px;
-}
-
-.dd-treatment-row p {
-  font-size: 12px;
-}
-
-.dd-faq-question {
-  font-size: 14px;
-}
-
-.dd-faq-answer {
-  font-size: 13px;
-}
-
-/* Keep mobile text comfortable to read */
-@media (max-width: 700px) {
-  .dd-title-copy h1 {
-    font-size: 25px;
+  .dd-book-page {
+    padding: 22px 17px 22px 25px;
   }
 
-  .dd-title-copy p {
-    font-size: 13px;
+  .dd-book-page::before {
+    left: 12px;
   }
 
-  .dd-sidebar-link {
-    font-size: 12px;
+  .dd-book-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .dd-result-heading h2,
-  .dd-info-card h2,
-  .dd-section-heading h2 {
-    font-size: 14px;
+  .dd-book-page-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-book-page-content .dd-info-card.dd-full-width {
+    grid-column: auto;
+  }
+
+  .dd-page-turn {
+    padding: 16px;
+  }
+
+  .dd-view-heading h2 {
+    font-size: 20px;
+  }
+
+  .dd-redesign .dd-upload-card .dd-analyze-action {
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .dd-redesign-footer {
+    flex-direction: column;
+    margin-top: 24px;
   }
 }
