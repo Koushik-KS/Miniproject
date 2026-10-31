@@ -1,7 +1,10 @@
-from pathlib import Path
-import json
-import io
 
+from pathlib import Path
+import base64
+import io
+import json
+
+import cv2
 import numpy as np
 import tensorflow as tf
 from PIL import Image, UnidentifiedImageError
@@ -28,7 +31,6 @@ ALLOWED_IMAGE_FORMATS = {"JPEG", "PNG", "WEBP"}
 
 app = FastAPI(title="KisanVision AI - Coffee Prediction API")
 
-# ---------------- CORS ----------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -50,14 +52,10 @@ def load_model():
     global model, class_names
 
     if not MODEL_PATH.is_file():
-        raise RuntimeError(
-            f"Updated Coffee model is missing: {MODEL_PATH}"
-        )
+        raise RuntimeError(f"Coffee model is missing: {MODEL_PATH}")
 
     if not LABELS_PATH.is_file():
-        raise RuntimeError(
-            f"Coffee class labels file is missing: {LABELS_PATH}"
-        )
+        raise RuntimeError(f"Coffee class labels are missing: {LABELS_PATH}")
 
     with LABELS_PATH.open("r", encoding="utf-8") as file:
         loaded_classes = json.load(file)
@@ -100,6 +98,95 @@ def health():
     }
 
 
+# ---------------- EXPERIMENTAL LESION CONTOURS ----------------
+def create_lesion_overlay(image_rgb):
+    """
+    Draw experimental colour-based candidate contours.
+    This does not confirm disease or provide validated segmentation.
+    """
+    image_bgr = cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
+    hsv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2HSV)
+
+    # Candidate orange/brown and red regions.
+    orange_brown = cv2.inRange(
+        hsv,
+        np.array([5, 55, 25], dtype=np.uint8),
+        np.array([32, 255, 250], dtype=np.uint8),
+    )
+    red_low = cv2.inRange(
+        hsv,
+        np.array([0, 55, 25], dtype=np.uint8),
+        np.array([5, 255, 235], dtype=np.uint8),
+    )
+    red_high = cv2.inRange(
+        hsv,
+        np.array([170, 55, 25], dtype=np.uint8),
+        np.array([179, 255, 235], dtype=np.uint8),
+    )
+
+    mask = cv2.bitwise_or(orange_brown, red_low)
+    mask = cv2.bitwise_or(mask, red_high)
+
+    # Reduce tiny noise and join small gaps inside individual spots.
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+
+    contours, _ = cv2.findContours(
+        mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
+    )
+
+    height, width = image_bgr.shape[:2]
+    image_area = height * width
+
+    min_area = max(35, int(image_area * 0.00007))
+    max_area = int(image_area * 0.035)
+
+    accepted = []
+
+    for contour in contours:
+        area = cv2.contourArea(contour)
+
+        if area < min_area or area > max_area:
+            continue
+
+        x, y, box_width, box_height = cv2.boundingRect(contour)
+
+        if box_width <= 0 or box_height <= 0:
+            continue
+
+        aspect_ratio = max(
+            box_width / box_height,
+            box_height / box_width,
+        )
+        if aspect_ratio > 2.8:
+            continue
+
+        perimeter = cv2.arcLength(contour, True)
+        if perimeter <= 0:
+            continue
+
+        circularity = 4 * np.pi * area / (perimeter * perimeter)
+
+        # Exclude extremely irregular, thin colour fragments.
+        if circularity < 0.08:
+            continue
+
+        accepted.append(contour)
+
+    # Draw thin red contours on a copy; never modify the input image.
+    output = image_bgr.copy()
+    cv2.drawContours(output, accepted, -1, (0, 0, 255), 2)
+
+    success, encoded = cv2.imencode(".png", output)
+    if not success:
+        raise RuntimeError("Could not encode lesion overlay.")
+
+    overlay_base64 = base64.b64encode(encoded.tobytes()).decode("ascii")
+
+    return f"data:image/png;base64,{overlay_base64}", len(accepted)
+
+
 # ---------------- COFFEE PREDICTION ----------------
 @app.post("/predict/coffee")
 async def predict_coffee(file: UploadFile = File(...)):
@@ -139,21 +226,25 @@ async def predict_coffee(file: UploadFile = File(...)):
                     )
 
                 source.load()
-                image = source.convert("RGB")
-                image = image.resize(IMAGE_SIZE)
-                image_array = np.asarray(image, dtype=np.float32)
+                original_rgb = np.asarray(
+                    source.convert("RGB"),
+                    dtype=np.uint8,
+                )
 
         except UnidentifiedImageError:
             raise HTTPException(
                 status_code=400,
                 detail="The uploaded file is not a valid image.",
             )
-
         except OSError:
             raise HTTPException(
                 status_code=400,
                 detail="The uploaded image could not be read.",
             )
+
+        # Classifier input only: original image remains unchanged.
+        model_image = Image.fromarray(original_rgb).resize(IMAGE_SIZE)
+        image_array = np.asarray(model_image, dtype=np.float32)
 
         probabilities = model.predict(
             np.expand_dims(image_array, axis=0),
@@ -171,6 +262,16 @@ async def predict_coffee(file: UploadFile = File(...)):
 
         best_index = int(np.argmax(probabilities))
 
+        try:
+            lesion_overlay, candidate_regions = create_lesion_overlay(
+                original_rgb
+            )
+        except Exception as error:
+            # Do not fail the disease classification if overlay processing fails.
+            print(f"Lesion overlay processing failed: {error}")
+            lesion_overlay = None
+            candidate_regions = None
+
         return {
             "success": True,
             "crop": "Coffee",
@@ -179,11 +280,16 @@ async def predict_coffee(file: UploadFile = File(...)):
                 float(probabilities[best_index]) * 100, 2
             ),
             "probabilities": {
-                name: round(
-                    float(probabilities[index]) * 100, 4
-                )
+                name: round(float(probabilities[index]) * 100, 4)
                 for index, name in enumerate(class_names)
             },
+            "lesion_overlay": lesion_overlay,
+            "candidate_regions": candidate_regions,
+            "localization_note": (
+                "Red outlines are experimental colour-based candidates, "
+                "not confirmed disease lesions. No validated disease-area "
+                "or severity measurement is provided."
+            ),
             "warning": (
                 "Prediction is experimental and must be verified. "
                 "Confidence is not a confirmed diagnosis."
