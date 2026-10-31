@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import {
   FaCamera,
@@ -473,64 +472,6 @@ export default function DiseaseDetectionPage() {
         },
       ];
 
-  const renderOverlayComparison = (item) => (
-    <section className="dd-localization-section">
-      <div className="dd-localization-heading">
-        <FaMicroscope />
-        <div>
-          <h3>Experimental Disease-Area Highlighting</h3>
-          <p>
-            Compare the original image with the API's experimental
-            colour-based candidate highlighting.
-          </p>
-        </div>
-      </div>
-
-      <div className="dd-overlay-grid">
-        <div className="dd-overlay-card">
-          <h4>Original Leaf</h4>
-          <img
-            src={item.imageUrl || imageUrl}
-            alt="Original coffee leaf"
-            className="dd-overlay-image"
-          />
-        </div>
-
-        {item.lesion_overlay ? (
-          <div className="dd-overlay-card">
-            <h4>Candidate Regions</h4>
-            <img
-              src={item.lesion_overlay}
-              alt="Coffee leaf with experimental red contour highlighting"
-              className="dd-overlay-image"
-            />
-          </div>
-        ) : (
-          <div className="dd-overlay-card dd-overlay-unavailable">
-            <FaInfoCircle />
-            <p>Overlay unavailable for this prediction.</p>
-          </div>
-        )}
-      </div>
-
-      {item.lesion_overlay && (
-        <p className="dd-overlay-count">
-          Candidate regions detected:{" "}
-          {item.candidate_regions ?? "Unavailable"}
-        </p>
-      )}
-
-      <div className="dd-localization-warning">
-        <FaInfoCircle />
-        <span>
-          Red contours are experimental colour-based candidates, not
-          confirmed disease lesions. They can highlight healthy areas
-          or miss affected regions. Disease severity is not measured.
-        </span>
-      </div>
-    </section>
-  );
-
   return (
     <div className="dd-redesign">
       {/* HEADER */}
@@ -873,76 +814,74 @@ export default function DiseaseDetectionPage() {
                     </span>
                   </div>
 
-                  
-{/* EXPERIMENTAL DISEASE-AREA HIGHLIGHTING */}
-{prediction && (
-  <section className="dd-highlight-panel">
-    <div className="dd-highlight-heading">
-      <FaMicroscope />
+                  {/* EXPERIMENTAL DISEASE-AREA HIGHLIGHTING */}
+                  {prediction && (
+                    <section className="dd-highlight-panel">
+                      <div className="dd-highlight-heading">
+                        <FaMicroscope />
 
-      <div>
-        <h3>Experimental Disease-Area Highlighting</h3>
-        <p>
-          Compare the original leaf with the API's
-          experimental colour-based candidate highlighting.
-        </p>
-      </div>
-    </div>
+                        <div>
+                          <h3>Experimental Disease-Area Highlighting</h3>
+                          <p>
+                            Compare the original leaf with the API's
+                            experimental colour-based candidate highlighting.
+                          </p>
+                        </div>
+                      </div>
 
-    <div className="dd-highlight-images">
-      <div className="dd-highlight-image-card">
-        <h4>Original Leaf</h4>
+                      <div className="dd-highlight-images">
+                        <div className="dd-highlight-image-card">
+                          <h4>Original Leaf</h4>
 
-        <div className="dd-highlight-image-frame">
-          <img
-            src={prediction.imageUrl || imageUrl}
-            alt="Original coffee leaf submitted for analysis"
-          />
-        </div>
-      </div>
+                          <div className="dd-highlight-image-frame">
+                            <img
+                              src={prediction.imageUrl || imageUrl}
+                              alt="Original coffee leaf submitted for analysis"
+                            />
+                          </div>
+                        </div>
 
-      <div className="dd-highlight-image-card">
-        <h4>Candidate Regions</h4>
+                        <div className="dd-highlight-image-card">
+                          <h4>Candidate Regions</h4>
 
-        <div className="dd-highlight-image-frame">
-          {prediction.lesion_overlay ? (
-            <img
-              src={prediction.lesion_overlay}
-              alt="Coffee leaf with experimental candidate regions outlined in red"
-            />
-          ) : (
-            <div className="dd-highlight-unavailable">
-              <FaInfoCircle />
-              <span>
-                Candidate-region highlighting is unavailable
-                for this prediction.
-              </span>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
+                          <div className="dd-highlight-image-frame">
+                            {prediction.lesion_overlay ? (
+                              <img
+                                src={prediction.lesion_overlay}
+                                alt="Coffee leaf with experimental candidate regions outlined in red"
+                              />
+                            ) : (
+                              <div className="dd-highlight-unavailable">
+                                <FaInfoCircle />
+                                <span>
+                                  Candidate-region highlighting is unavailable
+                                  for this prediction.
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
 
-    {prediction.lesion_overlay && (
-      <p className="dd-candidate-count">
-        Candidate regions detected:{" "}
-        <strong>
-          {Number(prediction.candidate_regions) || 0}
-        </strong>
-      </p>
-    )}
+                      {prediction.lesion_overlay && (
+                        <p className="dd-candidate-count">
+                          Candidate regions detected:{" "}
+                          <strong>
+                            {Number(prediction.candidate_regions) || 0}
+                          </strong>
+                        </p>
+                      )}
 
-    <div className="dd-highlight-warning">
-      <FaInfoCircle />
+                      <div className="dd-highlight-warning">
+                        <FaInfoCircle />
 
-      <p>
-        {prediction.localization_note ||
-          "Red contours are experimental colour-based candidates, not confirmed disease lesions. They may highlight healthy areas or miss affected regions. Disease severity is not measured."}
-      </p>
-    </div>
-  </section>
-)}
-
+                        <p>
+                          {prediction.localization_note ||
+                            "Red contours are experimental colour-based candidates, not confirmed disease lesions. They may highlight healthy areas or miss affected regions. Disease severity is not measured."}
+                        </p>
+                      </div>
+                    </section>
+                  )}
 
                   <div
                     className={`dd-result-empty ${
@@ -1054,8 +993,6 @@ export default function DiseaseDetectionPage() {
                     </div>
                   )}
 
-                  {prediction && renderOverlayComparison(prediction)}
-
                   {prediction && (
                     <button
                       type="button"
@@ -1076,6 +1013,7 @@ export default function DiseaseDetectionPage() {
             <section className="dd-page-turn" key={activeTool}>
               <div className="dd-view-heading">
                 <FaBookOpen />
+
                 <div>
                   <h2>Disease Information</h2>
                   <p>
@@ -1225,6 +1163,7 @@ export default function DiseaseDetectionPage() {
             <section className="dd-page-turn" key={activeTool}>
               <div className="dd-view-heading">
                 <FaShieldAlt />
+
                 <div>
                   <h2>Prevention &amp; Treatment</h2>
                   <p>
@@ -1243,6 +1182,7 @@ export default function DiseaseDetectionPage() {
                 {prediction && guidance && (
                   <div className="dd-treatment-row">
                     <FaMicroscope />
+
                     <div>
                       <strong>{guidance.title}</strong>
                       <p>{guidance.description}</p>
@@ -1253,6 +1193,7 @@ export default function DiseaseDetectionPage() {
                 {treatmentRows.map(({ icon: Icon, title, text }) => (
                   <div className="dd-treatment-row" key={title}>
                     <Icon />
+
                     <div>
                       <strong>{title}</strong>
                       <p>{text}</p>
