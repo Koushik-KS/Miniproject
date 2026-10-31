@@ -1,6 +1,5 @@
 
 import { useEffect, useRef, useState } from "react";
-
 import {
   FaCamera,
   FaCloudUploadAlt,
@@ -25,7 +24,6 @@ import {
   FaChevronRight,
   FaArrowLeft,
 } from "react-icons/fa";
-
 import "./DiseaseDetection.css";
 
 const COFFEE_API_URL =
@@ -80,28 +78,24 @@ const diseaseGuidance = {
       "The model classified this image as Healthy. Continue regular crop monitoring.",
     status: "Predicted healthy",
   },
-
   Cercospora: {
     title: "Coffee Cercospora",
     description:
-      "The model classified this image as Cercospora. Verify the symptoms with a qualified agricultural expert before treatment.",
+      "The model classified this image as Cercospora. Verify symptoms with a qualified agricultural expert before treatment.",
     status: "Disease class predicted",
   },
-
   "Leaf Rust": {
     title: "Coffee Leaf Rust",
     description:
       "The model classified this image as Leaf Rust. Confirm the diagnosis with a qualified agricultural expert before selecting treatment.",
     status: "Disease class predicted",
   },
-
   Miner: {
     title: "Coffee Miner",
     description:
       "The model classified this image as Miner. Inspect the leaves and confirm the diagnosis before taking control measures.",
     status: "Disease class predicted",
   },
-
   Phoma: {
     title: "Coffee Phoma",
     description:
@@ -124,12 +118,12 @@ const faqs = [
   {
     question: "Why is a prediction not showing?",
     answer:
-      "Make sure an image is selected and the Coffee Python API is running. Any connection or prediction errors will be shown on this page.",
+      "Make sure an image is selected and the Coffee Python API is running. Connection and prediction errors are displayed on this page.",
   },
   {
     question: "Can the system highlight affected leaf regions?",
     answer:
-      "The current classifier predicts a class but does not locate diseased pixels or calculate affected leaf area. A suitable localization or segmentation model is required.",
+      "The API provides experimental colour-based candidate highlighting. These contours are not verified disease lesions and cannot measure disease severity.",
   },
   {
     question: "Can I immediately apply the recommended treatment?",
@@ -138,7 +132,6 @@ const faqs = [
   },
 ];
 
-// Supported Crops has been removed from the sidebar menu.
 const tools = [
   { name: "Detect Disease", icon: FaMicroscope },
   { name: "Disease Information", icon: FaBookOpen },
@@ -171,10 +164,6 @@ export default function DiseaseDetectionPage() {
   const streamRef = useRef(null);
   const fileInputRef = useRef(null);
   const requestIdRef = useRef(0);
-
-  const isSeparatePage =
-    activeTool === "Disease Information" ||
-    activeTool === "Prevention & Treatment";
 
   const guidance = prediction
     ? diseaseGuidance[prediction.predicted_class]
@@ -238,7 +227,6 @@ export default function DiseaseDetectionPage() {
 
     return () => {
       cancelled = true;
-
       streamRef.current?.getTracks().forEach((track) => track.stop());
       streamRef.current = null;
     };
@@ -485,6 +473,64 @@ export default function DiseaseDetectionPage() {
         },
       ];
 
+  const renderOverlayComparison = (item) => (
+    <section className="dd-localization-section">
+      <div className="dd-localization-heading">
+        <FaMicroscope />
+        <div>
+          <h3>Experimental Disease-Area Highlighting</h3>
+          <p>
+            Compare the original image with the API's experimental
+            colour-based candidate highlighting.
+          </p>
+        </div>
+      </div>
+
+      <div className="dd-overlay-grid">
+        <div className="dd-overlay-card">
+          <h4>Original Leaf</h4>
+          <img
+            src={item.imageUrl || imageUrl}
+            alt="Original coffee leaf"
+            className="dd-overlay-image"
+          />
+        </div>
+
+        {item.lesion_overlay ? (
+          <div className="dd-overlay-card">
+            <h4>Candidate Regions</h4>
+            <img
+              src={item.lesion_overlay}
+              alt="Coffee leaf with experimental red contour highlighting"
+              className="dd-overlay-image"
+            />
+          </div>
+        ) : (
+          <div className="dd-overlay-card dd-overlay-unavailable">
+            <FaInfoCircle />
+            <p>Overlay unavailable for this prediction.</p>
+          </div>
+        )}
+      </div>
+
+      {item.lesion_overlay && (
+        <p className="dd-overlay-count">
+          Candidate regions detected:{" "}
+          {item.candidate_regions ?? "Unavailable"}
+        </p>
+      )}
+
+      <div className="dd-localization-warning">
+        <FaInfoCircle />
+        <span>
+          Red contours are experimental colour-based candidates, not
+          confirmed disease lesions. They can highlight healthy areas
+          or miss affected regions. Disease severity is not measured.
+        </span>
+      </div>
+    </section>
+  );
+
   return (
     <div className="dd-redesign">
       {/* HEADER */}
@@ -504,7 +550,7 @@ export default function DiseaseDetectionPage() {
             {activeTool === "Detect Disease"
               ? "Upload a leaf image or use your live camera to analyze a supported crop using a trained AI model."
               : activeTool === "Disease Information"
-                ? "Explore disease details, affected-area analysis, and severity analysis."
+                ? "Explore disease details, candidate highlighting and analysis limitations."
                 : activeTool === "Prevention & Treatment"
                   ? "Review crop-care guidance and precautions."
                   : activeTool === "Upload History"
@@ -542,7 +588,7 @@ export default function DiseaseDetectionPage() {
       </div>
 
       <div className="dd-redesign-layout">
-        {/* SIDEBAR — SUPPORTED CROPS REMOVED */}
+        {/* SIDEBAR */}
         <aside className="dd-sidebar">
           <h2 className="dd-sidebar-title">
             <FaStethoscope />
@@ -566,7 +612,6 @@ export default function DiseaseDetectionPage() {
 
           <div className="dd-sidebar-art">
             <FaLeaf className="dd-art-leaf" />
-
             <strong>
               Healthy Crops
               <br />
@@ -577,14 +622,12 @@ export default function DiseaseDetectionPage() {
           </div>
         </aside>
 
-        {/* MAIN AREA */}
+        {/* MAIN CONTENT */}
         <main className="dd-redesign-main">
           {message && (
             <div className="dd-message" role="alert">
               <FaExclamationTriangle />
-
               <span>{message}</span>
-
               <button
                 type="button"
                 aria-label="Dismiss message"
@@ -595,7 +638,7 @@ export default function DiseaseDetectionPage() {
             </div>
           )}
 
-          {/* DISEASE DETECTION DASHBOARD */}
+          {/* DETECT DISEASE */}
           {activeTool === "Detect Disease" && (
             <>
               <label className="dd-crop-select">
@@ -642,9 +685,7 @@ export default function DiseaseDetectionPage() {
                     ) : (
                       <div className="dd-camera-empty">
                         <FaCamera />
-
                         <strong>Live leaf camera</strong>
-
                         <span>
                           Open your camera to capture a clear leaf image.
                         </span>
@@ -659,7 +700,6 @@ export default function DiseaseDetectionPage() {
                       value={cameraFacing}
                       onChange={(event) => {
                         const nextFacing = event.target.value;
-
                         setCameraFacing(nextFacing);
 
                         if (cameraActive) {
@@ -670,10 +710,7 @@ export default function DiseaseDetectionPage() {
                       <option value="environment">
                         Rear camera (if available)
                       </option>
-
-                      <option value="user">
-                        Front camera
-                      </option>
+                      <option value="user">Front camera</option>
                     </select>
                   </label>
 
@@ -686,7 +723,6 @@ export default function DiseaseDetectionPage() {
                         disabled={cameraLoading}
                       >
                         <FaCamera />
-
                         {cameraLoading
                           ? "Opening camera..."
                           : "Open Live Camera"}
@@ -737,9 +773,7 @@ export default function DiseaseDetectionPage() {
                     ) : (
                       <div className="dd-upload-preview-empty">
                         <FaLeaf />
-
                         <strong>No image selected</strong>
-
                         <span>
                           Your selected leaf image appears here.
                         </span>
@@ -776,11 +810,8 @@ export default function DiseaseDetectionPage() {
                     />
 
                     <FaCloudUploadAlt />
-
                     <strong>Drag &amp; drop a leaf image here</strong>
-
                     <span>or click to choose a file</span>
-
                     <small>
                       Supported: JPG, PNG, WebP · Maximum size: 5 MB
                     </small>
@@ -793,10 +824,7 @@ export default function DiseaseDetectionPage() {
                         {fileName}
                       </span>
 
-                      <button
-                        type="button"
-                        onClick={clearImage}
-                      >
+                      <button type="button" onClick={clearImage}>
                         <FaTimes />
                         Remove
                       </button>
@@ -805,7 +833,6 @@ export default function DiseaseDetectionPage() {
 
                   <div className="dd-honesty-note">
                     <FaInfoCircle />
-
                     <span>
                       Coffee disease classification is connected. The
                       other four crops require separate trained models.
@@ -823,7 +850,6 @@ export default function DiseaseDetectionPage() {
                     }
                   >
                     <FaMicroscope />
-
                     {predictionLoading
                       ? "Analyzing..."
                       : "Analyze Disease"}
@@ -847,14 +873,76 @@ export default function DiseaseDetectionPage() {
                     </span>
                   </div>
 
-                  {imageUrl && (
-                    <div className="dd-result-image">
-                      <img
-                        src={imageUrl}
-                        alt="Leaf submitted for disease detection"
-                      />
-                    </div>
-                  )}
+                  
+{/* EXPERIMENTAL DISEASE-AREA HIGHLIGHTING */}
+{prediction && (
+  <section className="dd-highlight-panel">
+    <div className="dd-highlight-heading">
+      <FaMicroscope />
+
+      <div>
+        <h3>Experimental Disease-Area Highlighting</h3>
+        <p>
+          Compare the original leaf with the API's
+          experimental colour-based candidate highlighting.
+        </p>
+      </div>
+    </div>
+
+    <div className="dd-highlight-images">
+      <div className="dd-highlight-image-card">
+        <h4>Original Leaf</h4>
+
+        <div className="dd-highlight-image-frame">
+          <img
+            src={prediction.imageUrl || imageUrl}
+            alt="Original coffee leaf submitted for analysis"
+          />
+        </div>
+      </div>
+
+      <div className="dd-highlight-image-card">
+        <h4>Candidate Regions</h4>
+
+        <div className="dd-highlight-image-frame">
+          {prediction.lesion_overlay ? (
+            <img
+              src={prediction.lesion_overlay}
+              alt="Coffee leaf with experimental candidate regions outlined in red"
+            />
+          ) : (
+            <div className="dd-highlight-unavailable">
+              <FaInfoCircle />
+              <span>
+                Candidate-region highlighting is unavailable
+                for this prediction.
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+
+    {prediction.lesion_overlay && (
+      <p className="dd-candidate-count">
+        Candidate regions detected:{" "}
+        <strong>
+          {Number(prediction.candidate_regions) || 0}
+        </strong>
+      </p>
+    )}
+
+    <div className="dd-highlight-warning">
+      <FaInfoCircle />
+
+      <p>
+        {prediction.localization_note ||
+          "Red contours are experimental colour-based candidates, not confirmed disease lesions. They may highlight healthy areas or miss affected regions. Disease severity is not measured."}
+      </p>
+    </div>
+  </section>
+)}
+
 
                   <div
                     className={`dd-result-empty ${
@@ -875,8 +963,7 @@ export default function DiseaseDetectionPage() {
 
                     <h3>
                       {prediction
-                        ? guidance?.title ||
-                          prediction.predicted_class
+                        ? guidance?.title || prediction.predicted_class
                         : predictionLoading
                           ? "Analyzing Coffee leaf"
                           : "Ready for analysis"}
@@ -895,7 +982,6 @@ export default function DiseaseDetectionPage() {
                   <div className="dd-result-metrics">
                     <div>
                       <span>Crop / Plant</span>
-
                       <strong>
                         {prediction ? "Coffee" : "Not analyzed"}
                       </strong>
@@ -903,32 +989,25 @@ export default function DiseaseDetectionPage() {
 
                     <div>
                       <span>Detected class</span>
-
                       <strong>
-                        {prediction?.predicted_class ||
-                          "Not analyzed"}
+                        {prediction?.predicted_class || "Not analyzed"}
                       </strong>
                     </div>
 
                     <div>
                       <span>Model confidence</span>
-
                       <strong>
                         {prediction
-                          ? `${Number(
-                              prediction.confidence
-                            ).toFixed(2)}%`
+                          ? `${Number(prediction.confidence).toFixed(2)}%`
                           : "—"}
                       </strong>
                     </div>
 
                     <div>
                       <span>Plant status</span>
-
                       <strong>
                         {prediction
-                          ? guidance?.status ||
-                            "Classification returned"
+                          ? guidance?.status || "Classification returned"
                           : "Not determined"}
                       </strong>
                     </div>
@@ -939,9 +1018,7 @@ export default function DiseaseDetectionPage() {
                       <h3>Class probability scores</h3>
 
                       {Object.entries(prediction.probabilities)
-                        .sort(
-                          (a, b) => Number(b[1]) - Number(a[1])
-                        )
+                        .sort((a, b) => Number(b[1]) - Number(a[1]))
                         .map(([name, score]) => {
                           const value = Math.min(
                             100,
@@ -955,10 +1032,7 @@ export default function DiseaseDetectionPage() {
                             >
                               <div className="dd-probability-label">
                                 <span>{name}</span>
-
-                                <strong>
-                                  {value.toFixed(2)}%
-                                </strong>
+                                <strong>{value.toFixed(2)}%</strong>
                               </div>
 
                               <div
@@ -971,9 +1045,7 @@ export default function DiseaseDetectionPage() {
                               >
                                 <div
                                   className="dd-probability-fill"
-                                  style={{
-                                    width: `${value}%`,
-                                  }}
+                                  style={{ width: `${value}%` }}
                                 />
                               </div>
                             </div>
@@ -982,25 +1054,13 @@ export default function DiseaseDetectionPage() {
                     </div>
                   )}
 
-                  {prediction && (
-                    <div className="dd-localization-warning">
-                      <FaInfoCircle />
-
-                      <span>
-                        Prediction is experimental and must be verified.
-                        The current model does not locate affected pixels
-                        or calculate disease severity.
-                      </span>
-                    </div>
-                  )}
+                  {prediction && renderOverlayComparison(prediction)}
 
                   {prediction && (
                     <button
                       type="button"
                       className="dd-secondary-action dd-result-details-button"
-                      onClick={() =>
-                        openSection("Disease Information")
-                      }
+                      onClick={() => openSection("Disease Information")}
                     >
                       <FaBookOpen />
                       View Disease Information
@@ -1011,17 +1071,16 @@ export default function DiseaseDetectionPage() {
             </>
           )}
 
-          {/* DISEASE INFORMATION DASHBOARD */}
+          {/* DISEASE INFORMATION */}
           {activeTool === "Disease Information" && (
             <section className="dd-page-turn" key={activeTool}>
               <div className="dd-view-heading">
                 <FaBookOpen />
-
                 <div>
                   <h2>Disease Information</h2>
                   <p>
-                    Disease details, disease-area analysis, and severity
-                    analysis.
+                    Classification details and experimental candidate
+                    highlighting.
                   </p>
                 </div>
               </div>
@@ -1059,7 +1118,6 @@ export default function DiseaseDetectionPage() {
 
                   <div className="dd-info-placeholder">
                     <FaInfoCircle />
-
                     <span>
                       Classification does not independently confirm
                       the causal organism.
@@ -1067,30 +1125,65 @@ export default function DiseaseDetectionPage() {
                   </div>
                 </article>
 
-                <article className="dd-card dd-info-card">
+                <article className="dd-card dd-info-card dd-area-analysis-card">
                   <h2>
                     <FaChartPie />
                     Disease Area Analysis
                   </h2>
 
-                  {prediction?.imageUrl && (
-                    <div className="dd-area-image">
-                      <img
-                        src={prediction.imageUrl}
-                        alt="Leaf image submitted for analysis"
-                      />
+                  {prediction ? (
+                    <>
+                      <div className="dd-area-image">
+                        <img
+                          src={prediction.imageUrl || imageUrl}
+                          alt="Original coffee leaf submitted for analysis"
+                        />
+                      </div>
+
+                      {prediction.lesion_overlay ? (
+                        <>
+                          <h3>Experimental Candidate Highlighting</h3>
+
+                          <div className="dd-area-image">
+                            <img
+                              src={prediction.lesion_overlay}
+                              alt="Coffee leaf with experimental candidate contours"
+                            />
+                          </div>
+
+                          <p>
+                            Candidate regions detected:{" "}
+                            {prediction.candidate_regions ?? "Unavailable"}
+                          </p>
+                        </>
+                      ) : (
+                        <div className="dd-area-empty">
+                          <strong>Overlay unavailable</strong>
+                          <p>
+                            The prediction is available, but the API
+                            did not return a candidate overlay.
+                          </p>
+                        </div>
+                      )}
+
+                      <div className="dd-info-placeholder">
+                        <FaInfoCircle />
+                        <span>
+                          These colour-based contours are experimental.
+                          They cannot establish which pixels are diseased
+                          or provide a validated affected-area percentage.
+                        </span>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="dd-area-empty">
+                      <strong>No prediction available</strong>
+                      <p>
+                        Complete a Coffee leaf prediction to view its
+                        original image and experimental overlay.
+                      </p>
                     </div>
                   )}
-
-                  <div className="dd-area-empty">
-                    <strong>Localization model required</strong>
-
-                    <p>
-                      The current classifier cannot locate diseased
-                      pixels, draw verified disease outlines, or
-                      measure affected leaf area.
-                    </p>
-                  </div>
                 </article>
 
                 <article className="dd-card dd-info-card dd-full-width">
@@ -1108,11 +1201,9 @@ export default function DiseaseDetectionPage() {
 
                   <div className="dd-info-placeholder">
                     <FaShieldAlt />
-
                     <span>
-                      {prediction
-                        ? "A classification is available, but a validated severity measurement is not."
-                        : "Complete a prediction first. Severity measurement still requires a separate validated model."}
+                      A classification is available, but a validated
+                      severity measurement is not.
                     </span>
                   </div>
                 </article>
@@ -1129,12 +1220,11 @@ export default function DiseaseDetectionPage() {
             </section>
           )}
 
-          {/* PREVENTION & TREATMENT DASHBOARD */}
+          {/* PREVENTION & TREATMENT */}
           {activeTool === "Prevention & Treatment" && (
             <section className="dd-page-turn" key={activeTool}>
               <div className="dd-view-heading">
                 <FaShieldAlt />
-
                 <div>
                   <h2>Prevention &amp; Treatment</h2>
                   <p>
@@ -1153,7 +1243,6 @@ export default function DiseaseDetectionPage() {
                 {prediction && guidance && (
                   <div className="dd-treatment-row">
                     <FaMicroscope />
-
                     <div>
                       <strong>{guidance.title}</strong>
                       <p>{guidance.description}</p>
@@ -1161,26 +1250,22 @@ export default function DiseaseDetectionPage() {
                   </div>
                 )}
 
-                {treatmentRows.map(
-                  ({ icon: Icon, title, text }) => (
-                    <div className="dd-treatment-row" key={title}>
-                      <Icon />
-
-                      <div>
-                        <strong>{title}</strong>
-                        <p>{text}</p>
-                      </div>
+                {treatmentRows.map(({ icon: Icon, title, text }) => (
+                  <div className="dd-treatment-row" key={title}>
+                    <Icon />
+                    <div>
+                      <strong>{title}</strong>
+                      <p>{text}</p>
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
 
                 <div className="dd-info-placeholder">
                   <FaInfoCircle />
-
                   <span>
-                    AI predictions are experimental. Consult a
-                    qualified agricultural expert before applying
-                    pesticides or other treatments.
+                    AI predictions are experimental. Consult a qualified
+                    agricultural expert before applying pesticides or
+                    other treatments.
                   </span>
                 </div>
               </article>
@@ -1196,7 +1281,7 @@ export default function DiseaseDetectionPage() {
             </section>
           )}
 
-          {/* UPLOAD HISTORY DASHBOARD */}
+          {/* UPLOAD HISTORY */}
           {activeTool === "Upload History" && (
             <section className="dd-card dd-info-card dd-full-width">
               <h2>
@@ -1207,12 +1292,10 @@ export default function DiseaseDetectionPage() {
               {history.length === 0 ? (
                 <div className="dd-area-empty">
                   <FaImages />
-
                   <strong>No completed predictions yet</strong>
-
                   <p>
-                    Complete a prediction on the Detect Disease
-                    dashboard to see it in this session's history.
+                    Complete a prediction on the Detect Disease dashboard
+                    to see it in this session's history.
                   </p>
 
                   <button
@@ -1237,13 +1320,10 @@ export default function DiseaseDetectionPage() {
 
                     <div>
                       <strong>{item.fileName}</strong>
-
                       <span>
                         {item.predicted_class} ·{" "}
-                        {Number(item.confidence).toFixed(2)}%
-                        {" "}confidence
+                        {Number(item.confidence).toFixed(2)}% confidence
                       </span>
-
                       <span>{item.createdAt}</span>
                     </div>
 
@@ -1266,13 +1346,13 @@ export default function DiseaseDetectionPage() {
               )}
 
               <p>
-                Upload history is currently kept for this page session.
-                It is not permanently saved.
+                Upload history is kept for this page session. It is not
+                permanently saved.
               </p>
             </section>
           )}
 
-          {/* FAQ DASHBOARD */}
+          {/* FAQS */}
           {activeTool === "FAQs" && (
             <section className="dd-card dd-info-card dd-full-width">
               <h2>
@@ -1287,22 +1367,15 @@ export default function DiseaseDetectionPage() {
                     className="dd-faq-question"
                     aria-expanded={openFaq === index}
                     onClick={() =>
-                      setOpenFaq(
-                        openFaq === index ? null : index
-                      )
+                      setOpenFaq(openFaq === index ? null : index)
                     }
                   >
                     <span>{faq.question}</span>
-
-                    <span>
-                      {openFaq === index ? "−" : "+"}
-                    </span>
+                    <span>{openFaq === index ? "−" : "+"}</span>
                   </button>
 
                   {openFaq === index && (
-                    <p className="dd-faq-answer">
-                      {faq.answer}
-                    </p>
+                    <p className="dd-faq-answer">{faq.answer}</p>
                   )}
                 </div>
               ))}
@@ -1312,11 +1385,10 @@ export default function DiseaseDetectionPage() {
           {/* FOOTER */}
           <footer className="dd-info-placeholder dd-dashboard-footer">
             <FaShieldAlt />
-
             <span>
-              KisanVision AI · BAI586 academic mini-project.
-              Predictions are experimental and are not a substitute
-              for professional agricultural diagnosis.
+              KisanVision AI · BAI586 academic mini-project. Predictions
+              are experimental and are not a substitute for professional
+              agricultural diagnosis.
             </span>
           </footer>
         </main>
