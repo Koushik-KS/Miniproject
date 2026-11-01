@@ -4,6 +4,7 @@ const EUROPE_PMC_URL =
   "https://www.ebi.ac.uk/europepmc/webservices/rest/search";
 
 const REQUEST_TIMEOUT = 12000;
+const MAX_RETRIES = 3;
 const MAX_RESULTS_PER_SOURCE = 15;
 
 const SEARCH_CONFIG = {
@@ -12,12 +13,8 @@ const SEARCH_CONFIG = {
       "coffee Cercospora coffeicola",
       "Coffea Cercospora leaf spot",
     ],
-    patterns: [
-      /\bcercospora\b/i,
-      /\bmycosphaerella\b/i,
-    ],
+    patterns: [/\bcercospora\b/i, /\bmycosphaerella\b/i],
   },
-
   "Leaf Rust": {
     terms: [
       "coffee leaf rust Hemileia vastatrix",
@@ -29,7 +26,6 @@ const SEARCH_CONFIG = {
       /\bcoffee\s+rust\b/i,
     ],
   },
-
   Miner: {
     terms: [
       "coffee leaf miner Leucoptera coffeella",
@@ -41,20 +37,16 @@ const SEARCH_CONFIG = {
       /\bcoffee\s+miner\b/i,
     ],
   },
-
   Phoma: {
     terms: [
       "coffee Phoma disease",
       "Coffea Phoma leaf disease",
     ],
-    patterns: [
-      /\bphoma\b/i,
-      /\bphoma\s+costarricensis\b/i,
-    ],
+    patterns: [/\bphoma\b/i, /\bphoma\s+costarricensis\b/i],
   },
 };
 
-const VALID_CLASSES = Object.keys(SEARCH_CONFIG);
+const VALID_CLASSES = [...Object.keys(SEARCH_CONFIG), "Healthy"];
 
 const KNOWN_PUBLICATION_OVERRIDES = {
   "10.12688/f1000research.177569.2": {
@@ -67,18 +59,16 @@ const KNOWN_PUBLICATION_OVERRIDES = {
   },
 };
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 function normalizeSpaces(value = "") {
-  return String(value)
-    .replace(/\s+/g, " ")
-    .trim();
+  return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
 function cleanText(value = "") {
   if (Array.isArray(value)) {
     return value.map(cleanText).filter(Boolean).join(" ");
   }
-
-  let text = String(value ?? "");
 
   const entities = {
     "&amp;": "&",
@@ -90,23 +80,16 @@ function cleanText(value = "") {
     "&nbsp;": " ",
   };
 
-  text = text.replace(
-    /&(?:amp|lt|gt|quot|apos|nbsp);|&#(?:39|x27);/gi,
-    (entity) => {
-      const key = entity.toLowerCase();
-
-      if (key === "&#39;" || key === "&#x27;") {
-        return "'";
-      }
-
-      return entities[key] ?? entity;
-    }
-  );
-
   return normalizeSpaces(
-    text
+    String(value ?? "")
       .replace(/<[^>]*>/g, " ")
-      .replace(/<\/?jats:[^>]*>/gi, " ")
+      .replace(
+        /&(?:amp|lt|gt|quot|apos|nbsp);|&#(?:39|x27);/gi,
+        (entity) => {
+          const key = entity.toLowerCase();
+          return key === "&#x27;" ? "'" : entities[key] ?? entity;
+        }
+      )
       .replace(/&(?:#\d+|#x[0-9a-f]+);/gi, " ")
   );
 }
@@ -131,10 +114,7 @@ function normalizeDoi(value = "") {
 
 function doiUrl(doi = "") {
   const normalized = normalizeDoi(doi);
-
-  return normalized
-    ? `https://doi.org/${normalized}`
-    : "";
+  return normalized ? `https://doi.org/${normalized}` : "";
 }
 
 function getCrossrefType(item = {}) {
@@ -158,24 +138,15 @@ function getEuropePmcType(item = {}) {
 function getPublicationTypeLabel(publicationType = "") {
   const type = normalizeForComparison(publicationType);
 
-  if (
-    type.includes("preprint") ||
-    type.includes("posted content")
-  ) {
+  if (type.includes("preprint") || type.includes("posted content")) {
     return "Preprint / posted content";
   }
-
-  if (
-    type.includes("dissertation") ||
-    type.includes("thesis")
-  ) {
+  if (type.includes("dissertation") || type.includes("thesis")) {
     return "Dissertation / thesis";
   }
-
   if (type.includes("review")) {
     return "Review article";
   }
-
   if (
     type.includes("proceedings article") ||
     type.includes("conference paper") ||
@@ -183,15 +154,12 @@ function getPublicationTypeLabel(publicationType = "") {
   ) {
     return "Conference proceedings article";
   }
-
   if (type.includes("book chapter")) {
     return "Book chapter";
   }
-
   if (type.includes("book")) {
     return "Book";
   }
-
   if (
     type.includes("journal article") ||
     type.includes("research article") ||
@@ -199,15 +167,12 @@ function getPublicationTypeLabel(publicationType = "") {
   ) {
     return "Journal article";
   }
-
   if (type.includes("report")) {
     return "Report";
   }
-
   if (type.includes("dataset")) {
     return "Dataset";
   }
-
   if (type.includes("article")) {
     return "Article; subtype unclear";
   }
@@ -216,47 +181,40 @@ function getPublicationTypeLabel(publicationType = "") {
 }
 
 function getEvidenceMetadata(publicationType = "", abstract = "") {
-  const normalizedType =
-    normalizeForComparison(publicationType);
-
-  const abstractAvailable = Boolean(
-    normalizeSpaces(abstract)
-  );
+  const type = normalizeForComparison(publicationType);
+  const abstractAvailable = Boolean(normalizeSpaces(abstract));
 
   let evidenceType = "Publication type unclear";
 
-  if (
-    normalizedType.includes("preprint") ||
-    normalizedType.includes("posted content")
-  ) {
+  if (type.includes("preprint") || type.includes("posted content")) {
     evidenceType = "Preprint";
   } else if (
-    normalizedType.includes("dissertation") ||
-    normalizedType.includes("thesis")
+    type.includes("dissertation") ||
+    type.includes("thesis")
   ) {
     evidenceType = "Thesis or dissertation";
-  } else if (normalizedType.includes("review")) {
+  } else if (type.includes("review")) {
     evidenceType = "Review";
   } else if (
-    normalizedType.includes("journal article") ||
-    normalizedType.includes("research article") ||
-    normalizedType.includes("original article")
+    type.includes("journal article") ||
+    type.includes("research article") ||
+    type.includes("original article")
   ) {
     evidenceType = "Journal article";
-  } else if (normalizedType.includes("book chapter")) {
+  } else if (type.includes("book chapter")) {
     evidenceType = "Book chapter";
   } else if (
-    normalizedType.includes("proceedings") ||
-    normalizedType.includes("conference paper")
+    type.includes("proceedings") ||
+    type.includes("conference paper")
   ) {
     evidenceType = "Conference proceedings";
-  } else if (normalizedType.includes("article")) {
+  } else if (type.includes("article")) {
     evidenceType = "Article; subtype unclear";
-  } else if (normalizedType.includes("report")) {
+  } else if (type.includes("report")) {
     evidenceType = "Report";
-  } else if (normalizedType.includes("book")) {
+  } else if (type.includes("book")) {
     evidenceType = "Book";
-  } else if (normalizedType.includes("dataset")) {
+  } else if (type.includes("dataset")) {
     evidenceType = "Dataset";
   }
 
@@ -267,7 +225,7 @@ function getEvidenceMetadata(publicationType = "", abstract = "") {
     abstractAvailable,
     evidenceNote: abstractAvailable
       ? "An abstract is available. Publication type and abstract availability do not independently establish study quality or treatment effectiveness."
-      : "No abstract is available in the retrieved record. The study's findings cannot be fully assessed from the abstract.",
+      : "No abstract is available in the retrieved record. The study's findings cannot be fully assessed because no abstract is available.",
   };
 }
 
@@ -285,8 +243,7 @@ function applyPublicationOverride(record) {
     providerPublicationType:
       record.providerPublicationType || record.publicationType,
     providerPublicationTypeLabel:
-      record.providerPublicationTypeLabel ||
-      record.publicationTypeLabel,
+      record.providerPublicationTypeLabel || record.publicationTypeLabel,
     evidenceNote:
       `${record.evidenceNote} The publication label is supplemented by a DOI-specific publisher-record override; consult the publisher page for the current version and review history.`,
   };
@@ -294,26 +251,23 @@ function applyPublicationOverride(record) {
 
 function getAuthorsCrossref(item = {}) {
   return (item.author || [])
-    .map((author) => {
-      const given = cleanText(author.given || "");
-      const family = cleanText(author.family || "");
-
-      return normalizeSpaces(`${given} ${family}`);
-    })
+    .map((author) =>
+      normalizeSpaces(
+        `${cleanText(author.given || "")} ${cleanText(author.family || "")}`
+      )
+    )
     .filter(Boolean);
 }
 
 function getAuthorsEuropePmc(item = {}) {
-  const authorString = item.authorString;
-
-  if (authorString) {
-    return String(authorString)
-      .split(/,\s*(?![^()]*\))/)
-      .map(cleanText)
-      .filter(Boolean);
+  if (!item.authorString) {
+    return [];
   }
 
-  return [];
+  return String(item.authorString)
+    .split(/,\s*/)
+    .map(cleanText)
+    .filter(Boolean);
 }
 
 function getCrossrefDate(item = {}) {
@@ -324,28 +278,21 @@ function getCrossrefDate(item = {}) {
     item.created?.["date-parts"]?.[0] ||
     [];
 
-  const year = dateParts[0] || null;
-  const month = dateParts[1] || null;
-  const day = dateParts[2] || null;
+  const [year, month, day] = dateParts;
 
   if (!year) {
-    return {
-      year: null,
-      publicationDate: "",
-    };
+    return { year: null, publicationDate: "" };
   }
-
-  const publicationDate = [
-    String(year),
-    month ? String(month).padStart(2, "0") : null,
-    day ? String(day).padStart(2, "0") : null,
-  ]
-    .filter(Boolean)
-    .join("-");
 
   return {
     year: Number(year),
-    publicationDate,
+    publicationDate: [
+      String(year),
+      month ? String(month).padStart(2, "0") : null,
+      day ? String(day).padStart(2, "0") : null,
+    ]
+      .filter(Boolean)
+      .join("-"),
   };
 }
 
@@ -363,20 +310,14 @@ function getEuropePmcDate(item = {}) {
 
   if (!match) {
     return {
-      year: item.pubYear
-        ? Number(item.pubYear)
-        : null,
+      year: item.pubYear ? Number(item.pubYear) : null,
       publicationDate: "",
     };
   }
 
   return {
     year: Number(match[1]),
-    publicationDate: [
-      match[1],
-      match[2],
-      match[3],
-    ]
+    publicationDate: [match[1], match[2], match[3]]
       .filter(Boolean)
       .join("-"),
   };
@@ -385,20 +326,11 @@ function getEuropePmcDate(item = {}) {
 function getDiseaseClass(record, diseaseClass) {
   const title = cleanText(record.title || "");
   const abstract = cleanText(record.abstract || "");
-  const keywords = cleanText(
-    Array.isArray(record.keywords)
-      ? record.keywords.join(" ")
-      : record.keywords || ""
-  );
-
+  const keywords = cleanText(record.keywords || "");
   const text = `${title} ${abstract} ${keywords}`;
   const normalizedText = normalizeForComparison(text);
 
-  const coffeeMention =
-    /\bcoffee\b/i.test(text) ||
-    /\bcoffea\b/i.test(text);
-
-  if (!coffeeMention) {
+  if (!/\bcoffee\b|\bcoffea\b/i.test(text)) {
     return false;
   }
 
@@ -446,16 +378,11 @@ function calculateRelevance(record, diseaseClass) {
   const config = SEARCH_CONFIG[diseaseClass];
 
   if (!config) {
-    return {
-      relevanceScore: 0,
-      relevanceLevel: "Low relevance",
-    };
+    return { relevanceScore: 0, relevanceLevel: "Low relevance" };
   }
 
   const title = normalizeForComparison(record.title || "");
-  const abstract = normalizeForComparison(
-    record.abstract || ""
-  );
+  const abstract = normalizeForComparison(record.abstract || "");
   const keywords = normalizeForComparison(
     Array.isArray(record.keywords)
       ? record.keywords.join(" ")
@@ -465,13 +392,8 @@ function calculateRelevance(record, diseaseClass) {
   let score = 0;
 
   for (const pattern of config.patterns) {
-    if (pattern.test(record.title || "")) {
-      score += 5;
-    }
-
-    if (pattern.test(record.abstract || "")) {
-      score += 3;
-    }
+    if (pattern.test(record.title || "")) score += 5;
+    if (pattern.test(record.abstract || "")) score += 3;
 
     if (
       pattern.test(
@@ -484,29 +406,18 @@ function calculateRelevance(record, diseaseClass) {
     }
   }
 
-  if (/\bcoffee\b|\bcoffea\b/.test(title)) {
-    score += 3;
-  }
-
-  if (/\bcoffee\b|\bcoffea\b/.test(abstract)) {
-    score += 2;
-  }
-
-  if (/\bcoffee\b|\bcoffea\b/.test(keywords)) {
-    score += 1;
-  }
-
-  let relevanceLevel = "Low relevance";
-
-  if (score >= 8) {
-    relevanceLevel = "High relevance";
-  } else if (score >= 4) {
-    relevanceLevel = "Relevant research";
-  }
+  if (/\bcoffee\b|\bcoffea\b/.test(title)) score += 3;
+  if (/\bcoffee\b|\bcoffea\b/.test(abstract)) score += 2;
+  if (/\bcoffee\b|\bcoffea\b/.test(keywords)) score += 1;
 
   return {
     relevanceScore: score,
-    relevanceLevel,
+    relevanceLevel:
+      score >= 8
+        ? "High relevance"
+        : score >= 4
+          ? "Relevant research"
+          : "Low relevance",
   };
 }
 
@@ -518,18 +429,10 @@ function normalizeCrossref(item, diseaseClass) {
   const date = getCrossrefDate(item);
   const url = doiUrl(doi) || item.URL || "";
   const authors = getAuthorsCrossref(item);
-  const journal = cleanText(
-    item["container-title"]?.[0] || ""
-  );
-
+  const journal = cleanText(item["container-title"]?.[0] || "");
   const keywords = Array.isArray(item.subject)
     ? item.subject.map(cleanText).filter(Boolean)
     : [];
-
-  const metadata = getEvidenceMetadata(
-    publicationType,
-    abstract
-  );
 
   const record = {
     title,
@@ -538,9 +441,8 @@ function normalizeCrossref(item, diseaseClass) {
     publicationDate: date.publicationDate,
     journal,
     publicationType,
-    publicationTypeLabel:
-      getPublicationTypeLabel(publicationType),
-    ...metadata,
+    publicationTypeLabel: getPublicationTypeLabel(publicationType),
+    ...getEvidenceMetadata(publicationType, abstract),
     source: "Crossref",
     doi,
     url,
@@ -565,20 +467,16 @@ function normalizeEuropePmc(item, diseaseClass) {
   const date = getEuropePmcDate(item);
 
   const journal = cleanText(
-    item?.journalInfo?.journal?.title ||
-    item?.journalTitle ||
-    ""
+    item?.journalInfo?.journal?.title || item?.journalTitle || ""
   );
 
   const url =
     doiUrl(doi) ||
-    (
-      item.pmid
-        ? `https://europepmc.org/article/MED/${item.pmid}`
-        : item.id
-          ? `https://europepmc.org/article/MED/${item.id}`
-          : ""
-    );
+    (item.pmid
+      ? `https://europepmc.org/article/MED/${encodeURIComponent(item.pmid)}`
+      : item.id
+        ? `https://europepmc.org/article/MED/${encodeURIComponent(item.id)}`
+        : "");
 
   const keywords = Array.isArray(item.keywordList?.keyword)
     ? item.keywordList.keyword
@@ -597,8 +495,7 @@ function normalizeEuropePmc(item, diseaseClass) {
     publicationDate: date.publicationDate,
     journal,
     publicationType,
-    publicationTypeLabel:
-      getPublicationTypeLabel(publicationType),
+    publicationTypeLabel: getPublicationTypeLabel(publicationType),
     ...getEvidenceMetadata(publicationType, abstract),
     source: "Europe PMC",
     doi,
@@ -623,22 +520,13 @@ function makeRecordKey(record) {
     return `doi:${doi}`;
   }
 
-  const normalizedTitle = normalizeForComparison(
-    record.title || ""
-  );
+  const normalizedTitle = normalizeForComparison(record.title || "");
 
-  if (normalizedTitle) {
-    return `title:${normalizedTitle}`;
-  }
-
-  return "";
+  return normalizedTitle ? `title:${normalizedTitle}` : "";
 }
 
 function mergeDuplicateRecords(existing, incoming) {
-  const merged = {
-    ...existing,
-    ...incoming,
-  };
+  const merged = { ...existing, ...incoming };
 
   if (
     !normalizeSpaces(existing.abstract) &&
@@ -671,6 +559,20 @@ function mergeDuplicateRecords(existing, incoming) {
     merged.title = existing.title;
   }
 
+  merged.authors = [
+    ...new Set([
+      ...(existing.authors || []),
+      ...(incoming.authors || []),
+    ]),
+  ];
+
+  merged.keywords = [
+    ...new Set([
+      ...(existing.keywords || []),
+      ...(incoming.keywords || []),
+    ]),
+  ];
+
   const sources = [
     ...(Array.isArray(existing.sources)
       ? existing.sources
@@ -687,33 +589,79 @@ function mergeDuplicateRecords(existing, incoming) {
     Number(incoming.relevanceScore || 0)
   );
 
-  if (merged.relevanceScore >= 8) {
-    merged.relevanceLevel = "High relevance";
-  } else if (merged.relevanceScore >= 4) {
-    merged.relevanceLevel = "Relevant research";
-  } else {
-    merged.relevanceLevel = "Low relevance";
-  }
+  merged.relevanceLevel =
+    merged.relevanceScore >= 8
+      ? "High relevance"
+      : merged.relevanceScore >= 4
+        ? "Relevant research"
+        : "Low relevance";
 
   return applyPublicationOverride(merged);
 }
 
+/**
+ * Fetch JSON with retries for temporary network errors and HTTP 429.
+ * Respects Retry-After, while limiting an individual wait to 15 seconds.
+ */
 async function fetchJson(url) {
-  const response = await fetch(url, {
-    signal: AbortSignal.timeout(REQUEST_TIMEOUT),
-    headers: {
-      Accept: "application/json",
-      "User-Agent": "KisanVisionAI/1.0 (crop research service)",
-    },
-  });
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt += 1) {
+    let response;
 
-  if (!response.ok) {
+    try {
+      response = await fetch(url, {
+        signal: AbortSignal.timeout(REQUEST_TIMEOUT),
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "KisanVisionAI/1.0 (crop research service)",
+        },
+      });
+    } catch (error) {
+      if (attempt === MAX_RETRIES - 1) {
+        throw error;
+      }
+
+      await sleep(1000 * 2 ** attempt);
+      continue;
+    }
+
+    if (response.ok) {
+      return response.json();
+    }
+
+    if (response.status === 429 && attempt < MAX_RETRIES - 1) {
+      const retryAfter = response.headers.get("Retry-After");
+      let delayMs = 3000 * 2 ** attempt;
+
+      if (retryAfter) {
+        const seconds = Number(retryAfter);
+
+        if (Number.isFinite(seconds) && seconds >= 0) {
+          delayMs = seconds * 1000;
+        } else {
+          const retryDate = Date.parse(retryAfter);
+
+          if (!Number.isNaN(retryDate)) {
+            delayMs = Math.max(0, retryDate - Date.now());
+          }
+        }
+      }
+
+      delayMs = Math.min(delayMs, 15000);
+
+      console.warn(
+        `Research provider returned HTTP 429. Retrying in ${delayMs} ms (attempt ${attempt + 2}/${MAX_RETRIES}).`
+      );
+
+      await sleep(delayMs);
+      continue;
+    }
+
     throw new Error(
       `Request failed (${response.status} ${response.statusText})`
     );
   }
 
-  return response.json();
+  throw new Error("Research provider request failed after retries.");
 }
 
 async function fetchCrossref(diseaseClass) {
@@ -753,12 +701,9 @@ async function fetchCrossref(diseaseClass) {
     .map((item) => normalizeCrossref(item, diseaseClass))
     .filter(
       (record) =>
-        record.title &&
-        getDiseaseClass(record, diseaseClass)
+        record.title && getDiseaseClass(record, diseaseClass)
     );
 
-  // Add a direct DOI lookup for the known Leaf Rust publication.
-  // This avoids relying only on broad bibliographic search ranking.
   const targetDoi =
     diseaseClass === "Leaf Rust"
       ? "10.12688/f1000research.177569.2"
@@ -766,10 +711,10 @@ async function fetchCrossref(diseaseClass) {
 
   if (targetDoi) {
     try {
-      const doiUrl =
+      const directUrl =
         `${CROSSREF_URL}/${encodeURIComponent(targetDoi)}`;
 
-      const doiResponse = await fetchJson(doiUrl);
+      const doiResponse = await fetchJson(directUrl);
       const item = doiResponse?.message;
 
       if (item) {
@@ -783,7 +728,6 @@ async function fetchCrossref(diseaseClass) {
         }
       }
     } catch (error) {
-      // A failed extra lookup must not discard the main search.
       console.warn(
         "Direct Crossref DOI lookup failed:",
         error.message
@@ -809,10 +753,7 @@ async function fetchEuropePmc(diseaseClass) {
 
   url.searchParams.set("query", query);
   url.searchParams.set("format", "json");
-  url.searchParams.set(
-    "pageSize",
-    String(MAX_RESULTS_PER_SOURCE)
-  );
+  url.searchParams.set("pageSize", String(MAX_RESULTS_PER_SOURCE));
   url.searchParams.set("resultType", "core");
 
   const data = await fetchJson(url.toString());
@@ -822,8 +763,7 @@ async function fetchEuropePmc(diseaseClass) {
     .map((item) => normalizeEuropePmc(item, diseaseClass))
     .filter(
       (record) =>
-        record.title &&
-        getDiseaseClass(record, diseaseClass)
+        record.title && getDiseaseClass(record, diseaseClass)
     );
 }
 
@@ -885,8 +825,10 @@ export async function getCoffeeResearch(diseaseClass) {
     return {
       success: true,
       diseaseClass: "Healthy",
+      totalResults: 0,
       results: [],
       sources: [],
+      errors: [],
       message:
         "Healthy is a prediction class, not a disease. Disease-specific research is not applicable.",
     };
@@ -896,8 +838,10 @@ export async function getCoffeeResearch(diseaseClass) {
     return {
       success: false,
       diseaseClass: requestedClass,
+      totalResults: 0,
       results: [],
       sources: [],
+      errors: [],
       message:
         `Unsupported coffee disease class. Supported classes: ${VALID_CLASSES.join(", ")}.`,
     };
@@ -964,7 +908,7 @@ export async function getCoffeeResearch(diseaseClass) {
     results,
     errors,
     message: results.length
-      ? "Research results retrieved. Publication metadata and relevance labels should be interpreted as discovery aids, not proof of treatment effectiveness."
+      ? "Research results retrieved. Publication metadata and relevance labels are discovery aids, not proof of treatment effectiveness."
       : successfulSources.length
         ? "No matching research records were found for this class."
         : "Research providers could not be reached. Try again later.",
